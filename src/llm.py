@@ -26,6 +26,7 @@ class ComplianceResult:
     related_regulations: List[str]
     geo_regions: List[str]
 
+# Translates the common terminology to the full version
 class DomainKnowledge:
     """Maps TikTok internal terminology to clear descriptions"""
     def __init__(self, terminology_csv_path: str = 'data/terminology_table.csv'):
@@ -104,7 +105,7 @@ class DomainKnowledge:
             translated = re.sub(pattern, replacement, translated, flags=re.IGNORECASE)
         return translated
 
-
+# Main LLM Pipeline
 class LLMCompliancePipeline:
     def __init__(self, api_key: str = None, model: str = "gpt-4"):
         """
