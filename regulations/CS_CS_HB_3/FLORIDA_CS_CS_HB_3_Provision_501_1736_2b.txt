@@ -1,0 +1,7 @@
+A social media platform shall:
+    1. Terminate any account held by an account holder younger than 14 years of age, including accounts that the social media platform treats or categorizes as belonging to an account holder who is likely younger than 14 years of age for purposes of targeting content or advertising, and provide 90 days for an account holder to dispute such termination. Termination must be effective upon the expiration of the 90 days if the account holder fails to effectively dispute the termination.
+    2. Allow an account holder younger than 14 years of age to request to terminate the account. Termination must be effective within 5 business days after such request.
+    3. Allow the confirmed parent or guardian of an account holder younger than 14 years of age to request that the minor's account be terminated. Termination must be effective within 10 business days after such request.
+    4. Permanently delete all personal information held by the social media platform relating to the terminated account, unless there are legal requirements to maintain such information.
+
+
