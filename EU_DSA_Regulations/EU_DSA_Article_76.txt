@@ -1,0 +1,9 @@
+Statement:
+
+The Commission can impose periodic penalty payments on providers for non-compliance with obligations, calculated based on their income or turnover.
+
+Context:
+
+Penalty payments: The Commission can impose periodic penalty payments up to 5% of the average daily income or worldwide turnover, calculated per day, to compel providers to comply with various obligations, such as supplying correct information, submitting to inspections, adhering to interim measures, or complying with binding commitments.
+
+Adjustment of penalty: If the provider complies with the obligations, the Commission may reduce the amount of the penalty to a lower figure than originally set.

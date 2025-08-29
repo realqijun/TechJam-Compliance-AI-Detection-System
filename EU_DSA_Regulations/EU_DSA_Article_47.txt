@@ -1,0 +1,35 @@
+Statement:
+
+The Commission promotes voluntary EU-level accessibility codes of conduct with involvement from:
+
+Online platforms & service providers,
+
+Organisations representing users (including persons with disabilities),
+
+Civil society & relevant authorities.
+
+Goal: ensure full, equal participation of persons with disabilities by improving access to online services through design & adaptation.
+
+Codes must aim at:
+
+Accessible design/adaptation – services must be perceivable, operable, understandable, and robust.
+
+Transparency on accessibility – providers explain how they meet accessibility requirements and make this info publicly accessible in a disability-friendly format.
+
+Accessible compliance info – information, forms, and measures under the DSA must be easy to find, easy to understand, and accessible to persons with disabilities.
+
+Timeline:
+
+Codes developed by 18 Feb 2025.
+
+Applied by 18 Aug 2025.
+
+Context:
+
+Strengthens digital inclusion by ensuring online services are usable by persons with disabilities.
+
+Aligns with broader EU law on accessibility (e.g., European Accessibility Act).
+
+Builds a voluntary, collaborative framework for accessibility improvements beyond mandatory minimums.
+
+Encourages universal design principles, making services more inclusive for all users.

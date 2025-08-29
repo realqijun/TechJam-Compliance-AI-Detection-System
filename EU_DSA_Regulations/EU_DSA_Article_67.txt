@@ -1,0 +1,17 @@
+Statement:
+
+The Commission can request information from providers of very large online platforms or search engines and other relevant persons, and they must provide the information within a reasonable period.
+
+Context:
+
+Information request: The Commission may request information via simple request or decision from the concerned provider or any relevant person, including organizations performing audits.
+
+Legal requirements: The Commission must specify the legal basis, purpose, and required information when making a request, and mention penalties for incorrect or incomplete data.
+
+Decision-based requests: For formal decisions, the Commission will also indicate fines, periodic penalties, and the right to judicial review.
+
+Responsibility for information: Providers or their authorized representatives are responsible for supplying the requested information, and they are accountable for any incorrect or misleading data.
+
+Coordination with authorities: Digital Services Coordinators and other authorities must assist the Commission by providing necessary information.
+
+Information sharing: A copy of the request or decision will be sent to the Digital Services Coordinators through the designated information-sharing system.

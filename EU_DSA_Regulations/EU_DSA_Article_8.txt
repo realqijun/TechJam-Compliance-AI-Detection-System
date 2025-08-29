@@ -1,0 +1,15 @@
+Statement:
+
+Providers of intermediary services cannot be forced to:
+
+Monitor all information they transmit or store.
+
+Actively search for illegal activity or content.
+
+Context:
+
+Reinforces that providers are not general watchdogs over user activity.
+
+Liability exemptions (Articles 4–7) remain intact unless providers have actual knowledge of illegal content.
+
+Focuses obligations on specific cases (e.g., valid notices, authority orders), not blanket surveillance.

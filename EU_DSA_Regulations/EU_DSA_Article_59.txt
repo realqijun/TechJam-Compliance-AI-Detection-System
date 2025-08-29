@@ -1,0 +1,11 @@
+Statement:
+
+If there is disagreement or lack of response regarding enforcement measures, the Board can refer the matter to the Commission, which must assess the situation and request a review if necessary.
+
+Context:
+
+Referral to the Commission: If the Digital Services Coordinator of establishment fails to respond within the required timeframe or if the Board disagrees with the measures taken, the Board can refer the matter to the Commission, providing all relevant information.
+
+Commission’s assessment: The Commission has two months to assess the matter after the referral and must consult the Digital Services Coordinator of establishment.
+
+Request for review: If the Commission finds the measures insufficient or incompatible with the Regulation, it will request the Digital Services Coordinator of establishment to review and take necessary actions. The Coordinator must inform the Commission and the Board of the measures taken within two months of the review request.

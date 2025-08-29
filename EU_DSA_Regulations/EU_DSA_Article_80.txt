@@ -1,0 +1,9 @@
+Statement:
+
+The Commission must publish decisions it adopts, including the names of the parties and the main content, while considering the protection of confidential information.
+
+Context:
+
+Publication of decisions: The Commission is required to publish decisions related to interim measures, binding commitments, and penalties, specifying the names of the parties and the key details of the decision.
+
+Protection of confidential information: The publication must respect the rights and legitimate interests of the parties involved, including any confidential information from the provider, other relevant persons, or third parties.

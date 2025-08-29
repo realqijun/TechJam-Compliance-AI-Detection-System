@@ -1,0 +1,11 @@
+Statement:
+
+Digital Services Coordinators must prepare and publish annual activity reports, including complaints received, actions taken, and cooperation with other authorities.
+
+Context:
+
+Activity reports: Digital Services Coordinators must compile and publicly share annual reports on their activities under this Regulation, including complaints received (Article 53) and their follow-up actions. These reports must be accessible in a machine-readable format while respecting confidentiality rules (Article 84).
+
+Report contents: The report should include information on orders to act against illegal content (Articles 9 and 10) and the actions taken in response, as well as the effects of those orders.
+
+Cooperation between authorities: In Member States with multiple competent authorities, the Digital Services Coordinator must prepare a consolidated report, receiving necessary information and support from all relevant authorities.

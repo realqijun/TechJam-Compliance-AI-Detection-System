@@ -1,0 +1,15 @@
+Statement:
+
+The European Board for Digital Services is established as an independent advisory group to assist Digital Services Coordinators and the Commission in supervising intermediary services providers.
+
+Context:
+
+Board establishment: The European Board for Digital Services (the Board) is an independent advisory group composed of Digital Services Coordinators.
+
+Advisory role: The Board advises Digital Services Coordinators and the Commission to:
+
+Ensure consistent application of the Regulation and effective cooperation.
+
+Coordinate and contribute to guidelines and analysis on emerging issues within the internal market.
+
+Assist in the supervision of very large online platforms.

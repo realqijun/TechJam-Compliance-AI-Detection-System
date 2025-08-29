@@ -1,0 +1,9 @@
+Statement:
+
+The Commission can interview any person consenting to provide information related to a suspected infringement and may record the interview.
+
+Context:
+
+Interview process: The Commission may interview individuals (natural or legal persons) who agree to provide information relevant to an investigation and may record the interview.
+
+Location-based requirements: If the interview occurs outside the Commission's premises, the Commission must notify the Digital Services Coordinator of the relevant Member State. If requested, the Digital Services Coordinator’s officials can assist during the interview.

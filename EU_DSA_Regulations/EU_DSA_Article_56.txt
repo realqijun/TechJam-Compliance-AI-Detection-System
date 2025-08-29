@@ -1,0 +1,17 @@
+Statement:
+
+The Member State of a provider's main establishment holds primary powers for supervising and enforcing the Regulation, with certain exceptions where the Commission or other Member States can exercise powers.
+
+Context:
+
+Competence of Member States: The Member State where the provider’s main establishment is located has exclusive powers to enforce the Regulation, except for certain provisions that the Commission handles.
+
+Commission's powers: The Commission has exclusive powers for enforcing Section 5 of Chapter III and also supervises providers of very large online platforms and search engines.
+
+Enforcement when no Commission proceedings: If the Commission has not initiated proceedings for the same infringement, the Member State of the provider’s main establishment can enforce the Regulation.
+
+Cooperation: Member States and the Commission must work together to supervise and enforce the Regulation.
+
+Non-EU providers: If a provider has no establishment in the EU, the Member State where their legal representative is located, or the Commission, can enforce the Regulation.
+
+Legal representative: If a provider fails to appoint a legal representative, the Commission and all Member States can enforce the Regulation, with Digital Services Coordinators notifying others to avoid duplicated proceedings for the same infringement.

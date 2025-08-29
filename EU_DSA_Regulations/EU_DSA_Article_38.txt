@@ -1,0 +1,13 @@
+Statement:
+
+VLOPs and VLOSEs using recommender systems must provide at least one option per system that is not based on profiling (as defined in GDPR, Article 4(4)).
+
+Context:
+
+Builds on Article 27 (recommender transparency) by giving users a real choice: recommendations that don’t rely on profiling (e.g., chronological feeds, non-personalised search results).
+
+Ensures GDPR compliance by limiting profiling practices and offering alternatives that respect user privacy.
+
+Empowers users to control their online experience, reducing algorithmic influence based on personal data.
+
+Particularly important for systemic platforms due to their scale and impact on information access and civic discourse.

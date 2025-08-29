@@ -1,0 +1,15 @@
+Statement:
+
+The European Board for Digital Services is composed of Digital Services Coordinators, chaired by the Commission, with voting rights for Member States and the possibility to invite experts and other bodies for cooperation.
+
+Context:
+
+Board composition: The Board consists of high-level officials from Digital Services Coordinators, and may include other competent national authorities if relevant. The failure to designate a Digital Services Coordinator does not hinder the Board's tasks.
+
+Chair and meetings: The Commission chairs the Board, convening meetings and preparing agendas. The Commission also manages the information sharing system for Board decisions.
+
+Voting and decisions: Each Member State has one vote, with the Commission having no voting rights. Decisions are made by simple majority, with a 48-hour window for voting on certain recommendations.
+
+Support and cooperation: The Commission provides administrative and analytical support, and the Board can invite experts and cooperate with other Union bodies or external experts, making the results of such cooperation publicly available.
+
+Consultations and procedure: The Board can consult interested parties and must make those results public. It adopts its rules of procedure with the Commission's consent.

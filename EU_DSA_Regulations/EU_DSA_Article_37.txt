@@ -1,0 +1,65 @@
+Statement:
+
+VLOPs/VLOSEs must undergo an independent audit at their own expense at least once a year to assess compliance with:
+
+Chapter III obligations (systemic risk, mitigation, transparency, etc.),
+
+Codes of conduct (Arts. 45 & 46),
+
+Crisis protocols (Art. 48).
+
+Providers must fully cooperate with auditors: giving access to relevant data, premises, and responding to questions. They must not obstruct or influence audits.
+
+Audits must ensure confidentiality of obtained info, while still enabling transparency and reporting. Public versions of reports (for Article 42 transparency) must exclude sensitive/confidential data.
+
+Audits must be carried out by organisations that are:
+
+Independent & conflict-free, e.g.:
+
+No non-audit services to the provider within 12 months before/after,
+
+No audit services for longer than 10 consecutive years,
+
+No contingent fees.
+
+Experts in risk management, technical competence, and compliance.
+
+Committed to objectivity and ethics (e.g., codes of practice/standards).
+
+Audit reports must include at minimum:
+
+Provider & audit period details,
+
+Auditor details,
+
+Declaration of interests,
+
+Elements audited & methodology,
+
+Summary of findings,
+
+Consulted third parties,
+
+Audit opinion (“positive”, “positive with comments”, or “negative”),
+
+Recommendations with timeframe (if not fully compliant).
+
+If auditors cannot assess specific elements, they must explain why.
+
+Providers receiving non-“positive” reports must:
+
+Implement recommendations and file an audit implementation report within 1 month, or
+
+Justify why they did not adopt them and describe alternative measures.
+
+The Commission may adopt delegated acts specifying audit procedures, methodologies, and reporting templates.
+
+Context:
+
+Audits are a core accountability mechanism for VLOPs/VLOSEs.
+
+Prevents self-assessment bias and ensures independent verification of compliance.
+
+Continuous cycle: audit → recommendations → implementation report → Commission oversight.
+
+Aligns with risk-based supervision and transparency goals of the DSA.

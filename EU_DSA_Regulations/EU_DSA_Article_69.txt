@@ -1,0 +1,17 @@
+Statement:
+
+The Commission has the authority to conduct inspections at the premises of providers of very large online platforms or search engines and can compel cooperation from relevant persons.
+
+Context:
+
+Inspection powers: The Commission may inspect premises, records, and IT systems of providers or other relevant persons to investigate suspected infringements.
+
+Inspection procedures: Officials can enter premises, examine records, and request explanations regarding the organization, data handling, and business practices. They can seal premises and take copies of records.
+
+Cooperation and assistance: Inspections may involve auditors, experts, and Digital Services Coordinators. National authorities are required to assist if requested.
+
+Inspections with decisions: A formal decision specifying the subject, purpose, and penalties for the inspection is required. The Commission consults with the relevant Digital Services Coordinator before taking this decision.
+
+Enforcement: If an inspection is obstructed, the Member State must provide necessary assistance, including coercive measures if needed.
+
+Judicial oversight: National judicial authorities may be involved to verify the authenticity of the Commission's decision and assess whether coercive measures are justified.

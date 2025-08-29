@@ -1,0 +1,39 @@
+Statement:
+
+This Section applies to online platforms and search engines with ≥ 45 million average monthly active recipients in the EU (≈10% of EU population).
+
+The Commission designates services as VLOPs/VLOSEs after consulting Member States or Digital Services Coordinators, based on:
+
+Provider-reported data (Article 24(2)),
+
+Requested info (Article 24(3)), or
+
+Other available information.
+
+Providers can submit views within 10 working days before final designation, but failure to respond does not prevent designation.
+
+Designation ends if, for one continuous year, the service falls below the threshold.
+
+The Commission must:
+
+Notify providers, the Board, and the relevant Digital Services Coordinator.
+
+Publish and maintain an official list of designated VLOPs/VLOSEs in the EU Official Journal.
+
+Obligations apply (or end) 4 months after notification.
+
+Threshold may be adjusted by delegated acts if EU population changes by ≥ 5% (to keep it at 10% of EU population).
+
+Commission may also set a calculation methodology for monthly active recipients via delegated acts, considering market and tech developments.
+
+Context:
+
+VLOPs/VLOSEs are singled out due to their systemic impact on the digital ecosystem.
+
+45 million users ≈ 10% of EU population (2020 baseline).
+
+Stronger obligations aim to reduce systemic risks, ensure accountability, and safeguard EU digital safety.
+
+Mechanism ensures flexibility: population adjustments and methodology updates can be made via delegated acts.
+
+Public listing provides transparency and accountability.

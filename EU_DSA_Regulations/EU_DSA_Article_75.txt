@@ -1,0 +1,15 @@
+Statement:
+
+The Commission can require an action plan from providers to address infringements, which includes an independent audit, and monitor the plan’s implementation to ensure compliance.
+
+Context:
+
+Enhanced supervision: When a decision on non-compliance is made under Article 73 for infringements of Section 5 of Chapter III, the Commission must use the enhanced supervision system.
+
+Action plan: The provider must submit an action plan to remedy the infringement, including independent audits (Article 37) and, where applicable, participation in a code of conduct (Article 45).
+
+Board and Commission review: The Board will provide its opinion on the action plan within one month, and the Commission will decide whether the measures are sufficient within a month of receiving the opinion.
+
+Monitoring: The Commission will monitor the implementation of the action plan and require regular updates, including audit reports, and may request additional information.
+
+Non-compliance consequences: If the provider fails to provide the action plan, audit report, or updates, or if the plan is deemed insufficient, the Commission may take further necessary measures as per Articles 76(1)(e) and 82(1).

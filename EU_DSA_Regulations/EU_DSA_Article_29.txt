@@ -1,0 +1,17 @@
+Statement:
+
+This Section does not apply to online platforms that allow consumers to conclude distance contracts with traders if the platform qualifies as a micro or small enterprise (Recommendation 2003/361/EC).
+
+Exemption also applies for 12 months after losing micro/small status, unless the platform is a very large online platform (VLOP) under Article 33.
+
+VLOPs must comply with these rules regardless of size.
+
+Context:
+
+Applies specifically to platforms enabling consumer-trader contracts online.
+
+Provides regulatory relief for small businesses to avoid disproportionate burdens.
+
+Ensures large-scale platforms (VLOPs) remain fully covered due to their systemic role in digital markets.
+
+Builds on the EU’s definition of micro (<10 employees, turnover ≤ €2M) and small (<50 employees, turnover ≤ €10M) enterprises.

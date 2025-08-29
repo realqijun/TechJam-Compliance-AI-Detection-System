@@ -1,0 +1,45 @@
+Statement:
+
+Providers must comply with authority orders to remove or disable access to specific illegal content.
+
+Providers must inform the issuing authority (or designated authority) without undue delay about how and when the order was carried out.
+
+Orders must:
+
+Cite the legal basis.
+
+Explain why the content is illegal.
+
+Identify the issuing authority.
+
+Provide clear details to locate content (e.g., exact URLs).
+
+Inform both provider and user about redress options.
+
+Specify the authority to receive compliance information.
+
+Orders must be territorially limited (only as far as needed to meet the objective).
+
+Orders must be sent to the provider’s electronic point of contact in a declared/agreed language, or accompanied by a translation of key elements.
+
+Providers must inform the affected user about:
+
+The order received.
+
+The reasons.
+
+The territorial scope.
+
+Available redress.
+
+Digital Services Coordinators must share orders across Member States via the EU system.
+
+Context:
+
+Applies to judicial or administrative orders issued under EU or national law (aligned with Union law).
+
+Ensures procedural safeguards: clarity, transparency, and rights of both providers and users.
+
+National civil and criminal procedural law remains unaffected.
+
+Reinforces cross-border cooperation through Digital Services Coordinators (DSCs).

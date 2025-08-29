@@ -1,0 +1,29 @@
+Statement:
+
+Providers must publish annual transparency reports (machine-readable, accessible) covering their content moderation activities.
+
+Reports must include (as applicable):
+
+Orders from authorities (Articles 9 & 10): number received, type of illegal content, issuing Member State, median response times.
+
+Hosting providers: number of notices (Article 16), breakdown by content type, notices from trusted flaggers, actions taken (under law vs. T&Cs), automated processing, median action times.
+
+Own-initiative moderation: description of measures (automated & human), training/support for moderators, types of restrictions (availability, visibility, accessibility, user ability to post), breakdown by content type, detection method, restriction type.
+
+Complaints: number received, reasons, decisions made, median decision times, reversals; online platforms must also cover Article 20 complaints.
+
+Automated moderation tools: description, purpose, accuracy, error rates, safeguards.
+
+Micro and small enterprises are exempt, unless they are very large platforms/search engines (Article 33).
+
+The Commission may set templates and harmonised reporting periods via implementing acts.
+
+Context:
+
+Designed to ensure transparency and accountability in how providers moderate content.
+
+Balances automation with safeguards and human oversight.
+
+Stronger reporting obligations for hosting services and online platforms, given their direct role in content handling.
+
+Encourages comparability across providers by allowing the Commission to set standard templates.

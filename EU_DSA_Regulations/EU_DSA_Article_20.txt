@@ -1,0 +1,43 @@
+Statement:
+
+Online platforms must provide users (and notifiers) with free electronic access to an internal complaint-handling system for at least six months after a decision.
+
+Users can complain about platform decisions concerning:
+
+Removal, disabling, or visibility restriction of content.
+
+Suspension/termination of services (fully or partly).
+
+Suspension/termination of user accounts.
+
+Suspension, termination, or restriction of monetisation.
+
+Complaint systems must be:
+
+Easy to access, user-friendly, precise, and allow substantiated complaints.
+
+Complaints must be handled:
+
+Timely, non-discriminatorily, diligently, and objectively.
+
+If a complaint shows the decision was wrong, the platform must reverse it without undue delay.
+
+Platforms must inform complainants of:
+
+Their reasoned decision,
+
+Options for out-of-court dispute settlement (Article 21), and
+
+Other redress options.
+
+Decisions must be supervised by qualified staff — not based solely on automated tools.
+
+Context:
+
+Period of 6 months starts when the user is first informed of the decision (per Articles 16(5) & 17).
+
+Reinforces fairness and accountability in moderation decisions.
+
+Protects users from arbitrary or automated-only moderation by requiring human oversight.
+
+Connects directly to the redress mechanisms in Article 21.

@@ -1,0 +1,47 @@
+Statement:
+
+VLOPs/VLOSEs must adopt reasonable, proportionate, and effective measures to mitigate systemic risks identified under Article 34, with special regard for fundamental rights.
+
+Possible measures include:
+
+Adapting service design, features, or interfaces.
+
+Updating/enforcing terms and conditions.
+
+Improving content moderation (speed, quality, decision-making, resources), especially for illegal hate speech or cyber violence.
+
+Testing and adjusting algorithmic systems (e.g., recommender systems).
+
+Adjusting advertising systems, including limiting/controlling ad placement.
+
+Strengthening internal processes, resources, testing, documentation, and supervision.
+
+Cooperating with trusted flaggers (Art. 22) and implementing out-of-court dispute settlement decisions (Art. 21).
+
+Collaborating with other platforms/search engines via codes of conduct (Art. 45) and crisis protocols (Art. 48).
+
+Awareness-raising and better information for users through interface design.
+
+Protecting children’s rights (e.g., age verification, parental controls, abuse reporting/support tools).
+
+Marking synthetic/manipulated content (deepfakes, AI-generated media) so users can distinguish it, plus providing tools for users to flag such content.
+
+Board + Commission must publish annual reports including:
+
+Most prominent systemic risks (from providers’ reports and other sources).
+
+Best practices to mitigate risks.
+
+Risks broken down by Member States and EU-wide.
+
+The Commission + Digital Services Coordinators may issue guidelines with best practices and recommendations, following public consultation.
+
+Context:
+
+Complements Article 34’s risk assessments with practical risk mitigation duties.
+
+Focused on areas like illegal content, harmful manipulation, advertising integrity, child protection, and deepfake transparency.
+
+Annual EU-level reporting ensures coordination, benchmarking, and continuous improvement.
+
+Guidelines help harmonise practices while respecting fundamental rights under the EU Charter.

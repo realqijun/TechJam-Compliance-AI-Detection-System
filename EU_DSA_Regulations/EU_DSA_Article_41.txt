@@ -1,0 +1,45 @@
+Statement:
+
+VLOPs/VLOSEs must set up an independent compliance function, led by a head compliance officer, with sufficient authority, resources, and direct access to management.
+
+Head of compliance:
+
+Must be an independent senior manager, not removable without board approval.
+
+Reports directly to the management body.
+
+May raise concerns about systemic risks (Art. 34) or non-compliance.
+
+Compliance officers’ tasks include:
+
+Cooperating with DSCs & Commission.
+
+Identifying, reporting, and ensuring mitigation of systemic risks (Art. 35).
+
+Overseeing independent audits (Art. 37).
+
+Advising management & employees on DSA obligations.
+
+Monitoring compliance with DSA obligations.
+
+Monitoring adherence to codes of conduct (Arts. 45 & 46) and crisis protocols (Art. 48).
+
+Providers must share the head of compliance’s name & contact details with the DSC and Commission.
+
+Management body responsibilities:
+
+Ensure compliance function independence, prevent conflicts of interest, and manage systemic risks (Art. 34).
+
+Approve/review risk strategies annually, oversee implementation, and ensure resource allocation.
+
+Be actively involved in decisions on risk management.
+
+Context:
+
+Introduces a governance & accountability mechanism within VLOPs/VLOSEs.
+
+Mirrors compliance & risk frameworks in financial regulation, applying them to online systemic risks.
+
+Ensures compliance oversight is institutionalised, independent, and directly connected to management.
+
+Provides regulators with clear accountability contact points inside very large platforms/search engines.

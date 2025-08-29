@@ -1,0 +1,37 @@
+Statement:
+
+Providers must clearly state in their terms and conditions (T&Cs):
+
+Any restrictions on user-provided content.
+
+Content moderation policies, procedures, measures, and tools (including algorithms + human review).
+
+Rules of their internal complaint system.
+
+T&Cs must be:
+
+Clear, plain, user-friendly, unambiguous,
+
+Publicly available, easily accessible, and machine-readable.
+
+Providers must inform users of significant changes to T&Cs.
+
+If the service is mainly directed at or used by minors, T&Cs must be explained in a way minors can understand.
+
+Restrictions must be applied in a diligent, objective, and proportionate manner, respecting users’ fundamental rights (e.g., freedom of expression, media pluralism).
+
+Very large platforms/search engines must:
+
+Provide users with a concise, accessible, machine-readable summary of T&Cs (including remedies & redress).
+
+Publish T&Cs in the official languages of all Member States where they operate.
+
+Context:
+
+Ensures transparency and fairness in how platforms enforce content rules.
+
+Protects users’ rights while still allowing moderation.
+
+Places stronger obligations on very large platforms/search engines due to their wide impact.
+
+Builds trust by making T&Cs comprehensible and accessible, even for minors.
