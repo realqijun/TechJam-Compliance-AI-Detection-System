@@ -1,0 +1,25 @@
+Statement:
+
+Hosting providers are not liable for user-stored content if:
+
+They have no actual knowledge of illegal content/activity.
+
+If they do gain knowledge, they remove or disable access quickly.
+
+Exemptions don’t apply if:
+
+The user acts under the provider’s authority/control.
+
+An online platform misleads consumers into thinking content/products come from the platform itself.
+
+Authorities can still order providers to stop or prevent infringements.
+
+Context:
+
+Applies to hosting services → storing info at user request.
+
+Liability exemption linked to “notice and action” principle: providers must act when aware.
+
+Online platforms facilitating distance contracts with consumers have stricter responsibility if they blur the line between trader and platform.
+
+Member States’ judicial/administrative authorities retain enforcement powers.

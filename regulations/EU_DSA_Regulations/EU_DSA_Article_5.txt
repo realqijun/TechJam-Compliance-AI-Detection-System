@@ -1,0 +1,29 @@
+Statement:
+
+Providers are not liable for automatic, intermediate, and temporary storage (“caching”) if:
+
+They don’t modify the information.
+
+They respect access conditions.
+
+They follow industry-standard rules for updating information.
+
+They don’t interfere with lawful data collection technologies.
+
+They remove/disable stored information quickly if:
+
+The source removes it,
+
+Access is disabled, or
+
+A court/authority orders removal.
+
+Authorities may still order providers to prevent or stop infringements.
+
+Context:
+
+Applies to “caching services” → temporary storage done to improve efficiency or security of onward transmission.
+
+Liability exemption applies only if providers act passively and comply with technical/industry rules.
+
+Judicial/administrative authorities retain power to issue blocking/removal orders.

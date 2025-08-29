@@ -1,0 +1,11 @@
+Statement:
+
+Service recipients and their authorized representatives have the right to file complaints with the Digital Services Coordinator for alleged infringements, who will assess and potentially forward the complaint to the relevant authorities.
+
+Context:
+
+Right to lodge a complaint: Recipients of the service, and any body, organization, or association authorized to act on their behalf, can file a complaint with the Digital Services Coordinator of the Member State where the recipient is located or established.
+
+Assessment and transmission: The Digital Services Coordinator will assess the complaint and may forward it to the Digital Services Coordinator of establishment or, if necessary, to another competent authority.
+
+Right to be heard: Both parties in the proceedings have the right to be heard and informed about the status of the complaint, in line with national law.

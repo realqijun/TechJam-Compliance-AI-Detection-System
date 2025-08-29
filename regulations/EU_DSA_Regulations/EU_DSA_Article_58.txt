@@ -1,0 +1,13 @@
+Statement:
+
+Digital Services Coordinators can request cross-border cooperation to investigate and enforce compliance with the Regulation, particularly when an infringement affects recipients in their Member State.
+
+Context:
+
+Requests for cooperation: If a Digital Services Coordinator of destination suspects an infringement affecting recipients in their Member State, they may request the Digital Services Coordinator of establishment to assess the matter and take necessary action. This request can also be made by at least three Digital Services Coordinators, or by the Board, in cases of broader concerns.
+
+Details of requests: Requests must be reasoned, specifying the provider's contact details, the suspected infringement, the provisions violated, and any negative effects on recipients. The request may also suggest investigatory or enforcement measures.
+
+Action by Digital Services Coordinator of establishment: The Digital Services Coordinator of establishment must take the request into account and may ask for additional information or launch a joint investigation if needed.
+
+Timely response: The Digital Services Coordinator of establishment must respond to the request within two months, explaining the assessment and actions taken or planned.

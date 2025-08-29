@@ -1,0 +1,29 @@
+Statement:
+
+Platforms must not design or operate their interfaces in ways that:
+
+Deceive or manipulate users, or
+
+Distort/impair users’ ability to make free and informed decisions.
+
+Examples of prohibited practices may include:
+
+Giving undue prominence to certain choices when asking for consent.
+
+Repeatedly pushing users to make the same choice (e.g., intrusive pop-ups).
+
+Making it harder to cancel a service than to subscribe.
+
+The Commission may issue guidelines clarifying applications of this rule.
+
+Context:
+
+Aims to prevent dark patterns or manipulative design that pressures users into unwanted choices.
+
+Does not override existing rules already covered under:
+
+Directive 2005/29/EC (Unfair Commercial Practices Directive).
+
+Regulation (EU) 2016/679 (GDPR) on data protection and consent.
+
+Ensures fair, transparent, and user-friendly online environments.

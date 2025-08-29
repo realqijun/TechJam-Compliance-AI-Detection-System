@@ -1,0 +1,61 @@
+Statement:
+
+VLOPs/VLOSEs (very large online platforms/search engines) must identify, analyse, and assess systemic risks arising from their service design, functioning (including algorithms), or user activity.
+
+Risk assessments must be conducted:
+
+By the date obligations start (Article 33(6)),
+
+At least once per year,
+
+Before deploying new features with a critical impact on risks.
+
+Risks to assess include:
+
+Dissemination of illegal content.
+
+Negative effects on fundamental rights, including:
+
+Human dignity (Art. 1 Charter),
+
+Privacy (Art. 7), data protection (Art. 8),
+
+Freedom of expression & media pluralism (Art. 11),
+
+Non-discrimination (Art. 21),
+
+Child rights (Art. 24),
+
+Consumer protection (Art. 38).
+
+Negative effects on civic discourse, elections, and public security.
+
+Negative effects related to gender-based violence, public health, protection of minors, and mental/physical well-being.
+
+Assessments must consider influence of:
+
+Recommender and algorithmic systems,
+
+Content moderation systems,
+
+Terms & conditions and enforcement,
+
+Ad systems,
+
+Data practices.
+
+Must also analyse risks from intentional manipulation (e.g., fake accounts, bots, inauthentic use, amplification of harmful/illegal content).
+
+Must account for regional and linguistic contexts (including Member State-specific).
+
+Risk assessment documents must be kept for 3 years and made available to the Commission and Digital Services Coordinator on request.
+
+Context:
+
+Aims to prevent systemic online harms tied to platform design and scale.
+
+Connects algorithmic systems (recommenders, ads, moderation) with risks to democracy, public health, and fundamental rights.
+
+Shifts responsibility to platforms to conduct ongoing, proportionate risk analysis.
+
+Provides regulators with documentation for accountability and oversight.

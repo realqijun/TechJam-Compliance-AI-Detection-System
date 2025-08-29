@@ -1,0 +1,35 @@
+Statement:
+
+The Commission promotes voluntary EU-level codes of conduct for online advertising.
+
+Participants: online platforms, advertising intermediaries, programmatic ad actors, civil society, user orgs, and authorities.
+
+Goal: enhance transparency across the ad value chain, beyond the minimum rules of Articles 26 & 39.
+
+Codes should ensure competitive, transparent, and fair advertising while respecting competition, privacy, and data protection law.
+
+Must cover at least:
+
+(a) Sharing of ad-related information by intermediaries with users (per Art. 26(1)(b–d)).
+
+(b) Transmission of information to ad repositories (per Art. 39).
+
+(c) Clear information on data monetisation practices.
+
+Timeline:
+
+Codes developed by 18 Feb 2025.
+
+Applied by 18 Aug 2025.
+
+Commission will encourage broad endorsement & compliance by all actors in the ad value chain.
+
+Context:
+
+Aims to close gaps in ad transparency not fully covered by binding provisions.
+
+Provides soft law framework to align stakeholders and foster cooperation.
+
+Ensures users understand who paid for ads, how targeting works, and how data monetisation occurs.
+
+Creates a clearer, fairer online ad ecosystem through voluntary but structured commitments.

@@ -1,0 +1,11 @@
+Statement:
+
+The Commission can take actions to monitor compliance with the Regulation, including requesting access to databases, algorithms, and retaining necessary documents.
+
+Context:
+
+Monitoring actions: The Commission can monitor the implementation and compliance of very large online platforms and search engines, requiring access to relevant databases and explanations about their operations.
+
+Document retention: Providers may be required to retain documents necessary for assessing compliance with the Regulation.
+
+Use of experts: The Commission may appoint external experts or auditors, including those from competent national authorities, to assist in monitoring and provide specialized knowledge.

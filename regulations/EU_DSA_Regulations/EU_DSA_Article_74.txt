@@ -1,0 +1,13 @@
+Statement:
+
+The Commission can impose fines on providers of very large online platforms or search engines for non-compliance, with the amount determined by the nature and severity of the infringement.
+
+Context:
+
+Fines for non-compliance: The Commission may impose fines up to 6% of the provider’s annual turnover if they intentionally or negligently violate the Regulation, fail to comply with interim measures (Article 70), or breach binding commitments (Article 71).
+
+Fines for information violations: Fines up to 1% of annual income or turnover may be imposed for intentionally or negligently supplying incorrect or misleading information, failing to reply to requests, refusing inspections (Article 69), or not complying with Commission measures (Article 72).
+
+Preliminary findings: The Commission must communicate its preliminary findings before imposing fines under paragraph 2.
+
+Fine determination: The Commission will consider the nature, gravity, duration, recurrence of the infringement, and delays in proceedings when determining the fine amount.

@@ -1,0 +1,37 @@
+Statement:
+
+The Commission, after consulting the Board, shall support and promote voluntary standards (developed by European & international standardisation bodies) covering:
+
+Electronic notice submissions (Art. 16).
+
+User-friendly templates & design standards for communicating restrictions from T&Cs.
+
+Trusted flagger notices (Art. 22), including APIs.
+
+APIs/interfaces to support data access & scrutiny obligations (Arts. 39 & 40).
+
+Audit standards for VLOPs/VLOSEs (Art. 37).
+
+Ad repository interoperability (Art. 39(2)).
+
+Data transmission standards between ad intermediaries for transparency (Art. 26(1)(b-d)).
+
+Technical ad compliance measures, including markings for ads & commercial communications (Art. 26).
+
+Choice interfaces for recommender systems (Arts. 27 & 38).
+
+Standards for protecting minors online.
+
+Commission shall support updates of these standards based on technological developments and user behaviour.
+
+Updated information must be publicly available and accessible.
+
+Context:
+
+Encourages voluntary harmonisation instead of rigid regulation in technical areas.
+
+Ensures cross-border interoperability, especially in APIs, ad transparency, recommender systems, and audit methodologies.
+
+Provides flexibility: standards evolve with tech and behaviour.
+
+Balances uniform EU-wide practices with international alignment (global platforms must follow same standards).

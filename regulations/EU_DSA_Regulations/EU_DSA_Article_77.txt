@@ -1,0 +1,13 @@
+Statement:
+
+The Commission has a five-year limitation period to impose penalties, which can be interrupted and reset by certain actions related to the investigation or proceedings.
+
+Context:
+
+Limitation period: The Commission has five years to impose fines or penalty payments, starting from the day the infringement occurs. For ongoing or repeated infringements, the period starts when the infringement ceases.
+
+Interruption of limitation: Actions such as requests for information, inspections, or opening proceedings interrupt the limitation period, resetting the clock.
+
+Double limitation period: The limitation period can be extended, but will expire at the latest after twice the initial period without penalties being imposed.
+
+Suspension: The limitation period is suspended if the Commission's decision is being reviewed by the Court of Justice of the European Union.

@@ -1,0 +1,39 @@
+Statement:
+
+VLOPs/VLOSEs must pay an annual supervisory fee to the Commission once designated under Article 33.
+
+Fee covers costs of Commission’s supervisory tasks (designation, database management, info-sharing systems, referrals, Board support, audits, etc.).
+
+Fee is charged per service designated as a VLOP/VLOSE.
+
+Limits and principles:
+
+Fee must reflect actual supervisory costs.
+
+Amount is proportionate to average monthly active recipients in the EU.
+
+Fee cannot exceed 0.05% of provider’s worldwide net income from the previous financial year.
+
+Process:
+
+Commission sets fee amounts via implementing acts, following methodology in delegated acts.
+
+Delegated acts define methodology for: cost estimation, individual fee calculation, max limit, and payment arrangements.
+
+Revenue use:
+
+Supervisory fees count as external assigned revenue under EU budget law.
+
+Accountability:
+
+Commission must report annually to Parliament & Council on supervisory costs and fees collected.
+
+Context:
+
+Ensures cost recovery for EU oversight of systemic platforms.
+
+Prevents overcharging by capping fees relative to global net income.
+
+Introduces a transparent methodology, with annual reporting for accountability.
+
+Aligns with the principle that biggest platforms (who create highest systemic risks) bear the cost of regulation.

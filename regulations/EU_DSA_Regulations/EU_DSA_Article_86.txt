@@ -1,0 +1,9 @@
+Statement:
+
+Recipients of intermediary services can mandate a body or association to represent their rights under this Regulation, and online platform providers must prioritize processing complaints from such representatives.
+
+Context:
+
+Representation rights: Recipients of intermediary services have the right to authorize a not-for-profit body, organization, or association to represent their rights under this Regulation, provided the organization meets certain conditions, such as operating in accordance with Member State law and having a legitimate interest in ensuring compliance.
+
+Complaint processing: Online platform providers must ensure that complaints submitted by such representatives are processed and decided upon with priority and without unnecessary delays.

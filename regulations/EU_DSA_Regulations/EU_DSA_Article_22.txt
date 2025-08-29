@@ -1,0 +1,45 @@
+Statement:
+
+Online platforms must give priority processing (fast, reliable handling) to notices submitted by trusted flaggers within their expertise.
+
+Trusted flagger status is awarded by the Digital Services Coordinator if the applicant:
+
+Has proven expertise in detecting/identifying illegal content.
+
+Is independent of online platforms.
+
+Acts diligently, accurately, and objectively.
+
+Trusted flaggers must publish annual reports showing:
+
+Number of notices submitted,
+
+Hosting providers concerned,
+
+Types of illegal content notified,
+
+Actions taken by providers.
+
+Explanation of safeguards ensuring independence.
+
+Reports must be sent to the awarding Coordinator and made public (no personal data).
+
+Digital Services Coordinators must notify the Commission and the Board of all trusted flaggers awarded, suspended, or revoked.
+
+The Commission maintains a public EU database of trusted flaggers (updated, machine-readable).
+
+If a trusted flagger submits many poor-quality notices, platforms must inform the Coordinator with evidence → Coordinator can suspend status during investigation.
+
+Coordinator may revoke status if conditions are no longer met, after giving the entity a chance to respond.
+
+The Commission may issue guidelines to help with consistent application.
+
+Context:
+
+Trusted flaggers are specialised, reliable notifiers with priority in content moderation systems.
+
+Designed to improve efficiency of handling illegal content while avoiding abuse of the status.
+
+Safeguards ensure independence, transparency, and accountability.
+
+Oversight is shared between Digital Services Coordinators (award/revoke status) and the Commission (maintains EU-wide registry).

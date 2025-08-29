@@ -1,0 +1,15 @@
+Statement:
+
+The Commission can adopt a non-compliance decision if a provider fails to comply with the Regulation, interim measures, or binding commitments.
+
+Context:
+
+Non-compliance: The Commission can issue a non-compliance decision if the provider does not comply with the Regulation, interim measures (Article 70), or binding commitments (Article 71).
+
+Preliminary findings: Before making the decision, the Commission will communicate its findings to the provider, outlining potential measures the provider should take.
+
+Compliance measures: The decision will require the provider to take necessary measures within a reasonable period to comply and provide information on those measures.
+
+Reporting compliance: The provider must describe the measures taken to ensure compliance after implementing them.
+
+Closing the investigation: If the Commission determines there is no non-compliance, it will close the investigation with an immediate decision.

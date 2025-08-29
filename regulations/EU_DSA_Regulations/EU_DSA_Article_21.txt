@@ -1,0 +1,51 @@
+Statement:
+
+Users (including notifiers) may choose a certified out-of-court dispute settlement body to challenge platform decisions listed in Article 20.
+
+Platforms must make this option clearly visible and accessible on their interface.
+
+Users retain the right to go to court at any time.
+
+Both parties must engage in good faith; platforms may refuse if the same issue was already resolved.
+
+Settlement bodies cannot impose binding decisions.
+
+Certification (by Digital Services Coordinators) is valid for 5 years and renewable, provided the body is:
+
+Impartial and independent (financially too).
+
+Expert in illegal content or platform T&Cs.
+
+Fairly remunerated (not outcome-linked).
+
+Accessible online, with electronic submission of documents.
+
+Swift, efficient, low-cost, and available in at least one EU official language.
+
+Operating with clear, fair, and public procedures.
+
+Certified bodies must:
+
+Publish decisions within 90 days (max 180 days for complex cases).
+
+Report annually to their certifying Coordinator (number of disputes, outcomes, avg. time, difficulties).
+
+Fees: if user wins, platform pays all costs + reimburses user’s expenses. If platform wins, user pays nothing (unless acting in bad faith). For users, access must be free or nominal cost.
+
+Member States may establish or support certified bodies, but certification must remain independent.
+
+Certification may be revoked if conditions are no longer met.
+
+The Commission maintains a public EU-wide list of certified bodies.
+
+Context:
+
+Strengthens redress rights for users against platforms outside courts.
+
+Ensures settlements are voluntary, impartial, and accessible.
+
+Fees are capped and transparency about them is mandatory.
+
+Links with Directive 2013/11/EU (consumer ADR) but tailored for online platform disputes.
+
+Certification and oversight handled by Digital Services Coordinators, ensuring cross-border recognition.

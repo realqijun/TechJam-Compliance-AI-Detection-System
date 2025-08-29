@@ -1,0 +1,27 @@
+Statement:
+
+Platforms must ensure that every advertisement shown to users is clearly identifiable in real time, with at least:
+
+A clear label that it is an advertisement (with prominent markings, possibly under Article 44 standards).
+
+The name of the person/organisation on whose behalf the ad is shown.
+
+The name of the person/organisation who paid for the ad (if different).
+
+Meaningful, easily accessible info on the targeting parameters used to show the ad, and how users can adjust them.
+
+Platforms must provide users a tool to declare if their content is commercial.
+
+When declared, other users must see a clear real-time label that the content is a commercial communication.
+
+Platforms are prohibited from showing ads based on profiling using special categories of personal data (Article 9(1) GDPR: e.g., race, religion, political beliefs, health, sexual orientation).
+
+Context:
+
+Reinforces advertising transparency and user awareness of why they see ads.
+
+Extends responsibility to user-generated commercial content, requiring platforms to label it when declared.
+
+Builds on GDPR protections by banning ad targeting that relies on sensitive personal data.
+
+Part of the DSA’s broader framework for trust, safety, and accountability in digital advertising.

@@ -1,0 +1,15 @@
+Statement:
+Providers are not liable for information they transmit if:
+
+They don’t initiate the transmission.
+They don’t choose the recipient.
+They don’t alter the information.
+
+Temporary, automatic storage is allowed if it’s only for transmission purposes and lasts no longer than necessary.
+
+Courts/authorities may still order providers to stop or prevent infringements.
+
+Context:
+Applies to “mere conduit” services → just transmitting information or giving network access (e.g., ISPs, telecom operators).
+Covers technical acts like automatic, intermediate, and transient storage needed for transmission.
+Liability exemption doesn’t stop Member States’ authorities from issuing blocking/removal orders.

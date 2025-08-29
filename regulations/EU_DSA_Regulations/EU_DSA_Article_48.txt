@@ -1,0 +1,37 @@
+Statement:
+
+The Board can recommend that the Commission initiate voluntary crisis protocols for extraordinary public security or public health crises.
+
+The Commission encourages VLOPs, VLOSEs, and other platforms/search engines to participate.
+
+Crisis protocols may include:
+
+Displaying authoritative crisis info (from EU/MS authorities or reliable bodies).
+
+Designating a crisis management point of contact (could be the Art. 11 contact or Art. 41 compliance officer).
+
+Redirecting resources to compliance with Articles 16 (notices), 20 (complaints), 22 (trusted flaggers), 23 (misuse), 35 (risk mitigation) during crises.
+
+Protocols must clearly set:
+
+Parameters defining the crisis & objectives.
+
+Roles/measures of participants (before & after activation).
+
+Activation/deactivation procedures (duration strictly limited to necessity).
+
+Safeguards for fundamental rights (freedom of expression, non-discrimination).
+
+A reporting process on measures, duration, and outcomes once crisis ends.
+
+If a protocol is ineffective or lacks safeguards, the Commission can request revisions.
+
+Context:
+
+Designed for extraordinary circumstances (e.g., pandemics, war, terrorism).
+
+Ensures platforms adapt quickly while protecting fundamental rights.
+
+Builds a voluntary but structured emergency coordination tool involving platforms, Member States, and possibly civil society.
+
+Complements the crisis response mechanism (Art. 36), but here via protocols, not binding Commission decisions.
