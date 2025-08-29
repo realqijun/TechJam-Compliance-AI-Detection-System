@@ -1,0 +1,33 @@
+(a) "Account holder" means a resident who opens an account or creates a profile or is identified by the social media platform by a unique identifier while using or accessing a social media platform when the social media platform knows or has reason to believe the resident is located in this state.
+
+(b) "Daily active users" means the number of unique users in the United States who used the online forum, website, or application at least 80 percent of the days during the previous 12 months, or, if the online forum, website, or application did not exist during the previous 12 months, the number of unique users in the United States who used the online forum, website, or application at least 80 percent of the days during the previous month.
+
+(c) "Department" means the Department of Legal Affairs.
+
+(d) "Resident" means a person who lives in this state for more than 6 months of the year.
+
+(e) "Social media platform" means an online forum, website, or application that satisfies each of the following criteria:
+
+Allows users to upload content or view the content or activity of other users;
+
+Ten percent or more of the daily active users who are younger than 16 years of age spend on average 2 hours per day or longer on the online forum, website, or application on the days when using the online forum, website, or application during the previous 12 months or, if the online forum, website, or application did not exist during the previous 12 months, during the previous month;
+
+Employs algorithms that analyze user data or information on users to select content for users; and
+
+Has any of the following addictive features:
+
+a. Infinite scrolling, which means either:
+
+(I) Continuously loading content, or content that loads as the user scrolls down the page without the need to open a separate page; or
+
+(II) Seamless content, or the use of pages with no visible or apparent end or page breaks.
+
+b. Push notifications or alerts sent by the online forum, website, or application to inform a user about specific activities or events related to the user's account.
+
+c. Displays personal interactive metrics that indicate the number of times other users have clicked a button to indicate their reaction to content or have shared or reposted the content.
+
+d. Auto-play video or video that begins to play without the user first clicking on the video or on a play button for that video.
+
+e. Live-streaming or a function that allows a user or advertiser to broadcast live video content in real-time.
+
+The term does not include an online service, website, or application where the exclusive function is e-mail or direct messaging consisting of text, photographs, pictures, images, or videos shared only between the sender and the recipients, without displaying or posting publicly or to other users not specifically identified as the recipients by the sender.
