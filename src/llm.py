@@ -11,7 +11,6 @@ from datetime import datetime
 import csv
 from dotenv import load_dotenv
 
-
 class ComplianceFlag(Enum):
     REQUIRED = "REQUIRED"
     NOT_REQUIRED = "NOT_REQUIRED"
