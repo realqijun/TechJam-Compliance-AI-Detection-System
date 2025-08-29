@@ -11,7 +11,6 @@ from datetime import datetime
 import csv
 from dotenv import load_dotenv
 
-
 class ComplianceFlag(Enum):
     REQUIRED = "REQUIRED"
     NOT_REQUIRED = "NOT_REQUIRED"
@@ -254,7 +253,7 @@ class LLMCompliancePipeline:
 
 if __name__ == "__main__":
     load_dotenv()
-    client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+    client = OpenAI()
     pipeline = LLMCompliancePipeline(model="gpt-3.5-turbo")
     df = load_data('data/sample_data.csv')
 

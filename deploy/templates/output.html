@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSV Output</title>
+    <script src="https://www.google.com/search?q=https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://www.google.com/search?q=https://fonts.googleapis.com/css2%3Ffamily%3DInter:wght%40400%3B500%3B600%3B700%26display%3Dswap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .dataframe {
+        border-collapse: collapse;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        width: 100%;
+        overflow-x: auto;
+      }
+      .dataframe th,
+      .dataframe td {
+        padding: 0.75rem 1rem;
+        text-align: left;
+        white-space: nowrap;
+      }
+      .dataframe thead th {
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        background-color: #e5e7eb;
+        color: #4b5563;
+        border-bottom: 2px solid #d1d5db;
+      }
+      .dataframe tbody tr {
+        border-bottom: 1px solid #e5e7eb;
+      }
+      .dataframe tbody tr:nth-child(even) {
+        background-color: #f9fafb;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 p-8">
+    <div class="bg-white p-8 rounded-xl shadow-lg w-full max-w-4xl mx-auto">
+      <div class="flex items-center justify-between mb-6">
+        <h1 class="text-3xl font-bold text-gray-800">CSV File Contents</h1>
+        <a
+          href="/"
+          class="px-4 py-2 text-sm font-semibold text-white bg-gray-500 rounded-full shadow-sm hover:bg-gray-600 transition-colors duration-200"
+        >
+          &larr; Back to Dashboard
+        </a>
+      </div>
+
+      <div class="overflow-x-auto rounded-lg border border-gray-200">
+        {{ table_data | safe }}
+      </div>
+    </div>
+  </body>
+</html>
