@@ -1,0 +1,57 @@
+Statement:
+
+VLOPs/VLOSEs must provide data access to:
+
+Digital Services Coordinator (DSC) of establishment or the Commission, when requested, for monitoring DSA compliance.
+
+Vetted researchers (via DSC) for research on systemic risks (Art. 34) and assessment of mitigation measures (Art. 35).
+
+Providers must also explain their algorithmic systems (design, logic, functioning, testing) on request.
+
+Data must be accessible through appropriate interfaces (e.g., APIs, databases).
+
+Researchers can apply for “vetted researcher” status if they:
+
+Are affiliated with a recognised research organisation,
+
+Independent from commercial interests,
+
+Disclose funding,
+
+Ensure security, confidentiality, and GDPR compliance,
+
+Show necessity and proportionality of data access,
+
+Commit to making results publicly available free of charge,
+
+Focus research on systemic risks under Art. 34.
+
+Providers may request to amend access requests if:
+
+They lack the data, or
+
+Providing it risks security/confidentiality (e.g., trade secrets).
+
+DSCs can terminate access if vetted researchers no longer meet conditions.
+
+DSCs must share vetted researcher details with the Board.
+
+Providers must allow general researcher access (not only vetted) to publicly available real-time data, if certain safeguards are met.
+
+The Commission will issue delegated acts specifying:
+
+Technical conditions for data sharing,
+
+Permissible purposes of use,
+
+Safeguards for confidentiality, trade secrets, and security.
+
+Context:
+
+Ensures regulators and researchers have oversight of VLOPs/VLOSEs to detect systemic risks like disinformation, manipulation, or algorithmic harms.
+
+Balances transparency with safeguards: data access must protect privacy, security, and trade secrets.
+
+Establishes a dual access channel: (1) regulators and Commission for compliance, (2) vetted researchers for systemic risk studies.
+
+Provides flexibility via delegated acts, ensuring rules evolve with tech and risks.

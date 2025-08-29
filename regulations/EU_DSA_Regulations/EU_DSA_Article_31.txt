@@ -1,0 +1,35 @@
+Statement:
+
+Platforms enabling consumer-trader distance contracts must design their interfaces to allow traders to comply with EU rules on:
+
+Pre-contractual information,
+
+Product safety,
+
+Product compliance.
+
+Interfaces must let traders provide:
+
+Economic operator’s contact details (as defined in Regulation (EU) 2019/1020).
+
+Clear identification of products/services offered.
+
+Trader identifiers (e.g., trademark, logo).
+
+Labelling/marking information required under EU product safety and compliance law.
+
+Platforms must:
+
+Make best efforts to check traders provide required info before products/services go online.
+
+After listing, make reasonable efforts to randomly verify, via official free databases, whether products/services have been flagged as illegal.
+
+Context:
+
+Ensures compliance is embedded in the platform’s design (“compliance by design”) rather than left to traders alone.
+
+Protects consumers by ensuring key product and trader details are always available.
+
+Supports product safety enforcement across the EU digital single market.
+
+Shifts part of the responsibility for safe and transparent trading to online platforms themselves.

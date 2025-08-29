@@ -1,0 +1,21 @@
+Statement:
+
+Providers must set up a single point of contact so that recipients (users) can communicate directly and quickly with them.
+
+Communication must be:
+
+Electronic,
+
+User-friendly,
+
+Not limited to automated tools (must allow choice of methods).
+
+Providers must publish clear, up-to-date contact information for users to easily find and use.
+
+Context:
+
+Complements obligations under the e-Commerce Directive (2000/31/EC).
+
+Ensures users can reach providers for issues such as complaints, disputes, or clarifications.
+
+Transparency and accessibility are emphasized — info must be public, simple, and updated.

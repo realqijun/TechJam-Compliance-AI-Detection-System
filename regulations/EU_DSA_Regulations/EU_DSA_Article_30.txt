@@ -1,0 +1,45 @@
+Statement:
+
+Online platforms enabling consumer-trader contracts must ensure traders provide key identification details before selling/promoting to EU consumers, including:
+
+Name, address, phone, email.
+
+Copy of ID or electronic identification (Regulation (EU) 910/2014).
+
+Payment account details.
+
+Trade register details (if applicable).
+
+Self-certification to only offer products/services compliant with EU law.
+
+Platforms must:
+
+Verify the reliability of trader information using official databases or supporting documents.
+
+For existing traders (as of 17 Feb 2024), obtain info within 12 months — otherwise suspend services.
+
+Suspend services if trader info is inaccurate, incomplete, or outdated and not corrected.
+
+Traders may complain against suspension/refusal via Articles 20 & 21.
+
+Platforms must store trader data securely for 6 months after contract ends, then delete.
+
+Disclosure of trader data is only allowed when required by law (e.g., Article 10 orders, competent authority requests).
+
+Platforms must make publicly available to consumers:
+
+Trader’s name,
+
+Trade register details,
+
+Trader’s self-certification of EU law compliance.
+
+Context:
+
+Strengthens consumer protection and product safety in online marketplaces.
+
+Ensures only traceable, accountable traders can sell through platforms.
+
+Helps authorities and consumers verify trader legitimacy.
+
+Supports enforcement by tying platform obligations to due diligence in trader onboarding.

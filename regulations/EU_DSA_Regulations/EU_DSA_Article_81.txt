@@ -1,0 +1,7 @@
+Statement:
+
+The Court of Justice of the European Union has unlimited jurisdiction to review decisions imposing fines or periodic penalty payments by the Commission.
+
+Context:
+
+Review by the Court: In accordance with Article 261 TFEU, the Court can review Commission decisions imposing fines or penalties, with the authority to cancel, reduce, or increase the imposed amounts.

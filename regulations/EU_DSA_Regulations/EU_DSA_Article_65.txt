@@ -1,0 +1,25 @@
+Statement:
+
+The Commission can investigate VLOPs/VLOSEs’ compliance with the DSA, using its investigatory powers even before formal proceedings.
+
+Investigations can be started on the Commission’s initiative or following a Digital Services Coordinator (DSC) request.
+
+If a DSC suspects systemic infringement affecting service recipients in its Member State, it may send a request to the Commission via the EU info-sharing system (Art. 85).
+
+Such a request must be reasoned and include:
+
+The provider’s point of contact (per Art. 11).
+
+Description of facts, provisions breached, and justification showing the infringement is systemic.
+
+Any additional relevant information collected, including evidence from the DSC’s own initiative.
+
+Context:
+
+Provides a clear escalation mechanism: local DSCs can flag systemic issues to the Commission for Union-level enforcement.
+
+Focuses on serious or systemic infringements by VLOPs/VLOSEs (e.g., repeated breaches, large-scale user harm).
+
+Reinforces the Commission’s role as primary enforcer for very large platforms/search engines.
+
+Ensures cross-border issues are not handled in isolation but elevated to EU-level supervision.

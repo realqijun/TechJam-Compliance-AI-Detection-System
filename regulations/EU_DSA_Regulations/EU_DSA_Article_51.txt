@@ -1,0 +1,17 @@
+Statement:
+
+Digital Services Coordinators have powers for investigation, enforcement, and remedying infringements, including inspections, fines, periodic penalties, and even restricting access to services in cases of serious harm.
+
+Context:
+
+Investigative powers: Digital Services Coordinators can require providers and other relevant persons to provide information, conduct inspections, and ask staff for explanations regarding suspected infringements.
+
+Enforcement powers: They can accept commitments, order cessation of infringements, impose fines or periodic penalty payments, and adopt interim measures or request national judicial authorities to do so.
+
+Action in case of continuing infringements: When an infringement persists and causes serious harm, Digital Services Coordinators can require providers to submit an action plan, request temporary restrictions on access to services, and extend the restriction period if necessary.
+
+Proportionality: All measures taken must be effective, dissuasive, and proportionate to the nature, gravity, recurrence, and duration of the infringement.
+
+Safeguards: Measures must comply with national laws ensuring rights to privacy, defense, judicial review, and the Charter of Fundamental Rights.
+
+National rules: Member States must establish specific rules and procedures for the exercise of these powers while ensuring compliance with EU law principles.

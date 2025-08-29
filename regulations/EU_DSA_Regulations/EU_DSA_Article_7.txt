@@ -1,0 +1,15 @@
+Statement:
+
+Providers do not lose liability exemptions (from Articles 4–6) if they:
+
+Voluntarily investigate or act to detect/remove/disable illegal content.
+
+Take necessary measures to comply with EU or national law.
+
+Context:
+
+Encourages providers to act proactively against illegal content without fear of losing legal protections.
+
+Protection applies only if actions are taken in good faith and diligently.
+
+Links directly back to Articles 4 (mere conduit), 5 (caching), and 6 (hosting) liability exemptions.

@@ -1,0 +1,11 @@
+Statement:
+
+Digital Services Coordinators must carry out their tasks independently, transparently, and impartially, with sufficient resources to supervise providers effectively.
+
+Context:
+
+Resources and autonomy: Member States must ensure that Digital Services Coordinators have the necessary technical, financial, and human resources to supervise providers of intermediary services and maintain sufficient budget autonomy to preserve their independence.
+
+Independence: Digital Services Coordinators must perform their duties with complete independence, free from external influence or instructions from public authorities or private parties.
+
+Judicial review and accountability: While the Digital Services Coordinators must remain independent, they are subject to judicial review and proportional accountability, such as financial reporting, as long as these do not interfere with their regulatory duties or the objectives of the Regulation.

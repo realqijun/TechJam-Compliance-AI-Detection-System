@@ -1,0 +1,13 @@
+Statement:
+
+The Digital Services Coordinator of establishment can lead joint investigations with other Coordinators to address alleged infringements, with cooperation and defined timelines for reporting findings.
+
+Context:
+
+Initiating joint investigations: The Digital Services Coordinator of establishment can lead joint investigations either on its own initiative or upon the recommendation of the Board, when at least three other Digital Services Coordinators suspect an infringement affecting recipients across multiple Member States.
+
+Participation and timeline: Any Digital Services Coordinator with a legitimate interest may participate in a joint investigation. The investigation must be concluded within three months unless agreed otherwise, and the Coordinator of establishment must communicate its preliminary position within one month after the investigation deadline.
+
+Referral to the Commission: If the Coordinator of establishment fails to communicate its preliminary position, if there is substantial disagreement, or if the investigation is not initiated promptly, the matter may be referred to the Commission (Article 59).
+
+Cooperation in investigations: Participating Coordinators must cooperate in good faith, following the recommendations of the Digital Services Coordinator of establishment and the Board. Coordinators of destination can use their investigative powers for information and premises within their territory.
