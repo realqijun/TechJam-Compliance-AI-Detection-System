@@ -1,0 +1,4 @@
+Statement: Failure To Report.—A provider that knowingly and willfully fails to make a report required under subsection (a)(1) shall be fined—
+
+(1)in the case of an initial knowing and willful failure to make a report, not more than $850,000 in the case of a provider with not less than 100,000,000 monthly active users or $600,000 in the case of a provider with less than 100,000,000 monthly active users; and
+(2)in the case of any second or subsequent knowing and willful failure to make a report, not more than $1,000,000 in the case of a provider with not less than 100,000,000 monthly active users or $850,000 in the case of a provider with less than 100,000,000 monthly active users.
