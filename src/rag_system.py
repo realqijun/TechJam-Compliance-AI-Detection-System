@@ -94,22 +94,59 @@ US_reporting_child_sexual_abuse_collection = client.get_or_create_collection(nam
 # sample query
 # Sample feature-based queries against all regulation collections
 
-def query_all_collections(query_text: str, top_k: int = 3):
-    collections = {
+# def query_all_collections(query_text: str, top_k: int = 3):
+#     collections = {
+#         "CS_CS_HB_3": CS_CS_HB_3_collection,
+#         "EU_DSA_Regulations": EU_DSA_Regulations_collection,
+#         "SB976_POKSMAA": SB976_POKSMAA_collection,
+#         "UTAH_SocialMediaRegulation": UTAH_SocialMediaRegulation_collection,
+#         "US_reporting_child_sexual_abuse": US_reporting_child_sexual_abuse_collection,
+#     }
+#     results = {}
+#     for name, coll in collections.items():
+#         try:
+#             res = coll.query(query_texts=[query_text], n_results=top_k)
+#             results[name] = [
+#                 {
+#                     "doc_snippet": doc if doc else "",
+#                     "source": meta.get("source") if meta else None,
+#                     "distance": dist,
+#                 }
+#                 for doc, meta, dist in zip(
+#                     res.get("documents", [[]])[0],
+#                     res.get("metadatas", [[]])[0],
+#                     res.get("distances", [[]])[0],
+#                 )
+#             ]
+#         except Exception as e:
+#             results[name] = [{"error": str(e)}]
+#     return results
+
+def query_collections(collection_names: list[str], query_text: str, top_k: int = 5):
+    collections_map = {
         "CS_CS_HB_3": CS_CS_HB_3_collection,
         "EU_DSA_Regulations": EU_DSA_Regulations_collection,
         "SB976_POKSMAA": SB976_POKSMAA_collection,
         "UTAH_SocialMediaRegulation": UTAH_SocialMediaRegulation_collection,
         "US_reporting_child_sexual_abuse": US_reporting_child_sexual_abuse_collection,
     }
+
+    # If no list provided (empty), default to all collections
+    if not collection_names:
+        collection_names = list(collections_map.keys())
+
     results = {}
-    for name, coll in collections.items():
+    for name in collection_names:
+        collection = collections_map.get(name)
+        if not collection:
+            results[name] = [{"error": "Collection not found"}]
+            continue
         try:
-            res = coll.query(query_texts=[query_text], n_results=top_k)
-            results[name] = [
+            res = collection.query(query_texts=[query_text], n_results=top_k)
+            hits = [
                 {
                     "doc_snippet": doc if doc else "",
-                    "source": meta.get("source") if meta else None,
+                    "source": (meta or {}).get("source"),
                     "distance": dist,
                 }
                 for doc, meta, dist in zip(
@@ -118,6 +155,7 @@ def query_all_collections(query_text: str, top_k: int = 3):
                     res.get("distances", [[]])[0],
                 )
             ]
+            results[name] = hits
         except Exception as e:
             results[name] = [{"error": str(e)}]
     return results
