@@ -9,169 +9,186 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <style>
-      body {
-        font-family: "Roboto", sans-serif;
-        font-optical-sizing: auto;
-        font-style: normal;
-      }
-      .dataframe th,
-      .dataframe td {
+      body { font-family: "Roboto", sans-serif; }
+      .dataframe th, .dataframe td {
         border: 1px solid #e2e8f0;
         padding: 12px;
         text-align: left;
         max-width: 250px;
         overflow-wrap: break-word;
       }
-      .dataframe th {
-        background-color: #f1f5f9;
-        font-weight: 600;
-        text-transform: uppercase;
-        color: #1f2937;
-      }
-      .dataframe tbody tr {
-        border-bottom: 1px solid #e2e8f0;
-      }
-      .dataframe tbody tr:nth-child(even) {
-        background-color: #f8fafc;
-      }
-      .clickable-cell {
-        cursor: pointer;
-        transition: background-color 0.2s;
-      }
-      .clickable-cell:hover {
-        background-color: #e2e8f0;
-      }
+      .dataframe th { background-color: #f1f5f9; font-weight: 600; text-transform: uppercase; color: #1f2937; }
+      .dataframe tbody tr:nth-child(even) { background-color: #f8fafc; }
+      .clickable-cell { cursor: pointer; transition: background-color 0.2s; }
+      .clickable-cell:hover { background-color: #e2e8f0; }
     </style>
   </head>
   <body class="bg-gradient-to-br from-gray-50 to-gray-200 flex flex-col items-center p-6 min-h-screen">
     <div class="bg-white p-10 rounded-2xl shadow-2xl w-full max-w-6xl border border-gray-100">
       <div class="flex items-center gap-3 mb-8">
-        <h1 class="text-4xl font-extrabold text-gray-900 tracking-tight flex-1">
-          Analysis Results
-        </h1>
-        <a
-          href="/?tab=upload"
-          class="px-5 py-3 text-lg font-semibold text-white bg-blue-600 rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-200"
-        >
+        <h1 class="text-4xl font-extrabold text-gray-900 tracking-tight flex-1">Analysis Results</h1>
+        <a href="/?tab=upload"
+          class="px-5 py-3 text-lg font-semibold text-white bg-blue-600 rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-200">
           ← Upload CSV
         </a>
-        <a
-          href="/?tab=single"
-          class="px-5 py-3 text-lg font-semibold text-white bg-emerald-600 rounded-full shadow-lg hover:bg-emerald-700 transition-colors duration-200"
-        >
+        <a href="/?tab=single"
+          class="px-5 py-3 text-lg font-semibold text-white bg-emerald-600 rounded-full shadow-lg hover:bg-emerald-700 transition-colors duration-200">
           Single Feature →
         </a>
       </div>
-
 
       <div class="overflow-x-auto rounded-xl border border-gray-200 shadow-md">
         {{ table_data | safe }}
       </div>
 
       <div class="flex justify-center mt-8">
-        <button
-          id="downloadCsvBtn"
-          class="px-6 py-3 text-lg font-semibold text-blue-600 bg-white rounded-full shadow-lg border-2 border-blue-600 hover:bg-blue-50 transition-colors duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-        >
+        <button id="downloadCsvBtn"
+          class="px-6 py-3 text-lg font-semibold text-blue-600 bg-white rounded-full shadow-lg border-2 border-blue-600 hover:bg-blue-50 transition-colors duration-200">
           Download CSV
         </button>
       </div>
     </div>
 
-    <!-- Side Panel / Modal to show full results -->
-    <div id="fullContentPanel" class="fixed right-0 top-0 h-full w-0 bg-white shadow-xl z-50 overflow-y-auto transform translate-x-full transition-transform duration-300 ease-in-out p-6">
+    <!-- Side Panel for editing reasoning -->
+    <div id="fullContentPanel"
+      class="fixed right-0 top-0 h-full w-0 bg-white shadow-xl z-50 overflow-y-auto transform translate-x-full transition-transform duration-300 ease-in-out p-6">
       <div class="flex justify-between items-center pb-4 border-b border-gray-200">
-        <h2 class="text-2xl font-bold text-gray-800">Compliance reasoning</h2>
+        <h2 class="text-2xl font-bold text-gray-800">Edit Reasoning</h2>
         <button id="closePanelBtn" class="text-gray-500 hover:text-gray-700 focus:outline-none">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
       </div>
-      <p id="panelContent" class="mt-4 text-gray-700 whitespace-pre-wrap"></p>
+      <textarea id="reasonEditor"
+        class="w-full h-48 border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-blue-500 focus:outline-none mt-4"></textarea>
+      <div class="flex items-center justify-end gap-2 mt-4">
+        <button id="cancelEdit" class="px-4 py-2 rounded-full bg-gray-200 text-gray-800">Cancel</button>
+        <button id="saveEdit" class="px-4 py-2 rounded-full bg-blue-600 text-white">Save</button>
+      </div>
     </div>
 
     <script>
       const panel = document.getElementById('fullContentPanel');
-      const panelContent = document.getElementById('panelContent');
+      const reasonEditor = document.getElementById('reasonEditor');
       const closeBtn = document.getElementById('closePanelBtn');
       const table = document.querySelector('.dataframe');
       const downloadBtn = document.getElementById('downloadCsvBtn');
+      let currentCell = null;
 
-      // Function to truncate text
       function truncateText(text, maxLength) {
-        if (text.length > maxLength) {
-          return text.substring(0, maxLength) + '...';
-        }
-        return text;
+        return text.length > maxLength ? text.substring(0, maxLength) + '...' : text;
       }
-
-      // Function to escape string for CSV
       function escapeCsv(text) {
-        if (text.includes(',') || text.includes('"') || text.includes('\n')) {
-          return '"' + text.replace(/"/g, '""') + '"';
-        }
+        if (text.includes(',') || text.includes('"') || text.includes('\n')) return '"' + text.replace(/"/g, '""') + '"';
         return text;
       }
+      // normalize header text
+      function norm(s) { return (s || '').toLowerCase().replace(/[^a-z0-9]/g, ''); }
+      // fuzzy match header
+      function getHeaderIndexFuzzy(key) {
+        if (!table) return -1;
+        const headers = table.querySelectorAll('thead th');
+        const k = norm(key);
+        for (let i = 0; i < headers.length; i++) {
+          const h = norm(headers[i].textContent.trim());
+          if (h.includes(k)) return i;
+        }
+        return -1;
+      }
+      // extract first number in a string
+      function firstNumber(text) {
+        const m = (text || '').match(/-?\d+(?:\.\d+)?/);
+        return m ? parseFloat(m[0]) : NaN;
+      }
 
-      if (table) {
-        table.addEventListener('click', (event) => {
-          const cell = event.target.closest('td');
-          if (cell && cell.classList.contains('clickable-cell')) {
-            const content = cell.dataset.fullText || cell.textContent.trim();
-            panelContent.textContent = content;
-            panel.style.width = '400px';
-            panel.style.transform = 'translateX(0)';
+      document.addEventListener('DOMContentLoaded', () => {
+        if (!table) return;
+
+        // find confidence column
+        let confIdx = getHeaderIndexFuzzy('confidence_score');
+        if (confIdx === -1) confIdx = getHeaderIndexFuzzy('confidence score');
+        if (confIdx === -1) confIdx = getHeaderIndexFuzzy('confidence');
+
+        let reasoningIdx = getHeaderIndexFuzzy('reasoning');
+
+        const rows = table.querySelectorAll('tbody tr');
+        rows.forEach((row) => {
+          // IMPORTANT: include both <th> (index cell) and <td> to align with headers
+          const cells = row.querySelectorAll('th, td');
+
+          // LOW CONFIDENCE OR NaN → highlight
+          if (confIdx >= 0 && confIdx < cells.length) {
+            const confCell = cells[confIdx];
+            const conf = firstNumber(confCell.textContent);
+            if (isNaN(conf) || conf < 0.6) {
+              row.classList.add('ring-2', 'ring-amber-400', 'bg-yellow-50');
+              const firstCell = cells[0];
+              const badge = document.createElement('span');
+              badge.className = 'inline-block ml-2 text-xs font-semibold px-2 py-0.5 rounded-full bg-amber-500 text-white';
+              badge.textContent = 'NEEDS REVIEW';
+              firstCell.appendChild(badge);
+            }
+          }
+
+          // Reasoning cell editable
+          if (reasoningIdx >= 0 && reasoningIdx < cells.length) {
+            const c = cells[reasoningIdx];
+            const originalText = c.textContent.trim();
+            c.classList.add('clickable-cell');
+            c.dataset.fullText = originalText;
+            if (originalText.length > 100) c.textContent = truncateText(originalText, 100);
           }
         });
-      }
 
+        // open editor (click on any clickable cell)
+        table.addEventListener('click', (event) => {
+          const cell = event.target.closest('td, th');
+          if (!cell || !cell.classList.contains('clickable-cell')) return;
+          currentCell = cell;
+          reasonEditor.value = cell.dataset.fullText || cell.textContent.trim();
+          panel.style.width = '420px';
+          panel.style.transform = 'translateX(0)';
+        });
+      });
+
+      // panel controls
+      document.getElementById('cancelEdit').addEventListener('click', () => {
+        panel.style.transform = 'translateX(100%)';
+      });
+      document.getElementById('saveEdit').addEventListener('click', () => {
+        if (!currentCell) return;
+        const newText = reasonEditor.value.trim();
+        currentCell.dataset.fullText = newText;
+        currentCell.textContent = newText.length > 100 ? newText.slice(0, 100) + '...' : newText;
+        panel.style.transform = 'translateX(100%)';
+      });
       closeBtn.addEventListener('click', () => {
         panel.style.transform = 'translateX(100%)';
       });
-
-      // Close panel when clicking outside
       document.addEventListener('click', (event) => {
         if (!panel.contains(event.target) && !table.contains(event.target) && panel.style.transform === 'translateX(0px)') {
           panel.style.transform = 'translateX(100%)';
         }
       });
 
-      // Add clickable class to specific cells and truncate text
-      document.addEventListener('DOMContentLoaded', () => {
-        const tableCells = document.querySelectorAll('.dataframe td');
-        tableCells.forEach(cell => {
-          const headerIndex = Array.from(cell.parentNode.cells).indexOf(cell);
-          const header = table.querySelector('thead th:nth-child(' + (headerIndex + 1) + ')');
-          if (header && (header.textContent.toLowerCase().includes('reasoning') || header.textContent.toLowerCase().includes('description'))) {
-            cell.classList.add('clickable-cell');
-            const originalText = cell.textContent.trim();
-            if (originalText.length > 100) {
-              cell.dataset.fullText = originalText;
-              cell.textContent = truncateText(originalText, 100);
-            }
-          }
-        });
-      });
-
-      // Function to handle CSV download
-      function downloadTableAsCsv() {
+      // Download CSV (with edits). Include index column by reading <th, td>
+      downloadBtn.addEventListener('click', () => {
         const rows = document.querySelectorAll('.dataframe tr');
         let csv = [];
 
-        // Get headers
         const headerCells = rows[0].querySelectorAll('th');
         let headers = Array.from(headerCells).map(th => escapeCsv(th.textContent.trim()));
         csv.push(headers.join(','));
 
-        // Get rows
         for (let i = 1; i < rows.length; i++) {
           const row = rows[i];
-          const cells = row.querySelectorAll('td');
+          const cells = row.querySelectorAll('th, td'); // include index
           let rowData = Array.from(cells).map(cell => {
-            // Use the full text from the data attribute if available
-            const content = cell.dataset.fullText || cell.textContent.trim();
-            return escapeCsv(content);
+            if (cell.classList.contains('clickable-cell')) {
+              return escapeCsv(cell.dataset.fullText || cell.textContent.trim());
+            }
+            return escapeCsv(cell.textContent.trim());
           });
           csv.push(rowData.join(','));
         }
@@ -184,9 +201,7 @@
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
-      }
-
-      downloadBtn.addEventListener('click', downloadTableAsCsv);
+      });
     </script>
   </body>
 </html>

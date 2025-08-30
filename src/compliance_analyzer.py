@@ -10,7 +10,7 @@ class LLMCompliancePipeline:
         """Initialize the pipeline with an LLM provider."""
         self.llm_provider = llm_provider
         self.domain_knowledge = DomainKnowledge()
-        ##self.regulations = load_regulations(location=location)
+        # self.regulations = load_regulations(location=location)
         self.regulations = load_regulations_by_directory()
 
     def filter_relevant_regulation_dirs(self, feature_name: str, feature_description: str) -> dict:
@@ -86,7 +86,6 @@ class LLMCompliancePipeline:
         """Analyze a single feature for compliance requirements."""
         prompt = self.create_compliance_prompt(
             feature_name, feature_description)
-        input()
         try:
             response_obj = self.llm_provider.generate_json_response(prompt)
             result_json = json.loads(response_obj)
