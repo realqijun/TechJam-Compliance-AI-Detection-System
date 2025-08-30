@@ -1,0 +1,4 @@
+A commercial entity that knowingly and intentionally publishes or distributes material harmful to minors on a website or application, if the website or application contains a substantial portion of material harmful to minors, must use either anonymous age verification or standard age verification to verify that the age of a person attempting to access the material is 18 years of age or older and prevent access to the material by a person younger than 18 years of age.
+
+The commercial entity must offer anonymous age verification and standard age verification, and a person attempting to access the material may select which method will be used to verify his or her age.
+

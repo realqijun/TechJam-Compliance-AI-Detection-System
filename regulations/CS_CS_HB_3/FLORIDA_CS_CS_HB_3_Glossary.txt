@@ -1,0 +1,54 @@
+(a) "Account holder" means a resident who opens an account or creates a profile or is identified by the social media platform by a unique identifier while using or accessing a social media platform when the social media platform knows or has reason to believe the resident is located in this state.
+
+(b) "Daily active users" means the number of unique users in the United States who used the online forum, website, or application at least 80 percent of the days during the previous 12 months, or, if the online forum, website, or application did not exist during the previous 12 months, the number of unique users in the United States who used the online forum, website, or application at least 80 percent of the days during the previous month.
+
+(c) "Department" means the Department of Legal Affairs.
+
+(d) "Resident" means a person who lives in this state for more than 6 months of the year.
+
+(e) "Social media platform" means an online forum, website, or application that satisfies each of the following criteria:
+    - Allows users to upload content or view the content or activity of other users;
+    - Ten percent or more of the daily active users who are younger than 16 years of age spend on average 2 hours per day or longer on the online forum, website, or application on the days when using the online forum, website, or application during the previous 12 months or, if the online forum, website, or application did not exist during the previous 12 months, during the previous month;
+    - Employs algorithms that analyze user data or information on users to select content for users; and
+    - Has any of the following addictive features:
+        (i) Infinite scrolling, which means either:
+            (I) Continuously loading content, or content that loads as the user scrolls down the page without the need to open a separate page; or
+            (II) Seamless content, or the use of pages with no visible or apparent end or page breaks.
+        (ii) Push notifications or alerts sent by the online forum, website, or application to inform a user about specific activities or events related to the user's account.
+        (iii) Displays personal interactive metrics that indicate the number of times other users have clicked a button to indicate their reaction to content or have shared or reposted the content.
+        (iv) Auto-play video or video that begins to play without the user first clicking on the video or on a play button for that video.
+        (v) Live-streaming or a function that allows a user or advertiser to broadcast live video content in real-time.
+    - The term does not include an online service, website, or application where the exclusive function is e-mail or direct messaging consisting of text, photographs, pictures, images, or videos shared only between the sender and the recipients, without displaying or posting publicly or to other users not specifically identified as the recipients by the sender.
+
+(f) "Commercial entity" includes a corporation, a limited liability company, a partnership, a limited partnership, a sole proprietorship, and any other legally recognized entity.
+
+(g) "Distribute" means to issue, sell, give, provide, deliver, transfer, transmit, circulate, or disseminate by any means.
+
+(h) "Material harmful to minors" means any material that:
+    1. The average person applying contemporary community standards would find, taken as a whole, appeals to the prurient interest;
+    2. Depicts or describes, in a patently offensive way, sexual conduct as specifically defined in s. 847.001(19); and
+    3. When taken as a whole, lacks serious literary, artistic, political, or scientific value for minors.
+
+(i) "News-gathering organization" means any of the following:
+    1. A newspaper, news publication, or news source, printed or published online or on a mobile platform, engaged in reporting current news and matters of public interest, and an employee thereof who can provide documentation of such employment.
+    2. A radio broadcast station, television broadcast station, cable television operator, or wire service, and an employee thereof who can provide documentation of such employment.
+
+(j) "Publish" means to communicate or make information available to another person or entity on a publicly available website or application.
+
+(k) "Resident" means a person who lives in this state for more than 6 months of the year.
+
+(l) "Standard age verification" means any commercially reasonable method of age verification approved by the commercial entity.
+
+(m) "Substantial portion" means more than 33.3 percent of total material on a website or application.
+
+(n) As used in this section, the term "anonymous age verification" means a commercially reasonable method used by a government agency or a business for the purpose of age verification which is conducted by a nongovernmental, independent third party organized under the laws of a state of the United States which:
+    (a) Has its principal place of business in a state of the United States; and
+    (b) Is not owned or controlled by a company formed in a foreign country, a government of a foreign country, or any other entity formed in a foreign country.
+
+(o) A third party conducting anonymous age verification pursuant to this section:
+    (a) May not retain personal identifying information used to verify age once the age of an account holder or a person seeking an account has been verified.
+    (b) May not use personal identifying information used to verify age for any other purpose.
+
+(p) Must keep anonymous any personal identifying information used to verify age. Such information may not be shared or otherwise communicated to any person.
+
+(q) Must protect personal identifying information used to verify age from unauthorized or illegal access, destruction, use, modification, or disclosure through reasonable security procedures and practices appropriate to the nature of the personal information.
