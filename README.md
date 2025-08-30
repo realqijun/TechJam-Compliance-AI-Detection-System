@@ -1,5 +1,5 @@
 # GeoRegulator
-**An AI-powered Compliance Checker for Software Features**
+**An AI-powered Compliance Checker for Software Features** <br>
 This project is a submission for TikTok's TechJam 2025 Hackathon.
 
 ## Problem Statement ❔
@@ -14,16 +14,12 @@ The system's key features include:
  - Mitigated Regulatory Exposure: The system minimizes legal and financial risks by helping teams identify and address compliance gaps before a feature is launched. 
  - Transparency: The auditable evidence trail streamlines communication and provides clear documentation for regulatory inquiries and audits.
 
----
-
 ## The team:
 1. Leader: [Chew Jia Hui, Bryan](https://github.com/bryanjhc)
 2. [Chew En Rui, Samuel](https://github.com/Monochromas)
 3. [Leonardo Wolf](https://github.com/leowolf275)
 4. [Yashvan Alagirisamy](https://github.com/YashvanGH)
 5. [Ang Qi Jun](https://github.com/realqijun)
-
----
 
 ## Getting Started 🚀
 
