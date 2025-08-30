@@ -1,15 +1,11 @@
 # GeoRegulator
-
-## About
-GeoRegulator is a **Compliance Checker** powered by **AI**. Focusing on development features with support for preset terminologies. This project relies heavily on social media regulations from across the world. 
+**An AI-powered Compliance Checker for Software Features**
 This project is a submission for TikTok's TechJam 2025 Hackathon.
 
-## Problem Statement
-The goal of this project is to build a prototype system that uses LLM capabilities to flag features that require geo-specific compliance logic. Our solution transforms regulatory detection from a blind spot into a traceable, auditable output. By doing so, we aim to empower teams at companies like TikTok to proactively implement legal safeguards before a feature launches, generate auditable evidence of regulatory screening, and confidently respond to regulatory inquiries.
+## Problem Statement ❔
+The goal of this project is to build a prototype system that uses LLM capabilities to flag features that require geo-specific compliance logic. Our solution transforms regulatory detection from a blind spot into a traceable, auditable output, empowering teams to proactively implement legal safeguards and confidently respond to regulatory inquiries.
 
---- 
-
-## Core Functionality
+## Core Functionality 💪
 GeoRegulator is a sophisticated Compliance Checker powered by a large language model. It's designed to analyze software feature artifacts—such as titles and descriptions—and automatically determine if they require geo-specific compliance.
 The system's key features include:
  - Automated Compliance Analysis: Our core LLM pipeline analyzes feature descriptions against a provided knowledge base of regulations to flag potential compliance requirements.
@@ -29,20 +25,24 @@ The system's key features include:
 
 ---
 
-## How to run
-1. Create a API Key either from [Google AI Studio](https://aistudio.google.com/) or [OpenAI](https://platform.openai.com/docs/api-reference/project-api-keys).
-2. Clone the project onto your machine.
-3. Create a `.env` file in the root directory of the project and insert your API Key.
-4. Create and source your own Python Virtual Environment or use your system's global environment instead.
-5. Run `pip install -r requirement.txt`.
-6. Edit the code in main.py to use your preference of AI models, then insert your feature list(in csv format) into the data/ folder.
-7. Run `python main.py`.
-8. View the results in compliance_results_yyyymmdd_hhmmss.csv.
+## Getting Started 🚀
 
----
-
-## Specifications
+### Prerequisites
  - Python 3.9 or above
+ - An API Key from either [Google AI Studio](https://aistudio.google.com/) or [OpenAI](https://platform.openai.com/docs/api-reference/project-api-keys).
+
+### Installation
+
+1. Clone the project onto your machine: <br> `git clone https://github.com/bryanjhc/georegulator.git`
+2. Navigate to the project directory: <br> `cd georegulator`
+3. Create and activate a Python virtual environment.
+4. Install the required libraries: <br> `pip install -r requirements.txt`
+5. Create a `.env` file in the root directory and add your API key: <br> `GOOGLE_API_KEY="your_api_key_here"` <br> or <br> `OPENAI_API_KEY="your_api_key_here"`
+
+### How to Run
+1. Insert your feature list (in CSV format with `feature_name` and `feature_description` columns) into the `data/` folder.
+2. Run the application: <br> `python main.py`
+The results will be generated in a CSV file in the `uploads/` folder with a timestamped filename (e.g., `compliance_results_yyyymmdd_hhmmss.csv`).
 
 ---
 
