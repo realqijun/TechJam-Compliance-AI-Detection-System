@@ -1,21 +1,60 @@
 import json
 import re
 from typing import List
-from .data_handler import ComplianceFlag, ComplianceResult, DomainKnowledge, load_regulations
+from .data_handler import ComplianceFlag, ComplianceResult, DomainKnowledge, load_regulations_by_directory
 from .llm import LLMProvider
 
 
 class LLMCompliancePipeline:
-    def __init__(self, llm_provider: LLMProvider):
+    def __init__(self, llm_provider: LLMProvider, location: str | None = None):
         """Initialize the pipeline with an LLM provider."""
         self.llm_provider = llm_provider
         self.domain_knowledge = DomainKnowledge()
-        self.regulations = load_regulations()
+        ##self.regulations = load_regulations(location=location)
+        self.regulations = load_regulations_by_directory()
+
+    def filter_relevant_regulation_dirs(self, feature_name: str, feature_description: str) -> dict:
+        """
+        Uses the LLM to determine whether a feature is worth checking against each regulation directory.
+        Returns a dict of {directory: {"check_regulation": bool, "reasoning": str}}.
+        """
+        decisions = {}
+        for directory, data in self.regulations.items():
+            context = data["context"]
+            prompt = (
+                f"You are a legal analyst helping prioritize which regulations to check for a feature.\n\n"
+                f"--- Regulation Context ---\n"
+                f"{context}\n\n"
+                f"--- Feature to Analyze ---\n"
+                f"Name: {feature_name}\n"
+                f"Description: {feature_description}\n\n"
+                f"QUESTION: Should this feature be checked against the regulation context above?\n"
+                f"Only answer YES if the context clearly relates to the feature. If uncertain, say NO.\n\n"
+                f"Respond in the following JSON format:\n"
+                f"{{\n"
+                f"  \"check_regulation\": true|false,\n"
+                f"  \"reasoning\": \"Short explanation of why or why not.\"\n"
+                f"}}"
+            )
+            try:
+                response = self.llm_provider.generate_json_response(prompt)
+                parsed = json.loads(response)
+                decisions[directory] = {
+                    "check_regulation": bool(parsed.get("check_regulation", False)),
+                    "reasoning": parsed.get("reasoning", "No reasoning provided.")
+                }
+            except Exception as e:
+                decisions[directory] = {
+                    "check_regulation": False,
+                    "reasoning": f"LLM call failed: {str(e)}"
+                }
+        return decisions
 
     def create_compliance_prompt(self, feature_name: str, feature_description: str) -> str:
         """
         Creates the prompt for the LLM based on the feature data and loaded regulations.
         """
+        
         regulations_text = "\n\n".join([
             f"--- Regulation from file: {file_path} ---\n{content}"
             for file_path, content in self.regulations.items()
@@ -47,6 +86,7 @@ class LLMCompliancePipeline:
         """Analyze a single feature for compliance requirements."""
         prompt = self.create_compliance_prompt(
             feature_name, feature_description)
+        input()
         try:
             response_obj = self.llm_provider.generate_json_response(prompt)
             result_json = json.loads(response_obj)
@@ -81,6 +121,7 @@ class LLMCompliancePipeline:
             feature_name = row['feature_name']
             feature_description = row['feature_description']
             print(f"[{idx+1}/{len(df)}] Analyzing: {feature_name}")
+            regulationfiles = []
             result = self.analyze_feature(feature_name, feature_description)
             results.append(result)
         return results
