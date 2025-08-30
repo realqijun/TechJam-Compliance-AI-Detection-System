@@ -31,6 +31,7 @@ class ComplianceResult:
     reasoning: str
     related_regulations: list[str]
     geo_regions: list[str]
+    source_file: str  # Added from previous conversation
 
     def to_dict(self) -> dict:
         """Convert to dictionary for CSV export"""
@@ -40,7 +41,8 @@ class ComplianceResult:
             'confidence_score': self.confidence_score,
             'reasoning': self.reasoning,
             'related_regulations': '; '.join(self.related_regulations),
-            'geo_regions': '; '.join(self.geo_regions)
+            'geo_regions': '; '.join(self.geo_regions),
+            'source_file': self.source_file
         }
 
 
@@ -120,6 +122,29 @@ def generate_csv_output(results: list[ComplianceResult], output_path: str):
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writeheader()
         writer.writerows([r.to_dict() for r in results])
+
+
+def load_regulations(base_path: str = 'regulations') -> Dict[str, str]:
+    """
+    Recursively loads all .txt files from the regulations directory.
+    Returns a dictionary mapping the file path to its content.
+    """
+    regulations_data = {}
+    if not os.path.exists(base_path):
+        print(f"Warning: Regulations directory not found at '{base_path}'.")
+        return regulations_data
+
+    for dirpath, _, filenames in os.walk(base_path):
+        for filename in filenames:
+            if filename.endswith('.txt'):
+                file_path = os.path.join(dirpath, filename)
+                try:
+                    with open(file_path, 'r', encoding='utf-8') as f:
+                        content = f.read()
+                        regulations_data[file_path] = content
+                except Exception as e:
+                    print(f"Error reading file '{file_path}': {e}")
+    return regulations_data
 
 
 if __name__ == "__main__":

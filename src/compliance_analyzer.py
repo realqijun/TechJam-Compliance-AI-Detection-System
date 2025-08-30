@@ -1,7 +1,7 @@
 import json
 import re
 from typing import List
-from data_handler import ComplianceFlag, ComplianceResult, DomainKnowledge
+from data_handler import ComplianceFlag, ComplianceResult, DomainKnowledge, load_regulations
 from llm import LLMProvider
 
 
@@ -10,53 +10,76 @@ class LLMCompliancePipeline:
         """Initialize the pipeline with an LLM provider."""
         self.llm_provider = llm_provider
         self.domain_knowledge = DomainKnowledge()
+        self.regulations = load_regulations()
 
     def create_compliance_prompt(self, feature_name: str, feature_description: str) -> str:
-        """Create the LLM prompt for compliance detection."""
-        translated_description = self.domain_knowledge.translate_description(
-            feature_description)
-        regulations_str = '\n'.join([
-            f"- {name}" for name in self.domain_knowledge.REGULATIONS.keys()
+        """
+        Creates the prompt for the LLM based on the feature data and loaded regulations.
+        """
+        regulations_text = "\n\n".join([
+            f"--- Regulation from file: {file_path} ---\n{content}"
+            for file_path, content in self.regulations.items()
         ])
 
-        prompt = f"""
-        You are a compliance expert analyzing features for geo-specific legal requirements.
-        
-        FEATURE TO ANALYZE:
-        Name: {feature_name}
-        Description: {translated_description}
-
-        REGULATIONS TO CONSIDER:
-        {regulations_str}
-
-        ANALYSIS CRITERIA:
-        - REQUIRED: Feature explicitly implements region-specific legal compliance (e.g., "Utah minors", "California teens", "EU DSA").
-        - NOT_REQUIRED: Feature is business-driven, global testing, or general safety without legal mandate.
-        - UNCERTAIN: Unclear intention, ambiguous regional restrictions, or missing context.
-
-        Your task:
-        1. Determine if this feature requires geo-specific compliance logic.
-        2. Provide clear reasoning based on the provided text.
-        3. List relevant regulations (if any) and target geographic regions.
-        4. Assign a confidence score (0.0-1.0) for your analysis.
-
-        Respond in this exact JSON format. Do not include any other text.
-        {{
-            "compliance_flag": "REQUIRED|NOT_REQUIRED|UNCERTAIN",
-            "confidence_score": 0.0-1.0,
-            "reasoning": "Clear explanation of your decision",
-            "related_regulations": ["regulation1", "regulation2"],
-            "geo_regions": ["region1", "region2"]
-        }}
-        """
-        return prompt.strip()
+        return (
+            f"You are a compliance expert. Analyze the following software feature against the provided regulations.\n"
+            f"Identify if the feature is compliant, non-compliant, or uncertain.\n"
+            f"If it's compliant or non-compliant, you MUST state the exact file path from the provided regulations that supports your conclusion.\n\n"
+            f"--- Regulations to reference ---\n"
+            f"{regulations_text}\n\n"
+            f"--- Feature to analyze ---\n"
+            f"Feature Name: {feature_name}\n"
+            f"Description: {feature_description}\n\n"
+            f"Respond with a JSON object containing the following keys:\n"
+            f"1. `compliance_flag`: 'compliant', 'non-compliant', or 'uncertain'\n"
+            f"2. `confidence_score`: A float from 0.0 to 1.0\n"
+            f"3. `reasoning`: A brief explanation for the flag and confidence score.\n"
+            f"4. `related_regulations`: An array of relevant regulations (e.g., ['GDPR', 'CCPA']).\n"
+            f"5. `geo_regions`: An array of geographic regions affected (e.g., ['EU', 'US']).\n"
+            f"6. `source_file`: The full path of the regulation file that directly supports your finding.\n\n"
+            f"Example response:\n"
+            f"```json\n"
+            f"{{ \"compliance_flag\": \"compliant\", \"confidence_score\": 0.9, \"reasoning\": \"The feature uses data anonymization.\", \"related_regulations\": [\"HIPAA\"], \"geo_regions\": [\"US\"], \"source_file\": \"regulations/HIPAA/hipaa_privacy_rule.txt\" }}\n"
+            f"```\n"
+        )
 
     def analyze_feature(self, feature_name: str, feature_description: str) -> ComplianceResult:
         """Analyze a single feature for compliance requirements."""
         prompt = self.create_compliance_prompt(
             feature_name, feature_description)
         try:
-            result_json_str = self.llm_provider.generate_json_response(prompt)
+            # Use the mock provider to get a fake response
+            response_obj = self.llm_provider.generate_full_response(prompt)
+
+            # Check for a valid response object and candidate
+            if not response_obj.get("candidates"):
+                raise ValueError("No candidates returned from LLM.")
+
+            candidate = response_obj["candidates"][0]
+
+            # Check for specific failure reasons like MAX_TOKENS or safety blocks
+            if candidate.get("finish_reason") != "STOP":
+                reason = f"LLM generation failed due to {candidate.get('finish_reason')}"
+                return ComplianceResult(
+                    feature_name=feature_name,
+                    compliance_flag=ComplianceFlag.UNCERTAIN,
+                    confidence_score=0.0,
+                    reasoning=reason,
+                    related_regulations=[],
+                    geo_regions=[],
+                    source_file="N/A"
+                )
+
+            # Check if the content part is empty
+            if not candidate.get("content") or not candidate["content"].get("parts"):
+                raise ValueError("LLM returned an empty content part.")
+
+            # Extract text from the response parts
+            result_json_str = candidate["content"]["parts"][0].get("text")
+
+            if not result_json_str:
+                raise ValueError("LLM returned an empty text string.")
+
             result_json = json.loads(result_json_str)
 
             return ComplianceResult(
@@ -65,7 +88,8 @@ class LLMCompliancePipeline:
                 confidence_score=float(result_json["confidence_score"]),
                 reasoning=result_json["reasoning"],
                 related_regulations=result_json.get("related_regulations", []),
-                geo_regions=result_json.get("geo_regions", [])
+                geo_regions=result_json.get("geo_regions", []),
+                source_file=result_json.get("source_file", "N/A")
             )
         except Exception as e:
             print(f"Error analyzing '{feature_name}': {e}")
@@ -75,7 +99,8 @@ class LLMCompliancePipeline:
                 confidence_score=0.0,
                 reasoning=f"Analysis failed: {str(e)}",
                 related_regulations=[],
-                geo_regions=[]
+                geo_regions=[],
+                source_file="N/A"
             )
 
     def process_dataset(self, df) -> List[ComplianceResult]:
