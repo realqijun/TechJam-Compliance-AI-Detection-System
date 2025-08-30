@@ -1,0 +1,17 @@
+Statement:
+
+Most obligations in this Section do not apply to online platforms that are micro or small enterprises (as defined in Recommendation 2003/361/EC).
+
+Exclusion also applies for 12 months after losing micro/small status, unless the platform is designated a very large online platform (VLOP) under Article 33.
+
+Exception: Article 24(3) still applies to all platforms, regardless of size.
+
+VLOPs must comply with all obligations, even if they qualify as micro or small enterprises.
+
+Context:
+
+Provides regulatory relief to smaller companies to avoid disproportionate burden.
+
+Ensures obligations scale with size and impact: small businesses get lighter rules, but VLOPs remain fully accountable due to systemic influence.
+
+Recommendation 2003/361/EC defines micro (<10 employees, turnover/balance sheet ≤ €2M) and small (<50 employees, turnover/balance sheet ≤ €10M) enterprises.

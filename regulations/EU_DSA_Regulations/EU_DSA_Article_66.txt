@@ -1,0 +1,15 @@
+Statement:
+
+The Commission can initiate proceedings against a provider of a very large online platform or search engine suspected of violating the Regulation, and Digital Services Coordinators must cooperate in the investigation.
+
+Context:
+
+Initiation of proceedings: The Commission may start proceedings under Articles 73 and 74 if a provider is suspected of infringing the Regulation.
+
+Notification: Upon initiating proceedings, the Commission must notify Digital Services Coordinators, the Board, and the concerned provider.
+
+Information sharing: Digital Services Coordinators must provide the Commission with any relevant information about the infringement.
+
+Loss of powers: The initiation of proceedings removes the Digital Services Coordinator’s enforcement powers under Article 56(4).
+
+Cooperation: Digital Services Coordinators and other competent authorities must assist the Commission in investigations, including using their investigative powers under Article 51(1).

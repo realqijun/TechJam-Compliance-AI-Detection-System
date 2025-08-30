@@ -1,0 +1,39 @@
+Hosting providers must give a clear, specific statement of reasons to affected users whenever they restrict content or accounts because it is illegal or against their terms.
+
+Applies to restrictions such as:
+
+Removal, disabling access, demotion, or other visibility limits.
+
+Suspension/termination of payments.
+
+Suspension/termination of service (partially or fully).
+
+Suspension/termination of a user account.
+
+The statement must include:
+
+Type of restriction (e.g., removal, suspension) + scope + duration.
+
+Facts and circumstances for the decision (including whether it was based on a notice under Article 16 or provider’s own checks; notifier’s identity only if strictly necessary).
+
+Whether automated tools were used.
+
+Legal grounds (for illegal content cases).
+
+Contractual grounds (for T&C violations).
+
+Information on available redress mechanisms (complaints, out-of-court settlement, judicial review).
+
+Statements must be clear, specific, and comprehensible, allowing users to properly exercise redress rights.
+
+Context:
+
+Obligation applies only if the provider knows the user’s contact details.
+
+Must be provided at the time of restriction or earlier.
+
+Exemption: does not apply to deceptive, high-volume commercial spam.
+
+This Article does not cover formal orders from authorities (Article 9).
+
+Designed to ensure transparency, fairness, and user rights in moderation decisions.

@@ -1,0 +1,25 @@
+Statement:
+
+If a platform enabling consumer-trader distance contracts becomes aware that an illegal product or service was offered through its service, it must:
+
+Inform affected consumers (where contact details are available) that:
+
+The product/service is illegal,
+
+The trader’s identity,
+
+Available redress options.
+
+Obligation applies only to purchases made within the last 6 months before the platform became aware.
+
+If the platform does not have consumer contact details, it must instead publish the information publicly and accessibly on its interface.
+
+Context:
+
+Strengthens consumer protection and transparency by ensuring buyers are informed if they purchased something illegal.
+
+Balances obligation with feasibility — applies only within 6 months and only if contact details are available.
+
+Public disclosure ensures wider consumer awareness when direct communication isn’t possible.
+
+Complements Article 30 (traceability of traders) and Article 31 (compliance by design) by closing the loop when illegality is detected post-sale.

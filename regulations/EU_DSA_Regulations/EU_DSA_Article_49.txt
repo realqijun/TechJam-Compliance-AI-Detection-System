@@ -1,0 +1,15 @@
+Statement:
+
+Member States must designate competent authorities and a Digital Services Coordinator responsible for supervising and enforcing the Regulation, with cooperation between authorities at the national and Union levels.
+
+Context:
+
+Competent authorities: Member States are required to designate one or more competent authorities to oversee providers of intermediary services and enforce the Regulation.
+
+Digital Services Coordinator: One competent authority must be designated as the Digital Services Coordinator, responsible for national supervision and coordination, while cooperating with other authorities, the Board, and the Commission.
+
+Cooperation and task allocation: If multiple competent authorities are designated, their tasks must be clearly defined, and close cooperation must be ensured between them and the Digital Services Coordinator.
+
+Public designation: Member States must designate their Digital Services Coordinator by February 17, 2024, and make this information publicly available to the Commission and the Board.
+
+Application of provisions: The provisions applicable to Digital Services Coordinators also apply to other competent authorities designated by the Member States.

@@ -1,0 +1,39 @@
+Statement:
+
+Online platforms must suspend services (for a reasonable period, after warning) to:
+
+Users who frequently provide manifestly illegal content.
+
+Individuals/entities who frequently submit manifestly unfounded notices or complaints.
+
+Suspensions must be decided case by case, based on:
+
+Number of illegal/unfounded submissions,
+
+Proportion relative to total submissions,
+
+Gravity of the misuse and its consequences,
+
+Intention of the user/notifier (where identifiable).
+
+Platforms must publish in their terms and conditions:
+
+Their misuse policy,
+
+Examples of misuse,
+
+Suspension durations.
+
+Context:
+
+Balances user rights with platform protection against abuse of systems.
+
+Misuse includes both:
+
+Uploading illegal content,
+
+Misusing notice-and-action or complaint mechanisms.
+
+Safeguards require fair assessment: suspensions must be objective, diligent, and not arbitrary.
+
+Transparency through T&Cs ensures predictability and deterrence.

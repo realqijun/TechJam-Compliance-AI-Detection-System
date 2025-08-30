@@ -1,0 +1,51 @@
+Statement:
+
+VLOPs/VLOSEs must publish transparency reports:
+
+First report due 2 months after designation (Art. 33(6)),
+
+Then every 6 months.
+
+Reports must include:
+
+Content moderation resources – number of staff dedicated in the Union, broken down by official language, including for compliance with Arts. 16, 20, and 22.
+
+Qualifications & language expertise of moderators, plus training/support.
+
+Accuracy indicators of automated systems, broken down by language.
+
+Average monthly active recipients per Member State (Art. 24(2) reference).
+
+Providers must also send to DSC & Commission (and make public within 3 months):
+
+Risk assessment results (Art. 34),
+
+Risk mitigation measures (Art. 35(1)),
+
+Audit report (Art. 37(4)),
+
+Audit implementation report (Art. 37(6)),
+
+Consultations carried out in support of risk assessments & mitigation design.
+
+Providers may withhold public disclosure of sensitive parts if it risks:
+
+Revealing confidential info,
+
+Undermining service/public security,
+
+Harming recipients.
+
+In such cases: must still transmit complete reports to DSC & Commission, with a justification for removals.
+
+Context:
+
+Extends general transparency rules (Art. 15) with granular obligations for systemic platforms.
+
+Focus on staffing, qualifications, and accuracy metrics provides visibility into moderation quality.
+
+Biannual reporting ensures continuous oversight.
+
+Confidentiality safeguards balance transparency with security and trade secret protection.
+
+Links together key systemic oversight tools: risk assessment, mitigation, audits, and transparency.

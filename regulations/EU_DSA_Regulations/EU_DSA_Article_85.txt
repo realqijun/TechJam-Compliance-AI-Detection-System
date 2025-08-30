@@ -1,0 +1,11 @@
+Statement:
+
+The Commission will establish an information-sharing system for communication between relevant authorities and may grant access to other competent authorities.
+
+Context:
+
+Information sharing system: The Commission is responsible for setting up a secure system for communication between Digital Services Coordinators, the Commission, and the Board, with possible access for other relevant authorities.
+
+Use of system: All communications under this Regulation must use the information sharing system.
+
+Implementing acts: The Commission will adopt acts detailing the system’s operational and practical arrangements, including interoperability with other systems, following the advisory procedure in Article 88.

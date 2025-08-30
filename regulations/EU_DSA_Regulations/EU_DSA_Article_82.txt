@@ -1,0 +1,13 @@
+Statement:
+
+The Commission can request the Digital Services Coordinator to take action when an infringement persists and causes serious harm, and can cooperate with national courts by submitting observations.
+
+Context:
+
+Request for action: If all Commission powers have been exhausted and an infringement continues causing serious harm, the Commission can request the Digital Services Coordinator to act under Article 51(3).
+
+Invitation for observations: Before requesting action, the Commission must invite interested parties to submit observations within at least 14 working days.
+
+Cooperation with national courts: The Commission may submit written observations to the national judicial authority and, with permission, make oral observations. It may also request necessary documents from the judicial authority.
+
+National court decisions: National courts must not issue decisions that contradict the Commission's decisions under this Regulation, and may assess whether to stay proceedings to avoid conflict. This does not affect the application of Article 267 TFEU.

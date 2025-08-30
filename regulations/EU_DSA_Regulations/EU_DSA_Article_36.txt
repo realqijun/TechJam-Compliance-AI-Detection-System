@@ -1,0 +1,57 @@
+Statement:
+
+In a crisis situation (serious threat to public security or public health in the EU), the Commission, acting on the Board’s recommendation, may order VLOPs/VLOSEs to:
+
+Assess how their services contribute to the threat.
+
+Identify and apply effective, proportionate measures (e.g., mitigation steps under Articles 35 & 48).
+
+Report to the Commission (by a set deadline or regularly) on risk assessments, measures taken, their impact, and related issues.
+
+Measures must consider urgency, seriousness of the threat, and fundamental rights under the Charter.
+
+Commission decisions must be:
+
+Necessary, justified, and proportionate,
+
+Limited to max 3 months,
+
+With clear deadlines for providers to act.
+
+After adoption, the Commission must:
+
+Notify providers,
+
+Make the decision public,
+
+Inform and consult the Board.
+
+Providers retain discretion to choose the specific measures but must ensure they are effective and proportionate.
+
+Commission monitors compliance via reports and other data; if measures are ineffective, it may require providers to review them.
+
+Decisions may later be amended to:
+
+Revoke measures (if threat no longer exists),
+
+Extend them (max 3 months more),
+
+Adjust them for fundamental rights concerns.
+
+Commission must report:
+
+Regularly to the Board (monthly at least),
+
+Annually to Parliament & Council,
+
+And within 3 months after a crisis ends.
+
+Context:
+
+Provides a temporary emergency tool for the EU to address crises (e.g., pandemics, wars, disinformation threats).
+
+Balances swift intervention with safeguards for fundamental rights and proportionality.
+
+Ensures transparency (public publication + reporting) and oversight by both the Board and EU political institutions.
+
+Specific measures are chosen by providers, but under strict Commission oversight.

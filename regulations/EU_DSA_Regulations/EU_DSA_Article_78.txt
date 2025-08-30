@@ -1,0 +1,11 @@
+Statement:
+
+The Commission has five years to enforce penalties, with the period subject to interruptions and suspensions under certain conditions.
+
+Context:
+
+Limitation period: The Commission has five years to enforce penalties, starting from the day the decision becomes final.
+
+Interruption of limitation: The period is interrupted by actions such as modifying the fine, refusing a variation request, or enforcement actions by the Commission or a Member State at the Commission's request.
+
+Suspension of limitation: The limitation period is suspended during time allowed for payment or if enforcement is suspended by the Court of Justice of the European Union or a national court’s decision.

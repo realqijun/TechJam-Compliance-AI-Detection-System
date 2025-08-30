@@ -1,0 +1,43 @@
+Statement:
+
+Providers must comply with authority orders to hand over specific information about individual recipients of their service.
+
+Providers must inform the issuing authority (or specified authority) without undue delay about receipt of the order and when it was carried out.
+
+Orders must:
+
+Cite the legal basis.
+
+Identify the issuing authority.
+
+Clearly identify the recipient(s) (e.g., account name, ID).
+
+Explain why the information is necessary and proportionate (unless secrecy is needed for criminal cases).
+
+State available redress mechanisms for both providers and users.
+
+Indicate which authority receives compliance updates.
+
+Providers may only be required to supply information they already collected and control.
+
+Orders must be sent to the provider’s electronic contact point in a declared/agreed language (translation required if not).
+
+Digital Services Coordinators must circulate orders to other Member States through the EU system.
+
+Providers must also inform the affected recipient, including:
+
+Reasons for the order.
+
+Redress options available.
+
+National civil and criminal procedural laws remain unaffected.
+
+Context:
+
+Applies to judicial or administrative orders under EU/national law.
+
+Covers situations like identifying user accounts, verifying compliance, or investigations.
+
+Ensures balance: information can be requested, but must be targeted, lawful, and proportionate.
+
+Reinforces cooperation across Member States via Digital Services Coordinators.

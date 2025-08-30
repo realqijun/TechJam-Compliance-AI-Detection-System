@@ -1,0 +1,14 @@
+Statement: Preservation.—
+
+(1)In general.—
+For the purposes of this section, a completed submission by a provider of a report to the CyberTipline under subsection (a)(1) shall be treated as a request to preserve the contents provided in the report for 1 year after the submission to the CyberTipline.
+(2)Preservation of commingled content.—
+Pursuant to paragraph (1), a provider shall preserve any visual depictions, data, or other digital files that are reasonably accessible and may provide context or additional information about the reported material or person.
+(3)Protection of preserved materials.—
+A provider preserving materials under this section shall maintain the materials in a secure location and take appropriate steps to limit access by agents or employees of the service to the materials to that access necessary to comply with the requirements of this subsection.
+(4)Authorities and duties not affected.—
+Nothing in this section shall be construed as replacing, amending, or otherwise interfering with the authorities and duties under section 2703.
+(5)Extension of preservation.—
+A provider of a report to the CyberTipline under subsection (a)(1) may voluntarily preserve the contents provided in the report (including any comingled content described in paragraph (2)) for longer than 1 year after the submission to the CyberTipline for the purpose of reducing the proliferation of online child sexual exploitation or preventing the online sexual exploitation of children.
+(6)Method of preservation.—
+Not later than 1 year after the date of enactment of this paragraph, a provider of a report to the CyberTipline under subsection (a)(1) shall preserve materials under this subsection in a manner that is consistent with the most recent version of the Cybersecurity Framework developed by the National Institute of Standards and Technology, or any successor thereto.

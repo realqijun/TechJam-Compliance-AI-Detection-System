@@ -1,0 +1,41 @@
+Statement:
+
+VLOPs and VLOSEs presenting ads must maintain a publicly accessible ad repository that is:
+
+Searchable, reliable, supports multi-criteria queries, and available via APIs.
+
+Contains ad information for the full display period + 1 year after the ad last appeared.
+
+Must not contain personal data of ad recipients, and providers must ensure accuracy and completeness.
+
+Repository must include at least:
+
+Content of the ad (product, service, brand, subject).
+
+Advertiser (on whose behalf the ad is shown).
+
+Payer (if different from advertiser).
+
+Ad run period.
+
+Targeting information (main parameters for inclusion/exclusion of groups).
+
+Declared commercial communications (per Article 26(2)).
+
+Reach data: total number of recipients, with Member State breakdown if targeted.
+
+If an ad is removed/disabled for illegality or terms violation, the repository must instead include:
+
+A transparency record (Article 17(3)(a)–(e) or Article 9(2)(a)(i), as applicable), not the original ad content or advertiser details.
+
+The Commission may issue guidelines (after consulting the Board, vetted researchers, and the public) on repository structure, organisation, and functionality.
+
+Context:
+
+Strengthens baseline ad transparency rules (Article 26) with systemic obligations for VLOPs/VLOSEs.
+
+Ensures public, researchers, and regulators can scrutinise online ads, their targeting, funding, and reach.
+
+Addresses risks of manipulative or hidden political/issue-based ads by requiring structured, queryable, and long-term accessible data.
+
+Helps monitor compliance with illegal content and disinformation rules.

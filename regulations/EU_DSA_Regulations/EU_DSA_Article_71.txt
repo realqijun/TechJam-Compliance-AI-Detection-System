@@ -1,0 +1,11 @@
+Statement:
+
+The Commission can accept commitments from a provider of a very large online platform or search engine to ensure compliance, and make those commitments binding.
+
+Context:
+
+Commitments: The Commission can make commitments offered by a provider binding and end further action if the provider ensures compliance with the Regulation.
+
+Reopening proceedings: The Commission can reopen proceedings if there is a material change in facts, the provider fails to meet commitments, or if the decision was based on incorrect or misleading information.
+
+Rejection of commitments: If the Commission determines that the commitments do not ensure compliance, it can reject them in a reasoned decision.

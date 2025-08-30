@@ -1,0 +1,27 @@
+Statement:
+
+Providers must set up a single electronic point of contact for communication with:
+
+Member States’ authorities,
+
+The European Commission,
+
+The European Board for Digital Services (Article 61).
+
+Providers must:
+
+Publish clear, up-to-date contact information, easy to find.
+
+Indicate which official languages can be used to communicate with them.
+
+Ensure at least one language is an official language of the Member State where they are established (or where their legal representative resides).
+
+Context:
+
+Ensures direct, efficient communication between platforms and regulators.
+
+Transparency requirement: contact info must be public and accessible.
+
+Language rule: one broadly understood EU language (e.g., English, French, German) + at least one local Member State language.
+
+Supports enforcement and cooperation under the DSA by making providers more reachable.

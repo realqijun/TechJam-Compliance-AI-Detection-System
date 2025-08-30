@@ -1,0 +1,35 @@
+Statement:
+
+Hosting providers must set up easy-to-use electronic mechanisms for individuals or entities to notify them about specific illegal content.
+
+Notices must include:
+
+Explanation of why the content is illegal.
+
+Exact location (e.g., URL) + any needed details.
+
+Name and email of notifier (except for serious criminal offences under Directive 2011/93/EU).
+
+Statement confirming notifier’s good faith belief in accuracy.
+
+Valid notices = create actual knowledge/awareness under Article 6.
+
+Providers must:
+
+Send acknowledgement of receipt (if contact info provided).
+
+Inform notifier of their decision and available redress options.
+
+Process notices timely, diligently, objectively, non-arbitrarily.
+
+If automated tools are used, this must be disclosed in the notification.
+
+Context:
+
+Establishes the core process for notice-and-action: turning reports of illegal content into provider obligations.
+
+Ensures procedural fairness and transparency for both notifiers and affected users.
+
+Aligns liability rules (Article 6) with clear standards of what constitutes “knowledge” of illegality.
+
+Balances automation with requirements of human oversight and transparency.

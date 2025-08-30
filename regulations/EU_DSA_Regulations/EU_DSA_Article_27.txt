@@ -1,0 +1,29 @@
+Statement:
+
+Platforms using recommender systems must clearly explain in their terms and conditions:
+
+The main parameters used by the system, in plain and understandable language.
+
+The options available to users to modify or influence those parameters.
+
+Main parameters must at least cover:
+
+The key criteria determining suggested content.
+
+The reasons for the importance of each parameter.
+
+If multiple recommender options exist, platforms must provide users with a direct, easy-to-access functionality to:
+
+Select their preferred option.
+
+Modify it at any time from the section where content is prioritised.
+
+Context:
+
+Recommender systems = algorithms that prioritise or suggest content (e.g., news feeds, video recommendations).
+
+Transparency ensures users understand why content is suggested and can influence recommendation settings.
+
+User empowerment: provides choice and control over personalised content exposure.
+
+Part of the DSA’s wider goal of limiting opaque algorithmic influence and dark patterns.

@@ -1,0 +1,19 @@
+Statement:
+
+Platforms accessible to minors must implement appropriate, proportionate measures to ensure a high level of privacy, safety, and security for minors.
+
+Platforms must not show ads based on profiling (GDPR Article 4(4)) using personal data when they know with reasonable certainty that the user is a minor.
+
+Platforms are not required to collect extra personal data just to determine if a user is a minor.
+
+The Commission may issue guidelines to support compliance.
+
+Context:
+
+Strengthens child protection online, limiting profiling and targeted ads toward minors.
+
+Balances protection with data minimisation principles — platforms cannot justify more intrusive data collection to check user age.
+
+Reflects wider EU focus on child safety in digital spaces while preserving fundamental rights.
+
+Commission guidelines (after consulting the Board) will help clarify best practices.

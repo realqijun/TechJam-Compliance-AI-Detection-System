@@ -1,0 +1,25 @@
+Statement:
+
+Providers without an EU establishment but offering services in the EU must appoint a legal representative in one Member State where services are offered.
+
+The representative:
+
+Acts as the contact point for EU authorities, the Commission, and the Board.
+
+Must have the power and resources to cooperate efficiently and comply with decisions.
+
+Can be held liable for non-compliance, in addition to the provider itself.
+
+Providers must notify the Digital Services Coordinator of the representative’s details (name, address, email, phone).
+
+This information must be public, accessible, accurate, and updated.
+
+Appointment of a representative does not count as an establishment in the EU.
+
+Context:
+
+Ensures that providers outside the EU remain accountable within the Union.
+
+Legal representative serves as the official interface for regulatory and enforcement matters.
+
+Provides authorities with a concrete, reachable contact for compliance, even if the provider is located abroad.
