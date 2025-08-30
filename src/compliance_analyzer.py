@@ -41,26 +41,26 @@ class LLMCompliancePipeline:
         if location is None:
             self.regulations_by_directory = load_regulations_by_directory()
 
-    def filter_and_flatten_files(self, decisions: dict[str, dict[str, any]], regulations: dict[str, dict[str, any]]) -> list[str]:
-        """
-        Filters out regulation directories that are not relevant and returns a flat list of file paths
-        from the remaining directories.
-        self.regulations = load_regulations_by_directory()
-
-        Args:
-            decisions: Output of filter_relevant_regulation_dirs
-            regulations: A copy of the full regulations dictionary
-
-        Returns:
-            A flat list of file paths from directories marked as relevant.
-        """
-        filtered_files = []
-        for directory, decision in decisions.items():
-            if decision.get("check_regulation", False):
-                reg_entry = regulations.get(directory, {})
-                files = reg_entry.get("files", [])
-                filtered_files.extend(files)
-        return filtered_files
+    # def filter_and_flatten_files(self, decisions: dict[str, dict[str, any]], regulations: dict[str, dict[str, any]]) -> list[str]:
+    #     """
+    #     Filters out regulation directories that are not relevant and returns a flat list of file paths
+    #     from the remaining directories.
+    #     self.regulations = load_regulations_by_directory()
+    #
+    #     Args:
+    #         decisions: Output of filter_relevant_regulation_dirs
+    #         regulations: A copy of the full regulations dictionary
+    #
+    #     Returns:
+    #         A flat list of file paths from directories marked as relevant.
+    #     """
+    #     filtered_files = []
+    #     for directory, decision in decisions.items():
+    #         if decision.get("check_regulation", False):
+    #             reg_entry = regulations.get(directory, {})
+    #             files = reg_entry.get("files", [])
+    #             filtered_files.extend(files)
+    #     return filtered_files
 
 ##    def filter_relevant_regulation_dirs(self, feature_name: str, feature_description: str) -> dict:
 ##        """

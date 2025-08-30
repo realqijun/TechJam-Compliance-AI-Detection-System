@@ -24,7 +24,7 @@ The system's key features include:
 ## Getting Started 🚀
 
 ### Prerequisites
- - Python 3.9 or above
+ - Python 3.11 or above
  - An API Key from either [Google AI Studio](https://aistudio.google.com/) or [OpenAI](https://platform.openai.com/docs/api-reference/project-api-keys).
 
 ### Installation

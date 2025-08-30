@@ -19,22 +19,16 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 # Check if the file extension is allowed
-
-
 def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 # Main route for the dashboard and file upload form
-
-
 @app.route('/')
 def index():
     return render_template('index.html')
 
 # Route to handle the file upload
-
-
 @app.route('/upload', methods=['POST'])
 def upload_file():
     # validate
@@ -77,7 +71,6 @@ def upload_file():
             "geo_regions": "; ".join(r.geo_regions),
         } for r in results])
 
-
         # save + render
         ts = datetime.now().strftime("%Y%m%d_%H%M%S")
         out_name = f"compliance_results_{ts}.csv"
@@ -92,10 +85,12 @@ def upload_file():
 
 @app.route('/analyze_one', methods=['POST'])
 def analyze_one():
+    # extract form items
     feature_name = request.form.get('feature_name', '').strip()
     feature_description = request.form.get('feature_description', '').strip()
     location = request.form.get('location', '').strip()
 
+    # redirect to index page if form item is missing
     if not feature_name or not feature_description:
         return redirect(url_for('index') + '?tab=single')
 
