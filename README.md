@@ -14,7 +14,7 @@ As TikTok (and other global platforms) launch features worldwide, every product 
 5. [Ang Qi Jun](https://github.com/realqijun)
 
 ## Core Functionality 
-GeoRegulator is a sophisticated Compliance Checker powered by a large language model. It's designed to analyze software feature artifacts—such as titles and descriptions—and automatically determine if they require geo-specific compliance.
+Geo-Regulator is a sophisticated Compliance Checker powered by a large language model. It's designed to analyze software feature artifacts—such as titles and descriptions—and automatically determine if they require geo-specific compliance.
 The system's key features include:
  - **Dual Input Modes**: 
    - Upload a **CSV of multiple features** (bulk compliance check).
@@ -135,8 +135,8 @@ def translate_description(self, description: str) -> str:
 
 ### Installation
 
-1. Clone the project onto your machine: <br> `git clone https://github.com/bryanjhc/georegulator.git`
-2. Navigate to the project directory: <br> `cd georegulator`
+1. Clone the project onto your machine: <br> `git clone https://github.com/realqijun/TechJam-Compliance-AI-Detection-System`
+2. Navigate to the project directory: <br> `cd TechJam-Compliance-AI-Detection-System`
 3. Create and activate a Python virtual environment.
 4. Install the required libraries: <br> `pip install -r requirements.txt`
 5. Create a `.env` file in the root directory and add your API key: <br> `GOOGLE_API_KEY="your_api_key_here"` <br> or <br> `OPENAI_API_KEY="your_api_key_here"`
