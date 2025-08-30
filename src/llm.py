@@ -2,7 +2,6 @@ from abc import ABC, abstractmethod
 import os
 from openai import OpenAI
 from google import genai
-import json
 from typing import Optional
 
 # interface for LLM providers

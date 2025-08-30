@@ -11,7 +11,6 @@ def main():
     load_dotenv()
     # Initialize LLM Provider
     # Use GeminiProvider or OpenAIProvider
-    
     # llm_provider = OpenAIProvider(model="gpt-4-mini")
     llm_provider = GeminiProvider(model="gemini-2.5-flash")
 

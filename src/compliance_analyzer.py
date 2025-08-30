@@ -270,15 +270,12 @@ class LLMCompliancePipeline:
         """Process the entire dataset."""
         results = []
         print(f"Using LLM: {self.llm_provider.get_model_name()}")
-        print("Processing features for compliance analysis...")
 
         for idx, row in df.iterrows():
             feature_name = row['feature_name']
             feature_description = row['feature_description']
 
             print(f"[{idx+1}/{len(df)}] Analyzing: {feature_name}")
-            ttime = time.time()
             result = self.analyze_feature(feature_name, feature_description)
-            print(time.time()-ttime)
             results.append(result)
         return results
