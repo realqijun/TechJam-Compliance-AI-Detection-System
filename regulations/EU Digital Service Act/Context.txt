@@ -1,0 +1,64 @@
+Article 1 – Subject matter
+Sets out EU-wide rules for intermediary services (e.g., hosting, platforms, search engines).
+
+Main goals:
+
+Create a safe, predictable, trusted online environment.
+
+Protect fundamental rights (freedom of expression, consumer protection, etc.).
+
+Encourage innovation and fair digital markets.
+
+Establishes three things:
+
+Rules for when providers are exempt from liability.
+
+Specific due diligence obligations (different for service types).
+
+Rules for enforcement and authority cooperation.
+
+Article 2 – Scope
+
+Applies to all intermediary services offered in the EU, no matter where the company is based.
+
+Does not apply to:
+
+Services that are not intermediary services.
+
+Obligations aimed at other services, even if delivered through intermediaries.
+
+Doesn’t replace:
+
+e-Commerce Directive (2000/31/EC).
+
+Other EU laws (e.g., consumer protection, copyright, data protection, audiovisual, terrorism content rules, product safety, judicial cooperation).
+
+Article 3 – Key Definitions
+
+Information society service → Any online service provided for payment, at a distance, electronically, on request.
+
+Recipient of the service → Anyone (person or company) using an intermediary service.
+
+Consumer → Individual acting outside business/professional use.
+
+Intermediary services include:
+
+Mere conduit → Just transmitting info (e.g., ISPs).
+
+Caching → Temporary storage to improve efficiency.
+
+Hosting → Storing user-provided info.
+
+Illegal content → Any content, goods, services, or activity that breaks EU/national law.
+
+Online platform → A hosting service that also shares info to the public at user request.
+
+Online search engine → A service letting users search across websites.
+
+Dissemination to the public → Making content available to an unlimited audience.
+
+Recommender system → Automated tool suggesting or ranking content.
+
+Content moderation → Detecting, restricting, or removing illegal or terms-violating content (e.g., removal, shadow banning, demonetisation).
+
+Also defines: trader, distance contract, online interface, active recipient, advertisement, terms & conditions, persons with disabilities, commercial communication, turnover.

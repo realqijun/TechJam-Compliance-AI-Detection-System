@@ -5,6 +5,7 @@ from typing import Dict, Optional
 from dataclasses import dataclass
 from enum import Enum
 import csv
+import fnmatch
 
 
 def load_data(file_path: str) -> pd.DataFrame:
@@ -156,8 +157,63 @@ def load_regulations(base_path: str = 'regulations', location: Optional[str] = N
     return regulations_data
 
 
+def load_regulations_by_directory(base_path: str = 'regulations') -> Dict[str, str]:
+    """
+    Recursively loads all .txt files from the regulations directory.
+    Returns a dictionary mapping the file path to its content.
+    regulations_data = {directory: {context: <context>, files: []}}
+    """
+    regulations_data = {}
+    if not os.path.exists(base_path):
+        print(f"Warning: Regulations directory not found at '{base_path}'.")
+        return regulations_data
+
+
+    if not os.path.exists(base_path):
+        print(f"Warning: Regulations directory not found at '{base_path}'.")
+        return regulations_data
+
+    # Only go one level deep (immediate subdirectories)
+    for entry in os.listdir(base_path):
+        subdir_path = os.path.join(base_path, entry)
+        if os.path.isdir(subdir_path):
+            context_path = os.path.join(subdir_path, 'context.txt')
+            format_path = os.path.join(subdir_path, 'format.txt')
+
+            # Read context
+            try:
+                with open(context_path, 'r', encoding='utf-8') as f:
+                    context = f.read().strip()
+            except Exception as e:
+                print(f"Warning: Could not read context.txt in {entry}: {e}")
+                context = ""
+
+            # Read pattern
+            try:
+                with open(format_path, 'r', encoding='utf-8') as f:
+                    pattern = f.read().strip()
+            except Exception as e:
+                print(f"Warning: Could not read format.txt in {entry}: {e}")
+                pattern = "*.txt"  # fallback to catch-all
+
+            # Match files
+            matched_files = []
+            for file in os.listdir(subdir_path):
+                if fnmatch.fnmatch(file, pattern) and file not in ('context.txt', 'format.txt'):
+                    matched_files.append(file)
+
+            regulations_data[entry] = {
+                "context": context,
+                "files": matched_files
+            }
+    return regulations_data
+
+##regzz = load_regulations_by_directory('..\\regulations')
+
+
 if __name__ == "__main__":
     # run this as a script to test data loading
     df = load_data('data/sample_data.csv')
     if df.empty:
         print("No data loaded. Please check your file path.")
+
