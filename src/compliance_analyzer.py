@@ -20,7 +20,6 @@ class LLMCompliancePipeline:
             f"--- Regulation from file: {file_path} ---\n{content}"
             for file_path, content in self.regulations.items()
         ])
-        print(regulations_text)
 
         return (
             f"You are a compliance expert. Analyze the following software feature against the provided regulations.\n"
