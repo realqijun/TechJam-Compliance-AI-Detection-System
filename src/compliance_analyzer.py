@@ -6,11 +6,11 @@ from .llm import LLMProvider
 
 
 class LLMCompliancePipeline:
-    def __init__(self, llm_provider: LLMProvider):
+    def __init__(self, llm_provider: LLMProvider, location: str | None = None):
         """Initialize the pipeline with an LLM provider."""
         self.llm_provider = llm_provider
         self.domain_knowledge = DomainKnowledge()
-        self.regulations = load_regulations()
+        self.regulations = load_regulations(location=location)
 
     def create_compliance_prompt(self, feature_name: str, feature_description: str) -> str:
         """
