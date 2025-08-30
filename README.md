@@ -13,6 +13,9 @@ As TikTok (and other global platforms) launch features worldwide, every product 
 4. [Yashvan Alagirisamy](https://github.com/YashvanGH)
 5. [Ang Qi Jun](https://github.com/realqijun)
 
+## Demo
+[Youtube](https://youtu.be/nHvO1D0LrgI) Demo
+
 ## Core Functionality 
 Geo-Regulator is a sophisticated Compliance Checker powered by a large language model. It's designed to analyze software feature artifacts—such as titles and descriptions—and automatically determine if they require geo-specific compliance.
 The system's key features include:
