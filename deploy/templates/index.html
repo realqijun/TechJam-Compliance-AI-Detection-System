@@ -32,6 +32,25 @@
       <p class="text-center text-gray-500 mb-8 text-lg">
         Upload a CSV or analyze a single feature to get a compliance assessment.
       </p>
+      
+      <!-- Loading Icon -->
+      <div id="loadingOverlay" class="fixed inset-0 bg-gray-900 bg-opacity-60 hidden z-50 flex flex-col items-center justify-center">
+        <div class="w-16 h-16 border-4 border-blue-400 border-t-transparent rounded-full animate-spin"></div>
+        <p class="text-white text-lg mt-4 font-semibold">Analyzing... Please wait</p>
+      </div>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const forms = document.querySelectorAll('form');
+          const overlay = document.getElementById('loadingOverlay');
+
+          forms.forEach(form => {
+            form.addEventListener('submit', () => {
+              overlay.classList.remove('hidden');
+            });
+          });
+        });
+      </script>
 
       <!-- Tabs -->
       <div class="mb-6 flex gap-2 justify-center">
