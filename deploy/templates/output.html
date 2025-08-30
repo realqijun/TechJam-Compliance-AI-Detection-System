@@ -44,6 +44,15 @@
     </style>
   </head>
   <body class="bg-gradient-to-br from-gray-50 to-gray-200 flex flex-col items-center p-6 min-h-screen">
+
+    <div id="loadingOverlay"
+        class="fixed inset-0 bg-gray-900 bg-opacity-60 hidden z-50
+            flex flex-col items-center justify-center">
+      <div class="w-16 h-16 border-4 border-blue-400 border-t-transparent
+              rounded-full animate-spin"></div>
+      <p class="text-white text-lg mt-4 font-semibold">Preparing download…</p>
+    </div>
+
     <div class="bg-white p-10 rounded-2xl shadow-2xl w-full max-w-6xl border border-gray-100">
       <div class="flex items-center gap-3 mb-8">
         <h1 class="text-4xl font-extrabold text-gray-900 tracking-tight flex-1">
@@ -90,6 +99,19 @@
       </div>
       <p id="panelContent" class="mt-4 text-gray-700 whitespace-pre-wrap"></p>
     </div>
+
+    <!-- Loading Icon -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const overlay = document.getElementById('loadingOverlay');
+        const downloadBtn = document.getElementById('downloadCsvBtn');
+        if (downloadBtn) {
+          downloadBtn.addEventListener('click', () => {
+            overlay.classList.remove('hidden');
+          });
+        }
+      });
+    </script>
 
     <script>
       const panel = document.getElementById('fullContentPanel');
