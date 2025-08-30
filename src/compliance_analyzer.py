@@ -6,11 +6,11 @@ from .llm import LLMProvider
 
 
 class LLMCompliancePipeline:
-    def __init__(self, llm_provider: LLMProvider):
+    def __init__(self, llm_provider: LLMProvider, location: str | None = None):
         """Initialize the pipeline with an LLM provider."""
         self.llm_provider = llm_provider
         self.domain_knowledge = DomainKnowledge()
-        ##self.regulations = load_regulations()
+        ##self.regulations = load_regulations(location=location)
         self.regulations = load_regulations_by_directory()
 
     def filter_relevant_regulation_dirs(self, feature_name: str, feature_description: str) -> dict:
@@ -50,7 +50,7 @@ class LLMCompliancePipeline:
                 }
         return decisions
 
-    def create_compliance_prompt(self, feature_name: str, feature_description: str, regulationfiles: []) -> str:
+    def create_compliance_prompt(self, feature_name: str, feature_description: str) -> str:
         """
         Creates the prompt for the LLM based on the feature data and loaded regulations.
         """
@@ -122,7 +122,6 @@ class LLMCompliancePipeline:
             feature_description = row['feature_description']
             print(f"[{idx+1}/{len(df)}] Analyzing: {feature_name}")
             regulationfiles = []
-            for i in decisions:
             result = self.analyze_feature(feature_name, feature_description)
             results.append(result)
         return results

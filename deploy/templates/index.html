@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Compliance Analyzer</title>
-    
+
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- import roboto font from google fonts -->
+    <!-- Roboto font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,67 +15,157 @@
       rel="stylesheet"
     />
 
-    <!-- Font: roboto, button: styled with tailwind -->
     <style>
-      body {
-        font-family: "Roboto", sans-serif;
-        font-optical-sizing: auto;
-        font-style: normal;
-      }
+      body { font-family: "Roboto", sans-serif; font-optical-sizing: auto; font-style: normal; }
       input[type="file"]::file-selector-button {
         @apply mr-4 py-2 px-4 rounded-full border-0 text-sm font-semibold bg-blue-50 text-blue-700 hover:bg-blue-100 cursor-pointer transition-colors duration-200;
       }
+      .tab-active { @apply bg-blue-600 text-white; }
+      .tab-inactive { @apply bg-gray-200 text-gray-800; }
     </style>
   </head>
-  <body
-    class="bg-gradient-to-br from-gray-50 to-gray-200 flex items-center justify-center min-h-screen p-4"
-  >
-    <div
-      class="bg-white p-10 rounded-2xl shadow-2xl w-full max-w-xl border border-gray-100"
-    >
-      <h1
-        class="text-4xl font-extrabold text-center text-gray-900 mb-4 tracking-tight"
-      >
+  <body class="bg-gradient-to-br from-gray-50 to-gray-200 flex items-center justify-center min-h-screen p-4">
+    <div class="bg-white p-10 rounded-2xl shadow-2xl w-full max-w-xl border border-gray-100">
+      <h1 class="text-4xl font-extrabold text-center text-gray-900 mb-4 tracking-tight">
         Compliance Analyzer
       </h1>
-      <p class="text-center text-gray-500 mb-10 text-lg">
-        Upload your features in the form of a CSV file to get a compliance
-        analysis.
+      <p class="text-center text-gray-500 mb-8 text-lg">
+        Upload a CSV or analyze a single feature to get a compliance assessment.
       </p>
 
-      <form
-        action="/upload"
-        method="post"
-        enctype="multipart/form-data"
-        class="flex flex-col items-center space-y-8"
-      >
-        <div class="w-full">
-          <label
-            class="block text-gray-700 text-base font-semibold mb-3"
-            for="file_upload"
-          >
-            Choose CSV File
-          </label>
-          <input
-            type="file"
-            id="file_upload"
-            name="file"
-            accept=".csv"
-            class="block w-full text-base text-gray-500 file:cursor-pointer"
-          />
-        </div>
+      <!-- Tabs -->
+      <div class="mb-6 flex gap-2 justify-center">
+        <button id="tab-upload" class="px-4 py-2 rounded-full font-semibold tab-active">Upload CSV</button>
+        <button id="tab-single" class="px-4 py-2 rounded-full font-semibold tab-inactive">Single Feature</button>
+      </div>
 
-        <button
-          type="submit"
-          class="w-full px-6 py-3 text-lg font-semibold text-white bg-blue-600 rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+      <!-- Panel: Upload CSV -->
+      <div id="panel-upload">
+        <form
+          action="/upload"
+          method="post"
+          enctype="multipart/form-data"
+          class="flex flex-col items-center space-y-8"
         >
-          Upload & Analyze
-        </button>
-      </form>
+          <div class="w-full">
+            <label class="block text-gray-700 text-base font-semibold mb-3" for="file_upload">
+              Choose CSV File
+            </label>
+            <input
+              type="file"
+              id="file_upload"
+              name="file"
+              accept=".csv"
+              class="block w-full text-base text-gray-500 file:cursor-pointer"
+              required
+            />
+          </div>
 
-      <div class="mt-12 text-center text-gray-400 text-sm">
+          <button
+            type="submit"
+            class="w-full px-6 py-3 text-lg font-semibold text-white bg-blue-600 rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+          >
+            Upload & Analyze
+          </button>
+        </form>
+      </div>
+
+      <!-- Panel: Single Feature -->
+      <div id="panel-single" class="hidden">
+        <form action="/analyze_one" method="post" class="space-y-6">
+          <div>
+            <label for="feature_name" class="block text-gray-700 text-base font-semibold mb-2">
+              Feature Name
+            </label>
+            <input
+              id="feature_name"
+              name="feature_name"
+              type="text"
+              required
+              class="w-full rounded-lg border border-gray-300 p-3 focus:ring-2 focus:ring-emerald-500 focus:outline-none"
+              placeholder="e.g., Curfew login blocker (Utah minors)"
+            />
+          </div>
+
+          <div>
+            <label for="feature_description" class="block text-gray-700 text-base font-semibold mb-2">
+              Feature Description
+            </label>
+            <textarea
+              id="feature_description"
+              name="feature_description"
+              rows="6"
+              required
+              class="w-full rounded-lg border border-gray-300 p-3 focus:ring-2 focus:ring-emerald-500 focus:outline-none"
+              placeholder="Paste the feature text here..."
+            ></textarea>
+          </div>
+
+          <div>
+            <label for="location" class="block text-gray-700 text-base font-semibold mb-2">
+              Location (Optional)
+            </label>
+            <select
+              id="location"
+              name="location"
+              class="w-full rounded-lg border border-gray-300 p-3 focus:ring-2 focus:ring-emerald-500 focus:outline-none"
+            >
+              <option value="">(None)</option>
+              <option>EU Digital Service Act</option>
+              <option>California state law</option>
+              <option>Florida state law</option>
+              <option>Utah state law</option>
+              <option>US law on reporting child sexual abuse content to NCMEC</option>
+
+            </select>
+            <p class="text-sm text-gray-500 mt-1">We’ll pass this as a hint to improve geo detection.</p>
+          </div>
+
+          <button
+            type="submit"
+            class="w-full px-6 py-3 text-lg font-semibold text-white bg-emerald-600 rounded-full shadow-lg hover:bg-emerald-700 transition-colors duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
+          >
+            Analyze This Feature
+          </button>
+        </form>
+      </div>
+
+      <div class="mt-10 text-center text-gray-400 text-sm">
         &copy; 2025 All rights reserved.
       </div>
     </div>
+
+    <!-- Tabs script -->
+    <script>
+      (function () {
+        const tabUpload = document.getElementById('tab-upload');
+        const tabSingle = document.getElementById('tab-single');
+        const panelUpload = document.getElementById('panel-upload');
+        const panelSingle = document.getElementById('panel-single');
+
+        function setTab(which) {
+          const isUpload = which === 'upload';
+          // buttons
+          tabUpload.classList.toggle('tab-active', isUpload);
+          tabUpload.classList.toggle('tab-inactive', !isUpload);
+          tabSingle.classList.toggle('tab-active', !isUpload);
+          tabSingle.classList.toggle('tab-inactive', isUpload);
+          // panels
+          panelUpload.classList.toggle('hidden', !isUpload);
+          panelSingle.classList.toggle('hidden', isUpload);
+          // update URL query (so output can link back)
+          const url = new URL(window.location);
+          url.searchParams.set('tab', isUpload ? 'upload' : 'single');
+          window.history.replaceState({}, '', url);
+        }
+
+        tabUpload.addEventListener('click', () => setTab('upload'));
+        tabSingle.addEventListener('click', () => setTab('single'));
+
+        // default from ?tab=...
+        const params = new URLSearchParams(window.location.search);
+        setTab(params.get('tab') === 'single' ? 'single' : 'upload');
+      })();
+    </script>
   </body>
 </html>

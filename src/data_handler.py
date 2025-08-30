@@ -1,7 +1,7 @@
 import pandas as pd
 import re
 import os
-from typing import Dict
+from typing import Dict, Optional
 from dataclasses import dataclass
 from enum import Enum
 import csv
@@ -126,9 +126,10 @@ def generate_csv_output(results: list[ComplianceResult], output_path: str):
         writer.writerows([r.to_dict() for r in results])
 
 
-def load_regulations(base_path: str = 'regulations') -> Dict[str, str]:
+def load_regulations(base_path: str = 'regulations', location: Optional[str] = None) -> Dict[str, str]:
     """
     Recursively loads all .txt files from the regulations directory.
+    If `location` is provided, only loads files inside subfolders whose name matches (case-insensitive).
     Returns a dictionary mapping the file path to its content.
     """
     regulations_data = {}
@@ -137,6 +138,12 @@ def load_regulations(base_path: str = 'regulations') -> Dict[str, str]:
         return regulations_data
 
     for dirpath, _, filenames in os.walk(base_path):
+        folder_name = os.path.basename(dirpath)
+
+        # Apply filter only if location is specified
+        if location and location not in folder_name:
+            continue
+
         for filename in filenames:
             if filename.endswith('.txt'):
                 file_path = os.path.join(dirpath, filename)
@@ -146,6 +153,7 @@ def load_regulations(base_path: str = 'regulations') -> Dict[str, str]:
                         regulations_data[file_path] = content
                 except Exception as e:
                     print(f"Error reading file '{file_path}': {e}")
+
     return regulations_data
 
 
@@ -163,7 +171,7 @@ def load_regulations_by_directory(base_path: str = 'regulations') -> Dict[str, s
 
     if not os.path.exists(base_path):
         print(f"Warning: Regulations directory not found at '{base_path}'.")
-        return regulation_data
+        return regulations_data
 
     # Only go one level deep (immediate subdirectories)
     for entry in os.listdir(base_path):

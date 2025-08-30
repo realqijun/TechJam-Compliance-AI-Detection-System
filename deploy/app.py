@@ -2,6 +2,10 @@ import os
 import pandas as pd
 from flask import Flask, request, render_template, redirect, url_for
 
+from src.compliance_analyzer import LLMCompliancePipeline
+from src.llm import GeminiProvider
+
+
 UPLOAD_FOLDER = 'uploads'
 ALLOWED_EXTENSIONS = {'csv'}
 
@@ -63,6 +67,40 @@ def upload_file():
             return f"Error processing file: {e}"
 
     return redirect(url_for('index'))
+
+@app.route('/analyze_one', methods=['POST'])
+def analyze_one():
+    feature_name = request.form.get('feature_name', '').strip()
+    feature_description = request.form.get('feature_description', '').strip()
+    location = request.form.get('location', '').strip()
+
+    if not feature_name or not feature_description:
+        return redirect(url_for('index') + '?tab=single')
+
+    # Pass the location as a hint (quickest path, no pipeline signature change)
+    desc_with_hint = feature_description + (f"\n\n[User-selected region hint: {location}]" if location else "")
+
+    df = pd.DataFrame([{"feature_name": feature_name, "feature_description": desc_with_hint}])
+
+    # pick provider
+    # llm_provider = OpenAIProvider(model="gpt-4o-mini")
+    llm_provider = GeminiProvider(model="gemini-2.5-flash")
+
+    pipeline = LLMCompliancePipeline(llm_provider=llm_provider, location=location)
+    results = pipeline.process_dataset(df)
+
+    # build result table for output.html
+    table_df = pd.DataFrame([{
+        "feature_name": r.feature_name,
+        "compliance_flag": r.compliance_flag.value,
+        "confidence_score": r.confidence_score,
+        "reasoning": r.reasoning,
+        "related_regulations": "; ".join(r.related_regulations),
+        "geo_regions": "; ".join(r.geo_regions),
+    } for r in results])
+
+    csv_html = table_df.to_html(classes="dataframe table-auto w-full")
+    return render_template('output.html', table_data=csv_html)
 
 
 if __name__ == '__main__':
