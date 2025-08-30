@@ -3,7 +3,8 @@
 <p>This project is a submission for TikTok's TechJam 2025 Hackathon.</p>
 
 ## Problem Statement 
-The goal of this project is to build a prototype system that uses LLM capabilities to flag features that require geo-specific compliance logic. Our solution transforms regulatory detection from a blind spot into a traceable, auditable output, empowering teams to proactively implement legal safeguards and confidently respond to regulatory inquiries.
+As TikTok (and other global platforms) launch features worldwide, every product must comply with dozens of **regional laws** (e.g., EU DSA, California SB976, Utah Social Media Act). Today, compliance checks are mostly manual, costly, and reactive — companies risk **legal exposure**, **regulatory fines**, **and audit failures** if geo-specific rules are missed.
+**Geo-Regulator** solves this by using **AI + RAG (Retrieval-Augmented Generation)** to automatically flag which features require geo-specific compliance logic, with **explanations, confidence scores, and direct references to regulation text.**
 
 ## The team 
 1. Leader: [Chew Jia Hui, Bryan](https://github.com/bryanjhc)
@@ -15,13 +16,65 @@ The goal of this project is to build a prototype system that uses LLM capabiliti
 ## Core Functionality 
 GeoRegulator is a sophisticated Compliance Checker powered by a large language model. It's designed to analyze software feature artifacts—such as titles and descriptions—and automatically determine if they require geo-specific compliance.
 The system's key features include:
- - **Automated Compliance Analysis**: Our core LLM pipeline analyzes feature descriptions against a provided knowledge base of regulations to flag potential compliance requirements.
- - **Traceable, Auditable Output**: For every analysis, the system provides not only a compliance flag but also clear reasoning and, most importantly, the exact source file from which the regulation was derived. This creates a clear, auditable trail.
- - **Cost Reduction**: By automating the initial screening process, GeoRegulator significantly reduces the manual effort and time required to identify and manage geo-compliance needs.
- - **Mitigated Regulatory Exposure**: The system minimizes legal and financial risks by helping teams identify and address compliance gaps before a feature is launched. 
- - **Transparency**: The auditable evidence trail streamlines communication and provides clear documentation for regulatory inquiries and audits.
+ - **Dual Input Modes**: 
+   - Upload a **CSV of multiple features** (bulk compliance check).
+   - Enter a **single feature description** (quick analysis).
+ - **Geo-specific Analysis**:
+   - For every analysis, the system provides not only a compliance flag but also clear reasoning and, most importantly, the exact source file from which the regulation was derived. This creates a clear, auditable trail.
+   - Analyzes feature text against those regulations using LLM reasoning.
+ - **RAG-powered Compliance Detection**: 
+   - Retrieves relevant **regulation snippets** from uploaded laws.
+   - LLM generates compliance flag, reasoning, and linked source file.
+ - **Transparent Results**: 
+   - Compliance flag: `REQUIRED`, `NOT_REQUIRED`, `UNCERTAIN`.
+   - Confidence score (0.0–1.0).
+   - Reasoning (editable by user).
+   - Related regulations & geographic scope.
+ - **Human-in-the-Loop**:
+   - Low-confidence rows highlighted (yellow) for manual review.
+   - REQUIRED rows highlighted (red) to stress urgency.
+   - Reviewer can **edit reasoning** and mark as “Reviewed” with a checkbox.
+ - **Audit-ready Output**:
+   - Results table with traceability to regulation files.
+   - Export as CSV for legal teams and auditors.
 
-## Features
+## Development Tools Used
+ - **Frontend/UI**: TailwindCSS, HTML templates (index.html, output.html)
+ - **Backend Framework**: Python
+ - **Version Control & Deployment**: Git, Docker (docker-compose for easy setup)
+
+## APIs Used
+ - **OpenAI API** (GPT-4 / GPT-3.5 models)
+ - **Google Gemini API** (gemini-2.5-flash) for alternative inference
+
+## Assets Used
+ - **Regulation Text Files** (stored in `regulations/` folder):
+   - EU Digital Services Act
+   - California SB976 (Teens Online Protections)
+   - Utah Social Media Regulation Act
+   - Florida Online Protections for Minors
+   - US CSAM Reporting (NCMEC)
+ - **Sample CSVs** with feature descriptions (provided + custom test data)
+
+## Libraries Used
+ - **Python**:
+   - `pandas` → CSV handling + DataFrames 
+   - `dotenv` → API key management 
+   - `openai`, google-generativeai → LLM access 
+   - `flask` → web backend 
+   - `matplotlib` → architecture diagram for slides 
+   - `chromadb` → Retrieval-Augmented Generation 
+   - `concurrent.futures` → Threading
+ - **Frontend**:
+   - TailwindCSS → responsive styling
+   - Vanilla JavaScript → editing, highlighting, CSV export
+
+## Additional Datasets
+ - **Terminology Mapping Table** (`terminology_table.csv`)
+   - Maps TikTok’s internal jargon (e.g., PF, ASL, GH) into human-readable terms.
+   - Used to ensure the AI interprets features correctly.
+
+## Showcase
 
 ### 🔄 Batch Processing & Analysis
 **CSV Upload Pipeline**
@@ -63,15 +116,16 @@ The system's key features include:
 - Confidence calibration algorithms to flag uncertain cases for human review
 - Regulation-to-feature matching using semantic similarity and keyword analysis
 - Error handling and fallback mechanisms for robust production deployment
-
-### 🔍 Regulatory Intelligence Engine
-**Comprehensive Compliance Coverage**
-- Pre-loaded regulation database covering 5 major jurisdictions
-- Automated regulation file parsing and indexing
-- Smart keyword and indicator matching for regulation applicability
-- Geographic scope detection for multi-regional compliance requirements
-- Regulation version tracking and update notifications
-- Custom regulation addition support for expanding coverage
+```python
+def translate_description(self, description: str) -> str:
+    """Replace internal jargon with clear descriptions."""
+    translated = description
+    for term, definition in self.terminology.items():
+        pattern = r'\b' + re.escape(term) + r'\b'
+        translated = re.sub(
+            pattern, f"{term} ({definition})", translated, flags=re.IGNORECASE)
+    return translated
+```
 
 ## Getting Started 
 
