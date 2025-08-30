@@ -6,14 +6,9 @@
     <title>Compliance Analyzer</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Roboto font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
 
     <style>
       body { font-family: "Roboto", sans-serif; font-optical-sizing: auto; font-style: normal; }
@@ -60,30 +55,28 @@
 
       <!-- Panel: Upload CSV -->
       <div id="panel-upload">
-        <form
-          action="/upload"
-          method="post"
-          enctype="multipart/form-data"
-          class="flex flex-col items-center space-y-8"
-        >
+        <form action="/upload" method="post" enctype="multipart/form-data" class="flex flex-col items-center space-y-8">
           <div class="w-full">
             <label class="block text-gray-700 text-base font-semibold mb-3" for="file_upload">
               Choose CSV File
             </label>
-            <input
-              type="file"
-              id="file_upload"
-              name="file"
-              accept=".csv"
-              class="block w-full text-base text-gray-500 file:cursor-pointer"
-              required
-            />
+            <input type="file" id="file_upload" name="file" accept=".csv"
+              class="block w-full text-base text-gray-500 file:cursor-pointer" required />
           </div>
-
-          <button
-            type="submit"
-            class="w-full px-6 py-3 text-lg font-semibold text-white bg-blue-600 rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-          >
+          <div>
+            <label for="location" class="block text-gray-700 text-base font-semibold mb-2">Location (Optional)</label>
+            <select id="location" name="location"
+              class="w-full rounded-lg border border-gray-300 p-3 focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+              <option value="">(None)</option>
+              <option>EU Digital Service Act</option>
+              <option>California state law</option>
+              <option>Florida state law</option>
+              <option>Utah state law</option>
+              <option>US law on reporting child sexual abuse content to NCMEC</option>
+            </select>
+          </div>
+          <button type="submit"
+            class="w-full px-6 py-3 text-lg font-semibold text-white bg-blue-600 rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
             Upload & Analyze
           </button>
         </form>
@@ -93,65 +86,37 @@
       <div id="panel-single" class="hidden">
         <form action="/analyze_one" method="post" class="space-y-6">
           <div>
-            <label for="feature_name" class="block text-gray-700 text-base font-semibold mb-2">
-              Feature Name
-            </label>
-            <input
-              id="feature_name"
-              name="feature_name"
-              type="text"
-              required
+            <label for="feature_name" class="block text-gray-700 text-base font-semibold mb-2">Feature Name</label>
+            <input id="feature_name" name="feature_name" type="text" required
               class="w-full rounded-lg border border-gray-300 p-3 focus:ring-2 focus:ring-emerald-500 focus:outline-none"
-              placeholder="e.g., Curfew login blocker (Utah minors)"
-            />
+              placeholder="e.g., Curfew login blocker (Utah minors)" />
           </div>
-
           <div>
-            <label for="feature_description" class="block text-gray-700 text-base font-semibold mb-2">
-              Feature Description
-            </label>
-            <textarea
-              id="feature_description"
-              name="feature_description"
-              rows="6"
-              required
+            <label for="feature_description" class="block text-gray-700 text-base font-semibold mb-2">Feature Description</label>
+            <textarea id="feature_description" name="feature_description" rows="6" required
               class="w-full rounded-lg border border-gray-300 p-3 focus:ring-2 focus:ring-emerald-500 focus:outline-none"
-              placeholder="Paste the feature text here..."
-            ></textarea>
+              placeholder="Paste the feature text here..."></textarea>
           </div>
-
           <div>
-            <label for="location" class="block text-gray-700 text-base font-semibold mb-2">
-              Location (Optional)
-            </label>
-            <select
-              id="location"
-              name="location"
-              class="w-full rounded-lg border border-gray-300 p-3 focus:ring-2 focus:ring-emerald-500 focus:outline-none"
-            >
+            <label for="location" class="block text-gray-700 text-base font-semibold mb-2">Location (Optional)</label>
+            <select id="location" name="location"
+              class="w-full rounded-lg border border-gray-300 p-3 focus:ring-2 focus:ring-emerald-500 focus:outline-none">
               <option value="">(None)</option>
               <option>EU Digital Service Act</option>
               <option>California state law</option>
               <option>Florida state law</option>
               <option>Utah state law</option>
               <option>US law on reporting child sexual abuse content to NCMEC</option>
-
             </select>
-            <p class="text-sm text-gray-500 mt-1">We’ll pass this as a hint to improve geo detection.</p>
           </div>
-
-          <button
-            type="submit"
-            class="w-full px-6 py-3 text-lg font-semibold text-white bg-emerald-600 rounded-full shadow-lg hover:bg-emerald-700 transition-colors duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
-          >
+          <button type="submit"
+            class="w-full px-6 py-3 text-lg font-semibold text-white bg-emerald-600 rounded-full shadow-lg hover:bg-emerald-700 transition-colors duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2">
             Analyze This Feature
           </button>
         </form>
       </div>
 
-      <div class="mt-10 text-center text-gray-400 text-sm">
-        &copy; 2025 All rights reserved.
-      </div>
+      <div class="mt-12 text-center text-gray-400 text-sm">&copy; 2025 All rights reserved.</div>
     </div>
 
     <!-- Tabs script -->
@@ -164,15 +129,12 @@
 
         function setTab(which) {
           const isUpload = which === 'upload';
-          // buttons
           tabUpload.classList.toggle('tab-active', isUpload);
           tabUpload.classList.toggle('tab-inactive', !isUpload);
           tabSingle.classList.toggle('tab-active', !isUpload);
           tabSingle.classList.toggle('tab-inactive', isUpload);
-          // panels
           panelUpload.classList.toggle('hidden', !isUpload);
           panelSingle.classList.toggle('hidden', isUpload);
-          // update URL query (so output can link back)
           const url = new URL(window.location);
           url.searchParams.set('tab', isUpload ? 'upload' : 'single');
           window.history.replaceState({}, '', url);
@@ -181,7 +143,6 @@
         tabUpload.addEventListener('click', () => setTab('upload'));
         tabSingle.addEventListener('click', () => setTab('single'));
 
-        // default from ?tab=...
         const params = new URLSearchParams(window.location.search);
         setTab(params.get('tab') === 'single' ? 'single' : 'upload');
       })();

@@ -1,10 +1,13 @@
 import os
 import pandas as pd
-from flask import Flask, request, render_template, redirect, url_for
-
+from flask import render_template, Flask, request, redirect, url_for, send_from_directory, flash
 from src.compliance_analyzer import LLMCompliancePipeline
 from src.llm import GeminiProvider
+from datetime import datetime
 
+# where we save CSV outputs for download
+OUTPUT_DIR = os.path.join(os.path.dirname(__file__), "..", "outputs")
+os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 UPLOAD_FOLDER = 'uploads'
 ALLOWED_EXTENSIONS = {'csv'}
@@ -34,39 +37,60 @@ def index():
 
 @app.route('/upload', methods=['POST'])
 def upload_file():
-    # Check if the post request has the file part
+    # validate
     if 'file' not in request.files:
         return redirect(url_for('index'))
     file = request.files['file']
-
-    # case for user not selecting a file
     if file.filename == '':
         return redirect(url_for('index'))
+    if not (file and allowed_file(file.filename)):
+        return redirect(url_for('index'))
 
-    if file and allowed_file(file.filename):
-        try:
-            df = pd.read_csv(file)
+    try:
+        # read CSV
+        df = pd.read_csv(file)
 
-            # Convert the pandas DataFrame to an HTML table
-            csv_html = df.to_html(classes="table-auto w-full")
+        # normalize column names expected by pipeline
+        df = df.rename(columns={c: c.lower() for c in df.columns})
+        if 'feature_name' not in df.columns or 'feature_description' not in df.columns:
+            return "Error: CSV must contain 'feature_name' and 'feature_description' columns."
 
-            # TODO: Integrate compliance analysis logic here and update csv_html accordingly
-            # load_dotenv()
-            # llm_provider = GeminiProvider(model="gemini-2.5-flash")
-            # pipeline = LLMCompliancePipeline(llm_provider=llm_provider)
-            # results = pipeline.process_dataset(df)
-            # timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-            # output_file = f"compliance_results_{timestamp}.csv"
-            # generate_csv_output(results, os.path.join(app.config['UPLOAD_FOLDER'], output_file))
-            # csv_html = pd.DataFrame([r.to_dict() for r in results]).to_html(classes="table-auto w-full")
+        # read global location from dropdown (empty => None => use all regs)
+        raw_loc = request.form.get('location', '').strip()
+        global_location = raw_loc or None
 
-            # Render the output template with the HTML table
-            return render_template('output.html', table_data=csv_html)
+        # init provider + pipeline
+        # llm_provider = OpenAIProvider(model="gpt-4o-mini")
+        llm_provider = GeminiProvider(model="gemini-2.5-flash")
+        pipeline = LLMCompliancePipeline(llm_provider=llm_provider, location=global_location)
 
-        except Exception as e:
-            return f"Error processing file: {e}"
+        # process with ONE location for all rows
+        results = pipeline.process_dataset(df)
 
-    return redirect(url_for('index'))
+        # build output df
+        out_df = pd.DataFrame([{
+            "feature_name": r.feature_name,
+            "compliance_flag": r.compliance_flag.value,
+            "confidence_score": r.confidence_score,
+            "reasoning": r.reasoning,
+            "related_regulations": "; ".join(r.related_regulations),
+            "geo_regions": "; ".join(r.geo_regions),
+        } for r in results])
+
+
+        # save + render
+        ts = datetime.now().strftime("%Y%m%d_%H%M%S")
+        out_name = f"compliance_results_{ts}.csv"
+        out_path = os.path.join(OUTPUT_DIR, out_name)
+        out_df.to_csv(out_path, index=True)
+
+        csv_html = out_df.to_html(classes="dataframe table-auto w-full")
+        return render_template('output.html', table_data=csv_html)
+    except Exception as e:
+        return f"Error processing file: {e}"
+
+
+
 
 @app.route('/analyze_one', methods=['POST'])
 def analyze_one():

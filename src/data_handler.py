@@ -7,7 +7,6 @@ from enum import Enum
 import csv
 import fnmatch
 
-
 def load_data(file_path: str) -> pd.DataFrame:
     try:
         df = pd.read_csv(file_path)
