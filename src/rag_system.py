@@ -125,7 +125,7 @@ US_reporting_child_sexual_abuse_collection = client.get_or_create_collection(nam
 def query_collections(collection_names: list[str], query_text: str, top_k: int = 5):
     collections_map = {
         "CS_CS_HB_3": CS_CS_HB_3_collection,
-        "EU_DSA_Regulations": EU_DSA_Regulations_collection,
+        "EU_DSA": EU_DSA_Regulations_collection,
         "SB976_POKSMAA": SB976_POKSMAA_collection,
         "UTAH_SocialMediaRegulation": UTAH_SocialMediaRegulation_collection,
         "US_reporting_child_sexual_abuse": US_reporting_child_sexual_abuse_collection,
@@ -191,7 +191,7 @@ if __name__ == "__main__":
     for feat in sample_features:
         query_text = f"Feature: {feat['name']}\nDescription: {feat['description']}"
         print(f"\n==== Querying regulations for feature: {feat['name']} ====")
-        feature_results = query_all_collections(query_text, top_k=2)
+        feature_results = query_collections(query_text, top_k=2)
         for collection_name, hits in feature_results.items():
             print(f"\nCollection: {collection_name}")
             for i, hit in enumerate(hits, 1):
