@@ -1,8 +1,8 @@
 import json
 import re
 from typing import List
-from data_handler import ComplianceFlag, ComplianceResult, DomainKnowledge, load_regulations
-from llm import LLMProvider
+from .data_handler import ComplianceFlag, ComplianceResult, DomainKnowledge
+from .llm import LLMProvider
 
 
 class LLMCompliancePipeline:

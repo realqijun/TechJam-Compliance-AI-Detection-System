@@ -2,15 +2,17 @@ import pandas as pd
 import os
 from datetime import datetime
 from dotenv import load_dotenv
-from data_handler import load_data, generate_csv_output
-from llm import GeminiProvider
-from compliance_analyzer import LLMCompliancePipeline
+from src.data_handler import load_data, generate_csv_output
+from src.llm import GeminiProvider, OpenAIProvider
+from src.compliance_analyzer import LLMCompliancePipeline
 
 def main():
     load_dotenv()
     
     # Initialize LLM Provider
     # Use GeminiProvider or OpenAIProvider
+    
+    # llm_provider = OpenAIProvider(model="gpt-4-mini")
     llm_provider = GeminiProvider(model="gemini-2.5-flash")
 
     # Initialize Compliance Pipeline
