@@ -1,0 +1,30 @@
+Statement: This section contains a severability clause and specifies the effective dates for the various parts of the bill.
+Context: The severability clause is a standard legal provision that ensures the remainder of the law will stand even if a court finds a specific part of it invalid. It also clarifies the staggered effective dates, with the core provisions related to algorithm-driven harms taking effect later than others.
+
+Section 7. Section 78B-3-1106 is enacted to read:
+78B-3-1106. Severability.
+(1) If any provision of this chapter or the application of any provision to any person or circumstance is held invalid by a final decision of a court of competent jurisdiction, the remainder of this chapter shall be given effect without the invalid provision or application.
+(2) The provisions of this chapter are severable.
+
+Section 8. Repealer.
+This bill repeals:
+Section 13-63-101, Definitions.
+Section 13-63-102, Age requirements for use of social media platform -- Parental consent -- Rulemaking authority of division.
+Section 13-63-103, Prohibition on data collection for certain accounts -- Prohibition on advertising -- Use of information -- Search results -- Directed content.
+Section 13-63-104, Parental access to social media account.
+Section 13-63-105, Limited hours of access for minors -- Parental access and options.
+Section 13-63-201, Investigative powers of the division.Section 13-63-202, Enforcement powers of the division.Section 13-63-203, Division report.
+Section 13-63-301, Private right of action.
+Section 13-63-401, Social media platform design regulations -- Enforcement and auditing authority -- Penalties.
+Section 13-63-501, Private right of action for harm to a minor -- Rebuttable presumption of harm and causation.
+Section 13-63-601, Waiver prohibited.Section 13-63-701, Severability.
+
+Section 9. Effective date.
+(1) Except as provided in Subsection (2), this bill takes effect on May 1, 2024.
+(2) The actions affecting the following sections take effect on October 1, 2024:
+(a) Section 78B-3-1101;
+(b) Section 78B-3-1102;
+(c) Section 78B-3-1103;
+(d) Section 78B-3-1104;
+(e) Section 78B-3-1105; and
+(f) Section 78B-3-1106.

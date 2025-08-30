@@ -1,0 +1,10 @@
+Statement: This section invalidates any attempt to waive or limit the rights and protections granted by the chapter.
+Context: This provision is a strong protection for minors and their parents, ensuring that social media companies cannot use their terms of service or other contracts to force users to give up their right to sue or cooperate with government agencies.
+
+Section 6. Section 78B-3-1105 is enacted to read:
+78B-3-1105. Waiver prohibited.
+A waiver or limitation, or a purported waiver or limitation, of any of the following is void as unlawful, is against public policy, and a court or arbitrator may not enforce or give effect to the waiver, notwithstanding any contract or choice-of-law provision in a contract:
+(1) a protection or requirement provided under this chapter;
+(2) the right to cooperate with or file a complaint with a government agency;
+(3) the right to a private right of action as provided under this chapter; or
+(4) the right to recover actual damages, statutory damages, civil penalties, costs, or fees as allowed by this chapter.
