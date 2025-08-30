@@ -3,6 +3,30 @@ import re
 from typing import List
 from .data_handler import ComplianceFlag, ComplianceResult, DomainKnowledge, load_regulations_by_directory
 from .llm import LLMProvider
+from .rag_system import query_all_collections
+
+PROMPT_TEMPLATE = """
+You are a compliance expert. Your task is to analyze a software feature against provided regulations.
+Use only the provided regulations to inform your answer. If the regulations do not contain enough information, state that.
+---
+Relevant Regulations:
+{context}
+---
+Feature to analyze:
+Feature Name: {feature_name}
+Description: {feature_description}
+
+Based on the provided regulations, identify if geo-specific compliance logic is REQUIRED, NOT_REQUIRED, or UNCERTAIN.
+If it is REQUIRED, you MUST cite the relevant file path from the regulations.
+
+Respond with a JSON object.
+
+Example response:
+{{ "compliance_flag": "REQUIRED", "confidence_score": 0.95, "reasoning": "The feature handles user location data, which is regulated by the provided GDPR text.",
+    "related_regulations": ["GDPR"], "geo_regions": ["EU"], "source_file": "regulations/GDPR/data_protection_act.txt" }}
+
+Response:
+"""
 
 
 class LLMCompliancePipeline:
@@ -10,7 +34,6 @@ class LLMCompliancePipeline:
         """Initialize the pipeline with an LLM provider."""
         self.llm_provider = llm_provider
         self.domain_knowledge = DomainKnowledge()
-        ##self.regulations = load_regulations(location=location)
         self.regulations = load_regulations_by_directory()
 
     def filter_relevant_regulation_dirs(self, feature_name: str, feature_description: str) -> dict:
@@ -84,12 +107,36 @@ class LLMCompliancePipeline:
 
     def analyze_feature(self, feature_name: str, feature_description: str) -> ComplianceResult:
         """Analyze a single feature for compliance requirements."""
-        prompt = self.create_compliance_prompt(
-            feature_name, feature_description)
-        input()
+        # prompt = self.create_compliance_prompt(
+        #     feature_name, feature_description)
         try:
-            response_obj = self.llm_provider.generate_json_response(prompt)
-            result_json = json.loads(response_obj)
+            # Retrieve documents using the custom retriever
+            query = f"{feature_name} - {feature_description}"
+            retrieved_results = query_all_collections(query, 5)
+            first_source_file = "N/A"
+            all_snippets = []
+            context = ""
+
+            for collection_name, hits in retrieved_results.items():
+                for hit in hits:
+                    if "doc_snippet" in hit:
+                        all_snippets.append(f"Source: {hit['source']}\nContent: {hit['doc_snippet']}")
+                        if first_source_file == "N/A":
+                            first_source_file = hit['source']
+
+            context = "\n\n---\n\n".join(all_snippets)
+
+            # Use the retrieved context to populate the prompt template
+            prompt = PROMPT_TEMPLATE.format(
+                context=context,
+                feature_name=feature_name,
+                feature_description=feature_description
+            )
+
+            # Generate the response using the LLM provider
+            response_text = self.llm_provider.generate_json_response(prompt)
+            result_json = json.loads(response_text)
+
             return ComplianceResult(
                 feature_name=feature_name,
                 compliance_flag=ComplianceFlag(result_json["compliance_flag"]),
@@ -97,7 +144,7 @@ class LLMCompliancePipeline:
                 reasoning=result_json["reasoning"],
                 related_regulations=result_json.get("related_regulations", []),
                 geo_regions=result_json.get("geo_regions", []),
-                source_file=result_json.get("source_file", "N/A")
+                source_file=first_source_file
             )
         except Exception as e:
             print(f"Error analyzing '{feature_name}': {e}")

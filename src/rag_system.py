@@ -2,7 +2,7 @@ import chromadb
 import os
 import uuid
 
-client = chromadb.PersistentClient(path="../chroma_db")
+client = chromadb.PersistentClient(path="./chroma_db")
 
 # Each collection assigned to each regulation
 CS_CS_HB_3_collection = client.get_or_create_collection(name="CS_CS_HB_3")
@@ -11,7 +11,7 @@ SB976_POKSMAA_collection = client.get_or_create_collection(name="SB976_POKSMAA")
 UTAH_SocialMediaRegulation_collection = client.get_or_create_collection(name="UTAH_SocialMediaRegulation")
 US_reporting_child_sexual_abuse_collection = client.get_or_create_collection(name="US_reporting_child_sexual_abuse")
 
-# # open all txt files in CS_CS_HB_3 directory and put them into a list[str]
+# open all txt files in CS_CS_HB_3 directory and put them into a list[str]
 # CS_CS_HB_3_policies = []
 # for filename in os.listdir("../regulations/CS_CS_HB_3"):
 #     if filename.endswith(".txt"):
@@ -25,21 +25,21 @@ US_reporting_child_sexual_abuse_collection = client.get_or_create_collection(nam
 #     metadatas=[{"source": filename} for filename in os.listdir("../regulations/CS_CS_HB_3") if filename.endswith(".txt")]
 # )
 
-# # EU DSA Regulations
+# EU DSA Regulations
 # EU_DSA_Regulations_policies = []
-# for filename in os.listdir("../regulations/EU_DSA_Regulations"):
+# for filename in os.listdir("../regulations/EU Digital Service Act"):
 #     if filename.endswith(".txt"):
-#         with open(os.path.join("../regulations/EU_DSA_Regulations", filename), "r", encoding="utf-8") as file:
+#         with open(os.path.join("../regulations/EU Digital Service Act", filename), "r", encoding="utf-8") as file:
 #             content = file.read()
 #             EU_DSA_Regulations_policies.append(f"{filename}\n{content}")
 # EU_DSA_Regulations_policies: list[str] = EU_DSA_Regulations_policies
 # EU_DSA_Regulations_collection.add(
 #     ids=[str(uuid.uuid4()) for _ in EU_DSA_Regulations_policies],
 #     documents=EU_DSA_Regulations_policies,
-#     metadatas=[{"source": filename} for filename in os.listdir("../regulations/EU_DSA_Regulations") if filename.endswith(".txt")]
+#     metadatas=[{"source": filename} for filename in os.listdir("../regulations/EU Digital Service Act") if filename.endswith(".txt")]
 # )
 
-# # SB976 POKSMAA
+# SB976 POKSMAA
 # SB976_POKSMAA_policies = []
 # for filename in os.listdir("../regulations/SB976_POKSMAA"):
 #     if filename.endswith(".txt"):
@@ -53,7 +53,7 @@ US_reporting_child_sexual_abuse_collection = client.get_or_create_collection(nam
 #     metadatas=[{"source": filename} for filename in os.listdir("../regulations/SB976_POKSMAA") if filename.endswith(".txt")]
 # )
 
-# # UTAH Social Media Regulation
+# UTAH Social Media Regulation
 # UTAH_SocialMediaRegulation_policies = []
 # for filename in os.listdir("../regulations/UTAH_SocialMediaRegulation"):
 #     if filename.endswith(".txt"):
@@ -67,7 +67,7 @@ US_reporting_child_sexual_abuse_collection = client.get_or_create_collection(nam
 #     metadatas=[{"source": filename} for filename in os.listdir("../regulations/UTAH_SocialMediaRegulation") if filename.endswith(".txt")]
 # )
 
-# # US reporting child sexual abuse
+# US reporting child sexual abuse
 # US_reporting_child_sexual_abuse_policies = []
 # for filename in os.listdir("../regulations/US_reporting_child_sexual_abuse"):
 #     if filename.endswith(".txt"):
@@ -81,15 +81,15 @@ US_reporting_child_sexual_abuse_collection = client.get_or_create_collection(nam
 #     metadatas=[{"source": filename} for filename in os.listdir("../regulations/US_reporting_child_sexual_abuse") if filename.endswith(".txt")]
 # )
 
-print(CS_CS_HB_3_collection.peek())
-
-print(EU_DSA_Regulations_collection.peek())
-
-print(SB976_POKSMAA_collection.peek())
-
-print(UTAH_SocialMediaRegulation_collection.peek())
-
-print(US_reporting_child_sexual_abuse_collection.peek())
+# print(CS_CS_HB_3_collection.peek())
+#
+# print(EU_DSA_Regulations_collection.peek())
+#
+# print(SB976_POKSMAA_collection.peek())
+#
+# print(UTAH_SocialMediaRegulation_collection.peek())
+#
+# print(US_reporting_child_sexual_abuse_collection.peek())
 
 # sample query
 # Sample feature-based queries against all regulation collections
@@ -108,7 +108,7 @@ def query_all_collections(query_text: str, top_k: int = 3):
             res = coll.query(query_texts=[query_text], n_results=top_k)
             results[name] = [
                 {
-                    "doc_snippet": (doc[:160] + "...") if doc else "",
+                    "doc_snippet": doc if doc else "",
                     "source": meta.get("source") if meta else None,
                     "distance": dist,
                 }
@@ -149,15 +149,16 @@ sample_features = [
     },
 ]
 
-for feat in sample_features:
-    query_text = f"Feature: {feat['name']}\nDescription: {feat['description']}"
-    print(f"\n==== Querying regulations for feature: {feat['name']} ====")
-    feature_results = query_all_collections(query_text, top_k=2)
-    for collection_name, hits in feature_results.items():
-        print(f"\nCollection: {collection_name}")
-        for i, hit in enumerate(hits, 1):
-            if "error" in hit:
-                print(f"  Error: {hit['error']}")
-            else:
-                print(f"  Result {i}: source={hit['source']} distance={hit['distance']:.4f}")
-                print(f"    {hit['doc_snippet']}")
+if __name__ == "__main__":
+    for feat in sample_features:
+        query_text = f"Feature: {feat['name']}\nDescription: {feat['description']}"
+        print(f"\n==== Querying regulations for feature: {feat['name']} ====")
+        feature_results = query_all_collections(query_text, top_k=2)
+        for collection_name, hits in feature_results.items():
+            print(f"\nCollection: {collection_name}")
+            for i, hit in enumerate(hits, 1):
+                if "error" in hit:
+                    print(f"  Error: {hit['error']}")
+                else:
+                    print(f"  Result {i}: source={hit['source']} distance={hit['distance']:.4f}")
+                    print(f"    {hit['doc_snippet']}")
