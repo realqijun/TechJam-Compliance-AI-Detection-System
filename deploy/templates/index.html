@@ -44,6 +44,18 @@
             <input type="file" id="file_upload" name="file" accept=".csv"
               class="block w-full text-base text-gray-500 file:cursor-pointer" required />
           </div>
+          <div>
+            <label for="location" class="block text-gray-700 text-base font-semibold mb-2">Location (Optional)</label>
+            <select id="location" name="location"
+              class="w-full rounded-lg border border-gray-300 p-3 focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+              <option value="">(None)</option>
+              <option>EU Digital Service Act</option>
+              <option>California state law</option>
+              <option>Florida state law</option>
+              <option>Utah state law</option>
+              <option>US law on reporting child sexual abuse content to NCMEC</option>
+            </select>
+          </div>
           <button type="submit"
             class="w-full px-6 py-3 text-lg font-semibold text-white bg-blue-600 rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
             Upload & Analyze
@@ -75,6 +87,7 @@
               <option>California state law</option>
               <option>Florida state law</option>
               <option>Utah state law</option>
+              <option>US law on reporting child sexual abuse content to NCMEC</option>
             </select>
           </div>
           <button type="submit"

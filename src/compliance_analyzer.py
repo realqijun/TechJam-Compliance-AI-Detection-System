@@ -198,6 +198,7 @@ class LLMCompliancePipeline:
         for idx, row in df.iterrows():
             feature_name = row['feature_name']
             feature_description = row['feature_description']
+
             print(f"[{idx+1}/{len(df)}] Analyzing: {feature_name}")
             ttime = time.time()
             result = self.analyze_feature(feature_name, feature_description)

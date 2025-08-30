@@ -14,13 +14,44 @@
         border: 1px solid #e2e8f0;
         padding: 12px;
         text-align: left;
-        max-width: 250px;
+        max-width: 280px;
         overflow-wrap: break-word;
+        vertical-align: top;
       }
-      .dataframe th { background-color: #f1f5f9; font-weight: 600; text-transform: uppercase; color: #1f2937; }
+      .dataframe th {
+        background-color: #f1f5f9;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #1f2937;
+      }
       .dataframe tbody tr:nth-child(even) { background-color: #f8fafc; }
       .clickable-cell { cursor: pointer; transition: background-color 0.2s; }
       .clickable-cell:hover { background-color: #e2e8f0; }
+
+      /* === Row states === */
+      .needs-review th, .needs-review td { background-color: #FEF3C7 !important; } /* yellow */
+      .approved th, .approved td { background-color: #DCFCE7 !important; } /* green */
+      .required-flag th, .required-flag td { background-color: #FEE2E2 !important; } /* red */
+
+      /* Prettier checkboxes */
+      .review-checkbox {
+        appearance: none; -webkit-appearance: none;
+        width: 1.5rem; height: 1.5rem;
+        border: 2px solid #9CA3AF; border-radius: 0.375rem;
+        display: inline-block; position: relative; cursor: pointer;
+        transition: all 0.2s ease;
+      }
+      .review-checkbox:hover {
+        border-color: #2563EB; box-shadow: 0 0 0 3px rgba(37,99,235,0.2);
+      }
+      .review-checkbox:checked {
+        background-color: #2563EB; border-color: #2563EB;
+      }
+      .review-checkbox:checked::after {
+        content: "✔"; position: absolute; inset: 0;
+        color: white; font-size: 1rem; font-weight: bold;
+        display: flex; align-items: center; justify-content: center;
+      }
     </style>
   </head>
   <body class="bg-gradient-to-br from-gray-50 to-gray-200 flex flex-col items-center p-6 min-h-screen">
@@ -76,6 +107,7 @@
       const downloadBtn = document.getElementById('downloadCsvBtn');
       let currentCell = null;
 
+      // Helpers
       function truncateText(text, maxLength) {
         return text.length > maxLength ? text.substring(0, maxLength) + '...' : text;
       }
@@ -83,9 +115,7 @@
         if (text.includes(',') || text.includes('"') || text.includes('\n')) return '"' + text.replace(/"/g, '""') + '"';
         return text;
       }
-      // normalize header text
       function norm(s) { return (s || '').toLowerCase().replace(/[^a-z0-9]/g, ''); }
-      // fuzzy match header
       function getHeaderIndexFuzzy(key) {
         if (!table) return -1;
         const headers = table.querySelectorAll('thead th');
@@ -96,42 +126,51 @@
         }
         return -1;
       }
-      // extract first number in a string
       function firstNumber(text) {
         const m = (text || '').match(/-?\d+(?:\.\d+)?/);
         return m ? parseFloat(m[0]) : NaN;
+      }
+      function addBadge(cell, text, classes) {
+        const badge = document.createElement('span');
+        badge.className = 'inline-block ml-2 text-xs font-semibold px-2 py-0.5 rounded-full ' + classes;
+        badge.textContent = text;
+        cell.appendChild(badge);
       }
 
       document.addEventListener('DOMContentLoaded', () => {
         if (!table) return;
 
-        // find confidence column
+        // Find columns
         let confIdx = getHeaderIndexFuzzy('confidence_score');
         if (confIdx === -1) confIdx = getHeaderIndexFuzzy('confidence score');
         if (confIdx === -1) confIdx = getHeaderIndexFuzzy('confidence');
-
         let reasoningIdx = getHeaderIndexFuzzy('reasoning');
+        let flagIdx = getHeaderIndexFuzzy('compliance_flag');
+
+        const headerRow = table.querySelector('thead tr');
+        if (headerRow) {
+          const th = document.createElement('th');
+          th.textContent = "REVIEWED";
+          headerRow.appendChild(th);
+        }
 
         const rows = table.querySelectorAll('tbody tr');
         rows.forEach((row) => {
-          // IMPORTANT: include both <th> (index cell) and <td> to align with headers
           const cells = row.querySelectorAll('th, td');
+          const firstCell = cells[0];
 
-          // LOW CONFIDENCE OR NaN → highlight
-          if (confIdx >= 0 && confIdx < cells.length) {
-            const confCell = cells[confIdx];
-            const conf = firstNumber(confCell.textContent);
-            if (isNaN(conf) || conf < 0.6) {
-              row.classList.add('ring-2', 'ring-amber-400', 'bg-yellow-50');
-              const firstCell = cells[0];
-              const badge = document.createElement('span');
-              badge.className = 'inline-block ml-2 text-xs font-semibold px-2 py-0.5 rounded-full bg-amber-500 text-white';
-              badge.textContent = 'NEEDS REVIEW';
-              firstCell.appendChild(badge);
-            }
+          // Initial state
+          const flagText = flagIdx >= 0 ? (cells[flagIdx].textContent || '').trim().toUpperCase() : '';
+          const conf = confIdx >= 0 ? firstNumber(cells[confIdx].textContent) : NaN;
+
+          if (flagText === 'REQUIRED') {
+            row.classList.add('required-flag', 'ring-2', 'ring-red-300');
+            addBadge(firstCell, 'REQUIRED', 'bg-red-500 text-white');
+          } else if (isNaN(conf) || conf < 0.6) {
+            row.classList.add('needs-review', 'ring-2', 'ring-amber-400');
+            addBadge(firstCell, 'NEEDS REVIEW', 'bg-amber-500 text-white');
           }
 
-          // Reasoning cell editable
           if (reasoningIdx >= 0 && reasoningIdx < cells.length) {
             const c = cells[reasoningIdx];
             const originalText = c.textContent.trim();
@@ -139,9 +178,35 @@
             c.dataset.fullText = originalText;
             if (originalText.length > 100) c.textContent = truncateText(originalText, 100);
           }
+
+          // Checkbox column
+          const reviewCell = document.createElement('td');
+          const checkbox = document.createElement('input');
+          checkbox.type = 'checkbox';
+          checkbox.className = 'review-checkbox';
+          reviewCell.appendChild(checkbox);
+          row.appendChild(reviewCell);
+
+          // Checkbox handler
+          checkbox.addEventListener('change', () => {
+            row.classList.remove('needs-review', 'approved', 'required-flag',
+                                 'ring-amber-400', 'ring-emerald-300', 'ring-red-300');
+
+            if (checkbox.checked) {
+              // ✅ turn row green
+              row.classList.add('approved', 'ring-2', 'ring-emerald-300');
+            } else {
+              // ❌ restore original state
+              if (flagText === 'REQUIRED') {
+                row.classList.add('required-flag', 'ring-2', 'ring-red-300');
+              } else if (isNaN(conf) || conf < 0.6) {
+                row.classList.add('needs-review', 'ring-2', 'ring-amber-400');
+              }
+            }
+          });
         });
 
-        // open editor (click on any clickable cell)
+        // Editing panel
         table.addEventListener('click', (event) => {
           const cell = event.target.closest('td, th');
           if (!cell || !cell.classList.contains('clickable-cell')) return;
@@ -152,7 +217,7 @@
         });
       });
 
-      // panel controls
+      // Panel controls
       document.getElementById('cancelEdit').addEventListener('click', () => {
         panel.style.transform = 'translateX(100%)';
       });
@@ -163,7 +228,7 @@
         currentCell.textContent = newText.length > 100 ? newText.slice(0, 100) + '...' : newText;
         panel.style.transform = 'translateX(100%)';
       });
-      closeBtn.addEventListener('click', () => {
+      document.getElementById('closePanelBtn').addEventListener('click', () => {
         panel.style.transform = 'translateX(100%)';
       });
       document.addEventListener('click', (event) => {
@@ -172,23 +237,27 @@
         }
       });
 
-      // Download CSV (with edits). Include index column by reading <th, td>
+      // Download CSV
       downloadBtn.addEventListener('click', () => {
         const rows = document.querySelectorAll('.dataframe tr');
         let csv = [];
-
         const headerCells = rows[0].querySelectorAll('th');
         let headers = Array.from(headerCells).map(th => escapeCsv(th.textContent.trim()));
         csv.push(headers.join(','));
 
         for (let i = 1; i < rows.length; i++) {
           const row = rows[i];
-          const cells = row.querySelectorAll('th, td'); // include index
-          let rowData = Array.from(cells).map(cell => {
-            if (cell.classList.contains('clickable-cell')) {
-              return escapeCsv(cell.dataset.fullText || cell.textContent.trim());
+          const cells = row.querySelectorAll('th, td');
+          let rowData = [];
+          cells.forEach((cell) => {
+            const cb = cell.querySelector('input[type=checkbox]');
+            if (cb) {
+              rowData.push(cb.checked ? '✔' : '');
+            } else if (cell.classList.contains('clickable-cell')) {
+              rowData.push(escapeCsv(cell.dataset.fullText || cell.textContent.trim()));
+            } else {
+              rowData.push(escapeCsv(cell.textContent.trim()));
             }
-            return escapeCsv(cell.textContent.trim());
           });
           csv.push(rowData.join(','));
         }
