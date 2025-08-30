@@ -57,6 +57,8 @@ class LLMCompliancePipeline:
             feature_name, feature_description)
         try:
             result_json_str = self.llm_provider.generate_json_response(prompt)
+            
+            # Clean and parse JSON response
             result_json = json.loads(result_json_str)
 
             return ComplianceResult(

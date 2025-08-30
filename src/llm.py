@@ -6,8 +6,6 @@ import json
 from typing import Optional
 
 # interface for LLM providers
-
-
 class LLMProvider(ABC):
     """Abstract base class for LLM providers."""
 
@@ -33,14 +31,14 @@ class GeminiProvider(LLMProvider):
     def generate_json_response(self, prompt: str) -> str:
         """Generate a response, ensuring it's valid JSON."""
         model_instance = self.client
+        
+        # Generate content with JSON response format
         response = model_instance.models.generate_content(
             model=self.model,
             contents=prompt,
-            config=genai.types.GenerationConfig(
+            config=genai.types.GenerateContentConfig(
                 response_mime_type="application/json",
                 temperature=0.1,
-                max_output_tokens=500,
-                tools=[],
             ),
         )
         return response.text
