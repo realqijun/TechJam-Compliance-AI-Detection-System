@@ -148,6 +148,29 @@ def load_regulations(base_path: str = 'regulations') -> Dict[str, str]:
     return regulations_data
 
 
+def load_regulations_test(base_path: str = 'regulations') -> Dict[str, str]:
+    """
+    Recursively loads all .txt files from the regulations directory.
+    Returns a dictionary mapping the file path to its content.
+    """
+    regulations_data = {}
+    if not os.path.exists(base_path):
+        print(f"Warning: Regulations directory not found at '{base_path}'.")
+        return regulations_data
+
+    for dirpath, _, filenames in os.walk(base_path):
+        for filename in filenames:
+            if filename.endswith('.txt'):
+                file_path = os.path.join(dirpath, filename)
+                try:
+                    with open(file_path, 'r', encoding='utf-8') as f:
+                        content = f.read()
+                        regulations_data[file_path] = content
+                except Exception as e:
+                    print(f"Error reading file '{file_path}': {e}")
+    return regulations_data
+
+
 if __name__ == "__main__":
     # run this as a script to test data loading
     df = load_data('data/sample_data.csv')
