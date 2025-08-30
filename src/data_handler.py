@@ -126,7 +126,7 @@ def generate_csv_output(results: list[ComplianceResult], output_path: str):
         writer.writerows([r.to_dict() for r in results])
 
 
-def load_regulations(base_path: str = 'regulations', location: Optional[str] = None) -> Dict[str, str]:
+def load_regulations(base_path: Optional[str] = 'regulations', location: Optional[str] = None) -> Dict[str, str]:
     """
     Recursively loads all .txt files from the regulations directory.
     If `location` is provided, only loads files inside subfolders whose name matches (case-insensitive).
