@@ -1,62 +1,80 @@
 <!DOCTYPE html>
-
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSV Uploader</title>
-    <script src="https://www.google.com/search?q=https://cdn.tailwindcss.com"></script>
+    <title>Compliance Analyzer</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- import roboto font from google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://www.google.com/search?q=https://fonts.googleapis.com/css2%3Ffamily%3DInter:wght%40400%3B500%3B600%3B700%26display%3Dswap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Font: roboto, button: styled with tailwind -->
     <style>
       body {
-        font-family: "Inter", sans-serif;
+        font-family: "Roboto", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+      }
+      input[type="file"]::file-selector-button {
+        @apply mr-4 py-2 px-4 rounded-full border-0 text-sm font-semibold bg-blue-50 text-blue-700 hover:bg-blue-100 cursor-pointer transition-colors duration-200;
       }
     </style>
   </head>
-  <body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
-    <div class="bg-white p-8 rounded-xl shadow-lg w-full max-w-xl">
-      <h1 class="text-3xl font-bold text-center text-gray-800 mb-6">
-        Upload CSV File
+  <body
+    class="bg-gradient-to-br from-gray-50 to-gray-200 flex items-center justify-center min-h-screen p-4"
+  >
+    <div
+      class="bg-white p-10 rounded-2xl shadow-2xl w-full max-w-xl border border-gray-100"
+    >
+      <h1
+        class="text-4xl font-extrabold text-center text-gray-900 mb-4 tracking-tight"
+      >
+        Compliance Analyzer
       </h1>
-      <p class="text-center text-gray-500 mb-8">
-        Select a CSV file from your computer to display its contents.
+      <p class="text-center text-gray-500 mb-10 text-lg">
+        Upload your features in the form of a CSV file to get a compliance
+        analysis.
       </p>
 
       <form
         action="/upload"
         method="post"
         enctype="multipart/form-data"
-        class="flex flex-col items-center space-y-6"
+        class="flex flex-col items-center space-y-8"
       >
         <div class="w-full">
           <label
-            class="block text-gray-700 text-sm font-semibold mb-2"
+            class="block text-gray-700 text-base font-semibold mb-3"
             for="file_upload"
           >
-            Choose file
+            Choose CSV File
           </label>
           <input
             type="file"
             id="file_upload"
             name="file"
             accept=".csv"
-            class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-indigo-50 file:text-indigo-700 hover:file:bg-indigo-100"
+            class="block w-full text-base text-gray-500 file:cursor-pointer"
           />
         </div>
 
         <button
           type="submit"
-          class="w-full px-6 py-3 text-lg font-semibold text-white bg-indigo-600 rounded-full shadow-md hover:bg-indigo-700 transition-colors duration-200"
+          class="w-full px-6 py-3 text-lg font-semibold text-white bg-blue-600 rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
         >
-          Upload & Process
+          Upload & Analyze
         </button>
       </form>
 
-      <div class="mt-8 text-center text-gray-400 text-sm">
-        <p>&copy; 2024 CSV Uploader. All rights reserved.</p>
+      <div class="mt-12 text-center text-gray-400 text-sm">
+        &copy; 2025 All rights reserved.
       </div>
     </div>
   </body>
