@@ -1,6 +1,6 @@
 # GeoRegulator
-**An AI-powered Compliance Checker for Software Features** <br>
-This project is a submission for TikTok's TechJam 2025 Hackathon.
+### An AI-powered Compliance Checker for Software Features
+<p>This project is a submission for TikTok's TechJam 2025 Hackathon.</p>
 
 ## Problem Statement ❔
 The goal of this project is to build a prototype system that uses LLM capabilities to flag features that require geo-specific compliance logic. Our solution transforms regulatory detection from a blind spot into a traceable, auditable output, empowering teams to proactively implement legal safeguards and confidently respond to regulatory inquiries.
@@ -14,7 +14,7 @@ The system's key features include:
  - Mitigated Regulatory Exposure: The system minimizes legal and financial risks by helping teams identify and address compliance gaps before a feature is launched. 
  - Transparency: The auditable evidence trail streamlines communication and provides clear documentation for regulatory inquiries and audits.
 
-## The team:
+## The team 🕺 🕺 🕺 🕺 🕺
 1. Leader: [Chew Jia Hui, Bryan](https://github.com/bryanjhc)
 2. [Chew En Rui, Samuel](https://github.com/Monochromas)
 3. [Leonardo Wolf](https://github.com/leowolf275)
@@ -42,7 +42,7 @@ The results will be generated in a CSV file in the `uploads/` folder with a time
 
 ---
 
-## References
+## References 📖
 1. EU Digital Service Act. [DSA](https://en.wikipedia.org/wiki/Digital_Services_Act)
 2. California state law - [Protecting Our Kids from Social Media Addiction Act](https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202320240SB976)
 3. Florida state law - [Online Protections for Minors](https://www.flsenate.gov/Session/Bill/2024/3)
