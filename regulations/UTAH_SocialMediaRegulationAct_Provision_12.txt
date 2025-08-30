@@ -1,0 +1,12 @@
+Statement: This section grants the Division of Consumer Protection the authority to investigate and enforce the provisions of the Act against social media companies.
+Context: It provides the Division with the power to conduct investigations and impose penalties for violations of the law. The section also outlines the due process for companies, including the right to a hearing before a final order is issued.
+
+Section 5. Section 13-71-301 is enacted to read:
+Part 3. Enforcement
+13-71-301. Enforcement by Division of Consumer Protection.
+(1) The Division of Consumer Protection shall investigate any suspected violation of this chapter.
+(2) Upon a finding by the Division of a violation of this chapter, the Division may:
+(a) impose a fine of up to $2,500 per violation; and
+(b) issue a cease and desist order against the social media company.
+(3) A social media company against whom a fine is proposed or a cease and desist order is issued is entitled to a hearing before the Division issues a final order imposing a fine or cease and desist order.
+(4) Fines and cease and desist orders issued by the Division under this section are subject to judicial review.

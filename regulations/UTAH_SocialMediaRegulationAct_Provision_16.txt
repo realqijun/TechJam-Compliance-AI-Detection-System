@@ -1,0 +1,18 @@
+Statement: This section explicitly repeals the previous social media regulation chapters and sections, including those related to age requirements, data collection, and parental access. This section also specifies that the bill takes effect on October 1, 2024.
+Context: This is a critical provision that officially replaces the old legislation with the new one. It lists every section of the repealed law to prevent any legal ambiguity about which rules are in effect.
+
+Section 9. Repealer.
+This bill repeals:
+Section 13-63-101, Definitions.
+Section 13-63-102, Age requirements for use of social media platform -- Parental consent -- Rulemaking authority of division.
+Section 13-63-103, Prohibition on data collection for certain accounts -- Prohibition on advertising -- Use of information -- Search results -- Directed content.
+Section 13-63-104, Parental access to social media account.
+Section 13-63-105, Limited hours of access for minors -- Parental access and options.
+Section 13-63-201, Investigative powers of the division.Section 13-63-202, Enforcement powers of the division.Section 13-63-203, Division report.
+Section 13-63-301, Private right of action.
+Section 13-63-401, Social media platform design regulations -- Enforcement and auditing authority -- Penalties.
+Section 13-63-501, Private right of action for harm to a minor -- Rebuttable presumption of harm and causation.
+Section 13-63-601, Waiver prohibited.Section 13-63-701, Severability.
+
+Section 10. Effective date.
+This bill takes effect on October 1, 2024.

@@ -1,0 +1,13 @@
+Statement: This section requires social media companies to implement default privacy settings and provide parental consent tools for minor accounts.
+Context: It mandates that accounts for minors be set to maximum privacy by default and that parental consent is required to change these settings. The section also requires social media companies to provide tools for parents to monitor or manage their child's account, with the parent's approval.
+
+Section 3. Section 13-71-202 is enacted to read:
+13-71-202. Default settings for minors -- Parental consent -- Supervisory tools.
+(1) A social media company shall:
+(a) set all accounts of Utah minor account holders to a private account setting by default; and
+(b) require verifiable parental consent before the social media company or a minor is allowed to change the privacy settings of the minor's account.
+(2) (a) A social media company shall provide a Utah minor account holder's parent with a supervisory tool that is reasonably calculated to:
+(i) provide the parent with access to the minor's account; and
+(ii) allow the parent to configure the account settings, as permitted under the social media service's terms of service, of the minor's account.
+(b) A Utah minor account holder's parent shall provide a verifiable parental consent mechanism to use the supervisory tool described in Subsection (2)(a).
+(3) A social media company may not activate a Utah minor account holder's account on the social media service unless the social media company has obtained the verifiable parental consent described in Subsection (2)(b).

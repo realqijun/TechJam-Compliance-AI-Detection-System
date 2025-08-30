@@ -1,0 +1,12 @@
+Statement: This section mandates that social media companies must use an approved age assurance system to verify the age of new account holders.
+Context: This provision is the core of the bill's age verification requirement. It prohibits social media services from allowing a Utah minor account holder to create a new account without using an approved age assurance system and a verifiable parental consent mechanism. It also outlines the process for a minor to appeal an age verification result.
+
+Section 2. Section 13-71-201 is enacted to read:
+Part 2. Minor Protection
+13-71-201. Age assurance and age verification requirements.
+(1) A social media company may not allow a Utah minor account holder to create a new account on the social media service unless the social media company:
+(a) has confirmed the Utah minor account holder's age by using a reliable age assurance system; and
+(b) if the Utah account holder is a minor, has obtained verifiable parental consent to the minor account holder's use of the social media service.
+(2) (a) A social media company that complies with a verified age assurance system or verifiable parental consent mechanism that is approved by the Division of Consumer Protection in accordance with a rule made under Section 13-71-302 is entitled to the affirmative defense under Section 13-71-302.
+(b) A social media company that uses an age assurance system or verifiable parental consent mechanism that is not approved by the Division of Consumer Protection under a rule made under Section 13-71-302 is not entitled to the affirmative defense.
+(3) The social media company shall provide a minor with a method to appeal a decision that the minor is not of the age for which the minor sought to verify.

@@ -1,0 +1,9 @@
+Statement: This section establishes an affirmative defense for social media companies that comply with certain requirements related to age verification.
+Context: A company can avoid liability under the Act if it demonstrates that it used an approved age assurance system or a verifiable parental consent mechanism as authorized by the Division of Consumer Protection. This provides a legal safe harbor for companies that make a good-faith effort to comply with the law.
+
+Section 6. Section 13-71-302 is enacted to read:
+13-71-302. Affirmative defense.
+(1) It is an affirmative defense to a claim or cause of action brought under this chapter, and a social media company is not liable, if the social media company can demonstrate to the court that the social media company used an age assurance system or a verifiable parenta consent mechanism that:
+(a) is reasonably calculated to verify an account holder's age with a high degree of certainty, using commercially reasonable efforts, with due regard for accuracy and the privacy of the individual; and
+(b) is approved by the Division of Consumer Protection in accordance with a rule made under this chapter.
+(2) Nothing in this chapter shall displace any other available remedies or rights authorized under the laws of this state or the United States.

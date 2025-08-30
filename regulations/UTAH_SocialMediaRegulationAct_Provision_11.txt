@@ -1,0 +1,15 @@
+Statement: This section prohibits social media companies from collecting, using, or sharing data from minor accounts for advertising or other purposes.
+Context: This is a key privacy provision that bans targeted advertising to minors. It prevents social media companies from using a minor's data to recommend content, products, or services. The section also requires companies to provide a list of third parties with whom they share minor's data and to be transparent about their data retention policies.
+
+Section 4. Section 13-71-203 is enacted to read:
+13-71-203. Data confidentiality for minors -- Prohibition on data collection and use.
+(1) For a Utah minor account holder, a social media company may not:
+(a) collect the minor's personal data or a Utah minor account holder's content for the purpose of:
+(i) recommending content;
+(ii) advertising;
+(iii) selling the minor's data to a third party; or
+(b) provide or present to the minor account holder any advertising that is targeted to the minor based on the minor's use of the social media service.
+(2) A social media company shall:
+(a) provide a prominent, clear, and conspicuous disclosure of all third parties with whom the social media company shares the Utah minor account holder's data;
+(b) make available to a Utah minor account holder's parent the data retention and deletion policies of the social media service; and
+(c) ensure that data collected from a Utah minor account holder is promptly deleted upon closure of the minor's account.

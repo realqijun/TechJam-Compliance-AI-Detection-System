@@ -1,0 +1,38 @@
+Statement: This section, titled "Utah Minor Protection in Social Media Act," establishes a series of definitions for the terms used throughout the bill.
+Context: This is a foundational section that provides the legal definitions for key terms, including what constitutes a social media service, who is an account holder or minor, and what is considered an "age assurance system" and a "verifiable parental consent mechanism."
+
+Section 1. Section 13-71-101 is enacted to read:
+CHAPTER 71. UTAH MINOR PROTECTION IN SOCIAL MEDIA ACT
+Part 1. General Provisions 13-71-101. Definitions.
+As used in this chapter:
+(1) "Account holder" means an individual who has, creates, or opens an account or profile to use a social media service.
+(2) "Age assurance system" means a system that is reasonably calculated to verify an account holder's age with a high degree of certainty, using commercially reasonable efforts, with due regard for accuracy and the privacy of the individual.
+(3) "Algorithmically curated social media service" means a social media service that drives user engagement primarily through the use of:
+(a) a curation algorithm; and
+(b) engagement driven design elements.
+(4) "Curation algorithm" means a computational process or set of rules used by a social media platform that determines, influences, or personalizes, designed to encourage prolonged or frequent engagement:
+(a) the content a user views;
+(b) the order in which content is displayed;
+(c) how prominently content is displayed; or
+(d) the manner in which content is displayed.
+(5) "Engagement driven design elements" means:
+(a) autoplay features that continuously play content without requiring user interaction;
+(b) scroll or pagination that loads additional content as long as the user continues scrolling; or
+(c) push notifications.
+(6) "Minor" means an individual who is younger than 18 years old.
+(7) "Minor account holder" means an account holder who is a minor.
+(8) "Parent" includes a legal guardian.
+(9) "Private account" means an account that is not visible to the general public.
+(10) "Social media company" means an entity that owns or operates a social media service.
+(11) (a) "Social media service" means a public website or application that:
+(i) primarily displays user-generated content;
+(ii) permits an individual to register as an account holder;
+(iii) allows an individual to create a profile that is visible to other account holders or to the general public; and
+(iv) allows an account holder to post content viewable by other users.
+(b) "Social media service" does not include:
+(i) email;
+(ii) cloud storage; or
+(iii) document viewing, sharing, or collaboration services.
+(12) "Utah account holder" means a person who is a Utah resident and an account holder.
+(13) "Utah minor account holder" means a Utah account holder who is a minor.
+(14) "Verifiable parental consent mechanism" means a system that is reasonably calculated to provide a parent with the ability to consent to a minor's use of a social media service.

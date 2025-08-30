@@ -1,0 +1,7 @@
+Statement: This section contains a severability clause, a standard legal provision that ensures the remainder of the law will stand if a court finds a specific part of it invalid.
+Context: The severability clause is an important legal tool that helps preserve the intent of the legislature. It is a safeguard against the entire bill being struck down if a single provision is challenged successfully in court.
+
+Section 8. Section 13-71-304 is enacted to read:
+13-71-304. Severability.
+(1) If any provision of this chapter or the application of any provision to any person or circumstance is held invalid by a final decision of a court of competent jurisdiction, the remainder of this chapter shall be given effect without the invalid provision or application.
+(2) The provisions of this chapter are severable.
