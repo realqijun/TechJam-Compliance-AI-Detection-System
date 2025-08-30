@@ -6,9 +6,9 @@ from src.data_handler import load_data, generate_csv_output
 from src.llm import GeminiProvider, OpenAIProvider
 from src.compliance_analyzer import LLMCompliancePipeline
 
+
 def main():
     load_dotenv()
-    
     # Initialize LLM Provider
     # Use GeminiProvider or OpenAIProvider
     
