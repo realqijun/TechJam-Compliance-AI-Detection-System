@@ -5,6 +5,7 @@ from .data_handler import ComplianceFlag, ComplianceResult, DomainKnowledge, loa
 from .llm import LLMProvider
 import time
 from .rag_system import query_collections
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 PROMPT_TEMPLATE = """
 You are a compliance expert. Your task is to analyze a software feature against provided regulations.
@@ -268,14 +269,31 @@ class LLMCompliancePipeline:
 
     def process_dataset(self, df) -> List[ComplianceResult]:
         """Process the entire dataset."""
-        results = []
         print(f"Using LLM: {self.llm_provider.get_model_name()}")
 
-        for idx, row in df.iterrows():
-            feature_name = row['feature_name']
-            feature_description = row['feature_description']
+        max_workers = min(8, len(df))
+        indexed_results = []
 
+        def worker(idx, feature_name, feature_description):
             print(f"[{idx+1}/{len(df)}] Analyzing: {feature_name}")
-            result = self.analyze_feature(feature_name, feature_description)
-            results.append(result)
-        return results
+            return self.analyze_feature(feature_name, feature_description)
+
+        with ThreadPoolExecutor(max_workers=max_workers) as executor:
+            future_map = {}
+            for idx, row in df.iterrows():
+                fn = row['feature_name']
+                fd = row['feature_description']
+                fut = executor.submit(worker, idx, fn, fd)
+                future_map[fut] = (idx, fn)
+
+            for fut in as_completed(future_map):
+                idx, fn = future_map[fut]
+                try:
+                    res = fut.result()
+                except Exception as e:
+                    print(f"[ERROR] Failed {fn}: {e}")
+                    continue
+                indexed_results.append((idx, res))
+
+        indexed_results.sort(key=lambda x: x[0])
+        return [r for _, r in indexed_results]

@@ -188,7 +188,7 @@
           if (flagText === 'REQUIRED') {
             row.classList.add('required-flag', 'ring-2', 'ring-red-300');
             addBadge(firstCell, 'REQUIRED', 'bg-red-500 text-white');
-          } else if (isNaN(conf) || conf < 0.6) {
+          } else if (flagText === 'UNCERTAIN') {
             row.classList.add('needs-review', 'ring-2', 'ring-amber-400');
             addBadge(firstCell, 'NEEDS REVIEW', 'bg-amber-500 text-white');
           }
@@ -221,7 +221,7 @@
               // ❌ restore original state
               if (flagText === 'REQUIRED') {
                 row.classList.add('required-flag', 'ring-2', 'ring-red-300');
-              } else if (isNaN(conf) || conf < 0.6) {
+              } else if (flagText === 'UNCERTAIN') {
                 row.classList.add('needs-review', 'ring-2', 'ring-amber-400');
               }
             }
