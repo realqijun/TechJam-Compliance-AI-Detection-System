@@ -47,6 +47,14 @@ def upload_file():
             csv_html = df.to_html(classes="table-auto w-full")
 
             # TODO: Integrate compliance analysis logic here and update csv_html accordingly
+            # load_dotenv()
+            # llm_provider = GeminiProvider(model="gemini-2.5-flash")
+            # pipeline = LLMCompliancePipeline(llm_provider=llm_provider)
+            # results = pipeline.process_dataset(df)
+            # timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            # output_file = f"compliance_results_{timestamp}.csv"
+            # generate_csv_output(results, os.path.join(app.config['UPLOAD_FOLDER'], output_file))
+            # csv_html = pd.DataFrame([r.to_dict() for r in results]).to_html(classes="table-auto w-full")
 
             # Render the output template with the HTML table
             return render_template('output.html', table_data=csv_html)

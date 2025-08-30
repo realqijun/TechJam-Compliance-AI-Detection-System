@@ -1,7 +1,7 @@
 import json
 import re
 from typing import List
-from .data_handler import ComplianceFlag, ComplianceResult, DomainKnowledge
+from .data_handler import ComplianceFlag, ComplianceResult, DomainKnowledge, load_regulations
 from .llm import LLMProvider
 
 
@@ -20,18 +20,19 @@ class LLMCompliancePipeline:
             f"--- Regulation from file: {file_path} ---\n{content}"
             for file_path, content in self.regulations.items()
         ])
+        print(regulations_text)
 
         return (
             f"You are a compliance expert. Analyze the following software feature against the provided regulations.\n"
-            f"Identify if the feature is compliant, non-compliant, or uncertain.\n"
-            f"If it's compliant or non-compliant, you MUST state the exact file path from the provided regulations that supports your conclusion.\n\n"
+            f"Identify if geo-specific compliance logic for the feature is REQUIRED, NOT_REQUIRED or UNCERTAIN.\n"
+            f"If it's REQUIRED, you MUST state the exact file path from the provided regulations that supports your conclusion.\n\n"
             f"--- Regulations to reference ---\n"
             f"{regulations_text}\n\n"
             f"--- Feature to analyze ---\n"
             f"Feature Name: {feature_name}\n"
             f"Description: {feature_description}\n\n"
             f"Respond with a JSON object containing the following keys:\n"
-            f"1. `compliance_flag`: 'compliant', 'non-compliant', or 'uncertain'\n"
+            f"1. `compliance_flag`: 'REQUIRED', 'NOT_REQUIRED', or 'UNCERTAIN'\n"
             f"2. `confidence_score`: A float from 0.0 to 1.0\n"
             f"3. `reasoning`: A brief explanation for the flag and confidence score.\n"
             f"4. `related_regulations`: An array of relevant regulations (e.g., ['GDPR', 'CCPA']).\n"
@@ -48,40 +49,8 @@ class LLMCompliancePipeline:
         prompt = self.create_compliance_prompt(
             feature_name, feature_description)
         try:
-            # Use the mock provider to get a fake response
-            response_obj = self.llm_provider.generate_full_response(prompt)
-
-            # Check for a valid response object and candidate
-            if not response_obj.get("candidates"):
-                raise ValueError("No candidates returned from LLM.")
-
-            candidate = response_obj["candidates"][0]
-
-            # Check for specific failure reasons like MAX_TOKENS or safety blocks
-            if candidate.get("finish_reason") != "STOP":
-                reason = f"LLM generation failed due to {candidate.get('finish_reason')}"
-                return ComplianceResult(
-                    feature_name=feature_name,
-                    compliance_flag=ComplianceFlag.UNCERTAIN,
-                    confidence_score=0.0,
-                    reasoning=reason,
-                    related_regulations=[],
-                    geo_regions=[],
-                    source_file="N/A"
-                )
-
-            # Check if the content part is empty
-            if not candidate.get("content") or not candidate["content"].get("parts"):
-                raise ValueError("LLM returned an empty content part.")
-
-            # Extract text from the response parts
-            result_json_str = candidate["content"]["parts"][0].get("text")
-
-            if not result_json_str:
-                raise ValueError("LLM returned an empty text string.")
-
-            result_json = json.loads(result_json_str)
-
+            response_obj = self.llm_provider.generate_json_response(prompt)
+            result_json = json.loads(response_obj)
             return ComplianceResult(
                 feature_name=feature_name,
                 compliance_flag=ComplianceFlag(result_json["compliance_flag"]),
